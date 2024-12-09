@@ -202,13 +202,17 @@ class TwitterBot:
     def is_own_tweet(self, tweet_element):
         """Check if the tweet is from our own account"""
         try:
-            # Find the username element within the tweet
-            username_element = tweet_element.find_element(By.CSS_SELECTOR, '[data-testid="User-Name"]')
-            username_text = username_element.text.lower()
+            # Find all username elements within the tweet (including reply context)
+            username_elements = tweet_element.find_elements(By.CSS_SELECTOR, '[data-testid="User-Name"], [data-testid="socialContext"]')
             our_username = os.getenv('TWITTER_USERNAME', '').lower()
             
-            # Check if our username appears in the tweet's user info
-            return our_username in username_text
+            # Check all text elements for our username
+            for element in username_elements:
+                if our_username in element.text.lower():
+                    print(f"Found our username in tweet: {element.text}")
+                    return True
+                    
+            return False
         except Exception as e:
             print(f"Error checking tweet ownership: {str(e)}")
             return True  # If we can't verify, skip it to be safe
@@ -217,13 +221,16 @@ class TwitterBot:
         """Check if the tweet is a reply"""
         try:
             # Check for reply indicator elements
-            reply_indicators = tweet_element.find_elements(By.CSS_SELECTOR, '[data-testid="socialContext"]')
-            if reply_indicators:
+            social_context = tweet_element.find_elements(By.CSS_SELECTOR, '[data-testid="socialContext"]')
+            if social_context:
+                context_text = social_context[0].text.lower()
+                print(f"Found social context: {context_text}")
                 return True
 
-            # Also check for "Replying to" text
-            replying_to = tweet_element.find_elements(By.XPATH, './/*[contains(text(), "Replying to")]')
-            if replying_to:
+            # Check for "Replying to" text
+            reply_elements = tweet_element.find_elements(By.XPATH, './/*[contains(text(), "Replying to")]')
+            if reply_elements:
+                print("Found 'Replying to' text")
                 return True
 
             return False
@@ -434,7 +441,12 @@ class TwitterBot:
                 
                 for tweet in tweets:
                     try:
-                        # Skip our own tweets
+                        # First check if it's a reply
+                        if self.is_reply_tweet(tweet):
+                            print("Skipping reply tweet")
+                            continue
+                            
+                        # Then check if it's our own tweet
                         if self.is_own_tweet(tweet):
                             print("Skipping our own tweet")
                             continue
