@@ -28,7 +28,7 @@ class TwitterBot:
         if not gemini_api_key:
             raise ValueError("GEMINI_API_KEY not found in environment variables")
         genai.configure(api_key=gemini_api_key)
-        self.model = genai.GenerativeModel('gemini-pro')
+        self.model = genai.GenerativeModel('gemini-2.5-flash-lite-preview-06-17')
         
         # Remove the static reply templates as we'll use AI-generated responses
         print("AI model initialized successfully!")
@@ -130,8 +130,12 @@ class TwitterBot:
             time.sleep(5)
             
             # Verify login success
-            if "home" in self.driver.current_url.lower():
-                print("Successfully logged in!")
+            if "home" in self.driver.current_url.lower() or "communities/1493446837214187523" or "communities/1471580197908586507" in self.driver.current_url:
+                print("Successfully logged in and navigated to the community!")
+                # Navigate to the specified community after login
+                # print("Navigating to the community page...")
+                # self.driver.get('https://x.com/i/communities/1471580197908586507')
+                time.sleep(5)
                 return True
             else:
                 print("Login verification failed. Current URL:", self.driver.current_url)
@@ -202,6 +206,32 @@ class TwitterBot:
             return time_difference <= timedelta(hours=24)
         return False
 
+    def is_blocked_handle(self, tweet_element):
+        """Check if the tweet is from a blocked handle"""
+        try:
+            # Find the username element within the tweet
+            username_element = tweet_element.find_element(By.CSS_SELECTOR, '[data-testid="User-Name"]')
+            username_text = username_element.text.lower()
+            
+            # List of blocked handles (case insensitive)
+            # Add more handles here by adding them to this list
+            blocked_handles = [
+                'skysingh04',
+                # 'another_handle_to_block',
+                # 'yet_another_handle',
+            ]
+            
+            # Check if any blocked handle appears in the tweet's user info
+            for blocked_handle in blocked_handles:
+                if blocked_handle in username_text:
+                    print(f"Skipping blocked handle: {blocked_handle}")
+                    return True
+                    
+            return False
+        except Exception as e:
+            print(f"Error checking blocked handle: {str(e)}")
+            return False  # If we can't verify, allow the tweet
+
     def is_own_tweet(self, tweet_element):
         """Check if the tweet is from our own account"""
         try:
@@ -243,20 +273,108 @@ class TwitterBot:
         return cleaned or "Hmm"  # Return "Hmm" if cleaning results in empty string
 
     def generate_ai_response(self, tweet_text):
-        """Generate a contextual response using Gemini AI"""
+        """Generate a contextual response using Gemini AI with natural tweet patterns"""
         try:
+            # Randomly select a tone for variety
+            tones = [
+                "positive and supportive",
+                "slightly sarcastic but friendly", 
+                "curious and questioning",
+                "agreeing with enthusiasm",
+                "playfully disagreeing",
+                "casual and relatable"
+            ]
+            selected_tone = random.choice(tones)
+            
+            # Tweet structure patterns based on viral tweets
+            structures = [
+                "Start with 'tbh' for honesty",
+                "Use 'literally' for emphasis",
+                "End with a question to engage",
+                "Use 'same' or 'facts' for agreement",
+                "Start with 'wait' for surprise",
+                "Use 'lowkey' for subtle agreement",
+                "End with 'thoughts?' for discussion",
+                "Use 'fr' (for real) for emphasis",
+                "Start with 'honestly' for sincerity",
+                "Use 'deadass' for seriousness",
+                "Start with 'real talk' for emphasis",
+                "Use 'no cap' for truthfulness",
+                "Start with 'not gonna lie' for honesty",
+                "Use 'bro' or 'bruh' for casual tone",
+                "Start with 'hot take' for opinions",
+                "Use 'sheesh' for emphasis",
+                "Start with 'i can't even' for disbelief",
+                "Use 'as if' for playful disagreement",
+                "Start with 'yikes' for awkwardness",
+                "Use 'big mood' for relatability",
+                "Start with 'i feel like' for personal take",
+                "Use 'sus' for suspicion",
+                "Start with 'real ones know' for inside jokes",
+                "Use 'bet' for agreement",
+                "Start with 'no way' for surprise",
+                "Use 'i'm crying' for something funny",
+                "Start with 'this goes hard' for approval",
+                "Use 'i'm weak' for something funny",
+                "Start with 'nah but for real' for emphasis",
+                "Use 'wild' for something surprising",
+                "Start with 'i'm just saying' for opinions",
+                "Use 'on god' for strong agreement"
+            ]
+            selected_structure = random.choice(structures)
+            
             prompt = f"""
-            Generate a friendly and engaging response to this tweet. The response should be:
-            1. Relevant to the tweet content
-            2. Casual and conversational
-            3. Not longer than 200 characters
-            4. Without hashtags or emojis
-            5. Engaging but not controversial
-            6. Use only basic ASCII characters
+            You are a real Twitter user responding to this tweet. Generate a natural, human-like reply that sounds like it's written by an actual person, not AI.
+
+            TONE: {selected_tone}
+            STRUCTURE: {selected_structure}
             
-            Tweet: "{tweet_text}"
+            IMPORTANT GUIDELINES:
+            - Sound like a real person, not AI
+            - Use casual internet language (tbh, fr, same, facts, literally, lowkey, deadass, no cap, sheesh, bet, bruh, big mood, wild, on god, etc.)
+            - Keep it under 200 characters
+            - No hashtags or emojis
+            - Use only basic ASCII characters
+            - Be relevant to the tweet content
+            - Vary your response style naturally
             
-            Response:"""
+            EXAMPLES OF NATURAL TWEET STRUCTURES:
+            - "tbh this is facts"
+            - "literally same"
+            - "wait this is actually so true"
+            - "lowkey agree with this"
+            - "honestly i never thought about it like that"
+            - "fr tho"
+            - "same energy"
+            - "this but also..."
+            - "wait hold on"
+            - "real talk, that's wild"
+            - "deadass, that's true"
+            - "no cap, i feel this"
+            - "this is actually interesting, thoughts?"
+            - "bro, that's wild"
+            - "sheesh, that's a take"
+            - "i can't even with this"
+            - "yikes, that's tough"
+            - "big mood honestly"
+            - "sus if you ask me"
+            - "bet, i'm with you"
+            - "i'm crying, this is hilarious"
+            - "this goes hard, not gonna lie"
+            - "nah but for real, you got a point"
+            - "on god, that's true"
+            - "hot take but i agree"
+            - "i'm weak, this is too funny"
+            - "no way, that's crazy"
+            - "as if, lol"
+            - "real ones know what you mean"
+            - "i feel like this is underrated"
+            - "wild if true"
+            - "i'm just saying, you might be right"
+            
+            Tweet to respond to: "{tweet_text}"
+            
+            Generate a natural reply:"""
             
             response = self.model.generate_content(prompt)
             ai_reply = response.text.strip().strip('"')  # Remove quotes if present
@@ -268,12 +386,12 @@ class TwitterBot:
             if len(ai_reply) > 200:
                 ai_reply = ai_reply[:197] + "..."
                 
-            print(f"Generated AI response: {ai_reply}")
+            print(f"Generated AI response (tone: {selected_tone}): {ai_reply}")
             return ai_reply
             
         except Exception as e:
             print(f"Error generating AI response: {str(e)}")
-            return "Hmm"  # Fallback response
+            return "ngl same"  # More natural fallback response
 
     def find_element_with_retry(self, by, value, max_attempts=3, check_interactable=False):
         """Find an element with retry logic for stale elements"""
@@ -452,6 +570,11 @@ class TwitterBot:
                 try:
                     # Skip if tweet is not displayed or we can't get its ID
                     if not tweet.is_displayed() or not self.get_tweet_id(tweet):
+                        continue
+                        
+                    # Skip if it's from a blocked handle
+                    if self.is_blocked_handle(tweet):
+                        print("Skipping blocked handle tweet")
                         continue
                         
                     # Skip our own tweets and replies
