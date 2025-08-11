@@ -4,6 +4,8 @@ import time
 import random
 from dotenv import load_dotenv
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
@@ -57,8 +59,9 @@ class TwitterBot:
             chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
             chrome_options.add_experimental_option('useAutomationExtension', False)
             
-            # Initialize the Chrome WebDriver
-            self.driver = webdriver.Chrome(options=chrome_options)
+            # Initialize the Chrome WebDriver with automatic ChromeDriver management
+            service = Service(ChromeDriverManager().install())
+            self.driver = webdriver.Chrome(service=service, options=chrome_options)
             self.wait = WebDriverWait(self.driver, 20)
             
             # Navigate to Twitter
