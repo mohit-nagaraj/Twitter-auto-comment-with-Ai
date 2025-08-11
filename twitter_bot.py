@@ -408,19 +408,19 @@ class TwitterBot:
 
             TONE: {selected_tone}
 
-            IMPORTANT GUIDELINES:
-            - Sound like a real person with a strong technical background.
-            - Use professional but accessible language. Avoid overly technical jargon unless it's appropriate for the context.
-            - Use abbreviations like 'sheesh', 'cool', 'nice', 'lmao', 'lol', 'tf' sparingly and only when it fits the tone.
-            - Keep replies concise and under 280 characters.
-            - No hashtags.
-            - NO EMOJIS AT ALL. Do not use any emojis in your response.
-            - Be relevant to the tweet's content.
-            - Project confidence and expertise.
+            CRITICAL RULES - YOU MUST FOLLOW THESE:
+            1. ABSOLUTELY NO EMOJIS - Do not use ANY emoji characters whatsoever
+            2. ABSOLUTELY NO HASHTAGS - Do not use # symbol or hashtags
+            3. Use ONLY plain ASCII text characters
+            4. Keep replies under 200 characters
+            5. Be relevant to the tweet's content
+            6. Sound natural and conversational
+            7. Project confidence and expertise
+            8. Use simple punctuation only (. , ! ? - ')
 
             Tweet to respond to: "{tweet_text}"
 
-            Generate a natural and engaging reply as Mohit Nagaraj (no hashtags, no emojis):"""
+            Generate a SHORT reply (under 200 chars) with NO EMOJIS and NO HASHTAGS:"""
 
             response = self.models.generate_content(
                 model="gemini-2.0-flash-exp",
@@ -430,9 +430,13 @@ class TwitterBot:
 
             ai_reply = self.clean_text(ai_reply)
             
-            # Remove any emojis that might have been generated
+            # Remove any emojis and hashtags that might have been generated
             import re
-            # Remove emojis using regex
+            # First remove hashtags
+            ai_reply = re.sub(r'#\S+', '', ai_reply).strip()
+            
+            # Remove all emoji characters and other non-ASCII
+            # More comprehensive emoji removal pattern
             emoji_pattern = re.compile("["
                 u"\U0001F600-\U0001F64F"  # emoticons
                 u"\U0001F300-\U0001F5FF"  # symbols & pictographs
@@ -441,12 +445,12 @@ class TwitterBot:
                 u"\U00002702-\U000027B0"
                 u"\U000024C2-\U0001F251"
                 u"\U0001F900-\U0001F9FF"  # Supplemental Symbols and Pictographs
-                u"\U00002600-\U000027BF"  # Miscellaneous Symbols
-                u"\U0001F650-\U0001F67F"  # Ornamental Dingbats
-                u"\U0001F780-\U0001F7FF"  # Geometric Shapes Extended
-                u"\U0001F800-\U0001F8FF"  # Supplemental Arrows-C
+                u"\U00010000-\U0010FFFF"  # other planes
                 "]+", flags=re.UNICODE)
-            ai_reply = emoji_pattern.sub('', ai_reply).strip()
+            ai_reply = emoji_pattern.sub('', ai_reply)
+            
+            # Final aggressive ASCII-only filter for ChromeDriver compatibility
+            ai_reply = ''.join(char for char in ai_reply if ord(char) < 128 and char.isprintable())
 
             if len(ai_reply) > 280:
                 ai_reply = ai_reply[:277] + "..."
@@ -632,10 +636,17 @@ class TwitterBot:
                 print(f"[reply_to_tweet] No text content in tweet {tweet_id}, skipping...")
                 return None  # Return None to indicate skip, not failure
             
-            # Like the tweet before replying
+            # Like the tweet before replying with improved interaction
             try:
                 like_button = tweet_element.find_element(By.CSS_SELECTOR, '[data-testid="like"]')
-                like_button.click()
+                # Scroll element into view
+                self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", like_button)
+                time.sleep(1)
+                # Try JavaScript click if regular click fails
+                try:
+                    like_button.click()
+                except:
+                    self.driver.execute_script("arguments[0].click();", like_button)
                 print(f"[reply_to_tweet] Liked tweet: {tweet_id}")
                 time.sleep(1)
             except Exception as e:
@@ -644,10 +655,21 @@ class TwitterBot:
             ai_reply = self.generate_ai_response(tweet_text)
             print(f"[reply_to_tweet] AI reply: {ai_reply}")
             
-            # Find and click the reply button
-            reply_button = tweet_element.find_element(By.CSS_SELECTOR, '[data-testid="reply"]')
-            reply_button.click()
-            time.sleep(2)
+            # Find and click the reply button with improved interaction
+            try:
+                reply_button = tweet_element.find_element(By.CSS_SELECTOR, '[data-testid="reply"]')
+                # Scroll element into view and ensure it's clickable
+                self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", reply_button)
+                time.sleep(1)
+                # Try JavaScript click if regular click fails
+                try:
+                    reply_button.click()
+                except:
+                    self.driver.execute_script("arguments[0].click();", reply_button)
+                time.sleep(2)
+            except Exception as e:
+                print(f"[reply_to_tweet] Could not click reply button: {str(e)}")
+                return False
             
             # Find the reply text area (should be the only textarea visible)
             reply_box = self.wait.until(
