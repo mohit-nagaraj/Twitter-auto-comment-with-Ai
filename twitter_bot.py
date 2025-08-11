@@ -25,7 +25,7 @@ try:
     from selenium.webdriver.common.keys import Keys
     from selenium.webdriver.support.ui import WebDriverWait
     from selenium.webdriver.support import expected_conditions as EC
-    from selenium.common.exceptions import TimeoutException, NoSuchElementException
+    from selenium.common.exceptions import TimeoutException, NoSuchElementException, ElementNotInteractableException, InvalidSessionIdException, StaleElementReferenceException
     print("✓ selenium modules imported successfully")
 except Exception as e:
     print(f"❌ Failed to import selenium modules: {e}")
@@ -173,16 +173,16 @@ class TwitterBot:
             self.wait = WebDriverWait(self.driver, 20)
             print("✓ WebDriverWait configured (20 seconds)")
             
-            # Navigate to Twitter
+            # Install Control Panel for Twitter extension FIRST
+            print("\n=== Installing Control Panel for Twitter Extension ===")
+            self.install_control_panel_extension()
+            
+            # Now navigate to Twitter after extension is installed
             print("\nNavigating to Twitter...")
             self.driver.get("https://twitter.com")
             time.sleep(3)  # Give it time to load
             print(f"✓ Current URL: {self.driver.current_url}")
             print(f"✓ Page title: {self.driver.title}")
-            
-            # Install Control Panel for Twitter extension
-            print("\n=== Installing Control Panel for Twitter Extension ===")
-            self.install_control_panel_extension()
             
             print("\n✅ Chrome driver setup completed successfully!")
                 
@@ -232,10 +232,9 @@ class TwitterBot:
             except TimeoutException:
                 print("⚠️ No confirmation dialog found, extension might already be installed or installation completed automatically")
             
-            # Navigate back to Twitter
-            print("Navigating back to Twitter...")
-            self.driver.get("https://twitter.com")
-            time.sleep(3)
+            # Extension installed, no need to navigate to Twitter here
+            # as we'll do it after this function returns
+            print("Extension installation process completed.")
             
         except Exception as e:
             print(f"❌ Error installing extension: {str(e)}")
@@ -264,6 +263,13 @@ class TwitterBot:
         print("[login] Called.")
         try:
             print("Starting login process...")
+            # Check if we're already on Twitter, if not navigate there
+            if "x.com" not in self.driver.current_url and "twitter.com" not in self.driver.current_url:
+                print("Navigating to Twitter...")
+                self.driver.get("https://twitter.com")
+                time.sleep(3)
+            
+            print("Navigating to login flow...")
             self.driver.get('https://x.com/i/flow/login')
             time.sleep(5)  # Wait for page to fully load
             
@@ -329,15 +335,21 @@ class TwitterBot:
         print(f"[search_tweets] Called with query: {query}")
         try:
             print(f"Searching for tweets with query: {query}")
-            search_url = f"https://x.com/search?q={query}&src=typed_query"
+            search_url = f"https://x.com/search?q={query}&src=typed_query&f=live"  # Add f=live for latest tweets
             self.driver.get(search_url)
-            time.sleep(5)
+            time.sleep(7)  # Give more time to load
 
             tweets = self.wait.until(
                 EC.presence_of_all_elements_located((By.CSS_SELECTOR, 'article[data-testid="tweet"]'))
             )
             print(f"[search_tweets] Found {len(tweets)} tweets for '{query}'")
             return tweets
+        except TimeoutException:
+            print(f"[search_tweets] No tweets found for '{query}' within timeout")
+            return []
+        except InvalidSessionIdException:
+            print(f"[search_tweets] Session expired while searching for '{query}'")
+            raise  # Re-raise to handle at higher level
         except Exception as e:
             print(f"Error searching tweets for query '{query}': {str(e)}")
             return []
@@ -371,23 +383,37 @@ class TwitterBot:
             found_handles = []
             for anchor in anchors:
                 href = anchor.get_attribute('href')
-                if href and href.startswith('/') and '/status/' not in href:
-                    handle = href.strip('/').lower()
-                    found_handles.append(handle)
-                    print(f"[is_blocked_handle] Checking handle: {handle}")
-                    if handle in blocked_handles:
-                        print(f"[is_blocked_handle] Blocked handle found: {handle}")
-                        return True
+                if href:
+                    # Check for Twitter/X handle patterns
+                    if href.startswith('https://x.com/') or href.startswith('https://twitter.com/'):
+                        # Extract handle from full URL
+                        parts = href.split('/')
+                        if len(parts) >= 4 and parts[3] and '/status/' not in href:
+                            handle = parts[3].lower()
+                            found_handles.append(handle)
+                            print(f"[is_blocked_handle] Checking handle: {handle}")
+                            if handle in blocked_handles:
+                                print(f"[is_blocked_handle] Blocked handle found: {handle}")
+                                return True
+                    elif href.startswith('/') and '/status/' not in href and '/search' not in href:
+                        handle = href.strip('/').lower()
+                        found_handles.append(handle)
+                        print(f"[is_blocked_handle] Checking handle: {handle}")
+                        if handle in blocked_handles:
+                            print(f"[is_blocked_handle] Blocked handle found: {handle}")
+                            return True
+            
             # Fallback: check if tweet text contains @blocked_handle or handle name
             try:
                 tweet_text_elem = tweet_element.find_element(By.CSS_SELECTOR, '[data-testid="tweetText"]')
                 tweet_text = tweet_text_elem.text.lower()
                 for handle in blocked_handles:
-                    if f"@{handle}" in tweet_text or handle in tweet_text:
+                    if f"@{handle}" in tweet_text:
                         print(f"[is_blocked_handle] Blocked handle found in tweet text: {handle}")
                         return True
             except Exception as e:
                 print(f"[is_blocked_handle] Could not extract tweet text for fallback: {str(e)}")
+            
             print(f"[is_blocked_handle] All found handles in tweet: {found_handles}")
             return False
         except Exception as e:
@@ -426,8 +452,16 @@ class TwitterBot:
             print(f"Error checking reply tweet: {str(e)}")
             return False
 
-    def generate_ai_response(self, tweet_text):
+    def generate_ai_response(self, tweet_text, image_description=None):
         print(f"[generate_ai_response] Called with tweet_text: {tweet_text}")
+        if image_description:
+            print(f"[generate_ai_response] Image description provided: {image_description[:100]}...")
+        
+        # If tweet_text is empty, return a generic response
+        if not tweet_text or tweet_text.strip() == "":
+            print("[generate_ai_response] Warning: Empty tweet text received")
+            return "That's interesting! Would love to hear more about this."
+        
         try:
             tones = [
                 "professional and insightful",
@@ -450,6 +484,10 @@ class TwitterBot:
                 "You are passionate about building, learning, and sharing in the tech community. "
             )
 
+            image_context = ""
+            if image_description:
+                image_context = f"\n\nThe tweet also includes an image showing: {image_description}"
+
             prompt = f"""
             {mohit_bio}
             Your goal is to increase your outreach on Twitter by providing valuable, engaging, and sometimes humorous or assertive comments.
@@ -461,13 +499,14 @@ class TwitterBot:
             - Use professional but accessible language. Avoid overly technical jargon unless it's appropriate for the context.
             - Use abbreviations like 'sheesh', 'cool', 'nice', 'lmao', 'lol', 'tf' sparingly and only when it fits the tone.
             - Keep replies concise and under 280 characters.
-            - No hashtags.
+            - NEVER use hashtags in your response.
             - Be relevant to the tweet's content.
             - Project confidence and expertise.
+            - Do not use any emojis.
 
-            Tweet to respond to: "{tweet_text}"
+            Tweet to respond to: "{tweet_text}"{image_context}
 
-            Generate a natural and engaging reply as Mohit Nagaraj:"""
+            Generate a natural and engaging reply as Mohit Nagaraj (no hashtags, no emojis):"""
 
             response = self.models.generate_content(
                 model="gemini-2.0-flash-exp",
@@ -476,6 +515,10 @@ class TwitterBot:
             ai_reply = response.text.strip().strip('"')
 
             ai_reply = self.clean_text(ai_reply)
+            
+            # Remove any hashtags that might have been generated
+            import re
+            ai_reply = re.sub(r'#\w+', '', ai_reply).strip()
 
             if len(ai_reply) > 280:
                 ai_reply = ai_reply[:277] + "..."
@@ -486,7 +529,7 @@ class TwitterBot:
 
         except Exception as e:
             print(f"Error generating AI response: {str(e)}")
-            return "cool"
+            return "That's an interesting perspective! Thanks for sharing."
 
     def monitor_and_reply(self, interval=60 * 5):
         print(f"[monitor_and_reply] Called with interval: {interval}")
@@ -496,49 +539,70 @@ class TwitterBot:
 
         processed_tweets = set()
         print("Starting to monitor tech tweets...")
+        max_tweets_per_query = 5  # Limit tweets per query
 
         while True:
-            random.shuffle(self.tech_search_queries)
-            for query in self.tech_search_queries:
-                try:
-                    print(f"\nProcessing query: {query}")
-                    tweets = self.search_tweets(query)
-                    print(f"Found {len(tweets)} tweets for '{query}'")
+            try:
+                random.shuffle(self.tech_search_queries)
+                for query in self.tech_search_queries:
+                    try:
+                        print(f"\nProcessing query: {query}")
+                        tweets = self.search_tweets(query)
+                        print(f"Found {len(tweets)} tweets for '{query}'")
 
-                    tweets_processed_this_round = 0
-                    for tweet in tweets:
-                        try:
-                            tweet_id = self.get_tweet_id(tweet)
-                            if not tweet_id or tweet_id in processed_tweets:
+                        tweets_processed_this_round = 0
+                        for tweet in tweets[:max_tweets_per_query]:  # Process only first 5 tweets
+                            try:
+                                tweet_id = self.get_tweet_id(tweet)
+                                if not tweet_id or tweet_id in processed_tweets:
+                                    continue
+
+                                # Check if tweet is already liked (to prevent duplicate comments)
+                                if self.is_tweet_already_liked(tweet):
+                                    print(f"Tweet {tweet_id} already liked, skipping...")
+                                    processed_tweets.add(tweet_id)
+                                    continue
+
+                                if self.is_blocked_handle(tweet) or self.is_own_tweet(tweet) or self.is_reply_tweet(tweet):
+                                    continue
+                                
+                                print(f"Processing tweet: {tweet_id}")
+                                if self.reply_to_tweet(tweet):
+                                    processed_tweets.add(tweet_id)
+                                    tweets_processed_this_round += 1
+                                    print(f"Successfully replied to tweet: {tweet_id}")
+                                    time.sleep(random.uniform(20, 40))
+
+                            except Exception as e:
+                                print(f"Error processing a tweet: {str(e)}")
                                 continue
+                        
+                        print(f"Processed {tweets_processed_this_round} new tweets for query '{query}'")
+                        
+                        # Add 10 second delay between queries
+                        print(f"Waiting 10 seconds before next query...")
+                        time.sleep(10)
 
-                            if self.is_blocked_handle(tweet) or self.is_own_tweet(tweet) or self.is_reply_tweet(tweet):
-                                continue
-                            
-                            print(f"Processing tweet: {tweet_id}")
-                            if self.reply_to_tweet(tweet):
-                                processed_tweets.add(tweet_id)
-                                tweets_processed_this_round += 1
-                                print(f"Successfully replied to tweet: {tweet_id}")
-                                time.sleep(random.uniform(20, 40))
+                    except InvalidSessionIdException as e:
+                        print(f"Session expired. Attempting to re-login...")
+                        self.handle_session_recovery()
+                        continue
+                    except Exception as e:
+                        print(f"An error occurred while processing query '{query}': {str(e)}")
+                        continue
+                
+                if len(processed_tweets) > 500:
+                    print("Cleaning up processed tweets list...")
+                    processed_list = list(processed_tweets)
+                    processed_tweets = set(processed_list[-500:])
 
-                        except Exception as e:
-                            print(f"Error processing a tweet: {str(e)}")
-                            continue
-                    
-                    print(f"Processed {tweets_processed_this_round} new tweets for query '{query}'")
-
-                except Exception as e:
-                    print(f"An error occurred while processing query '{query}': {str(e)}")
-                    continue
-            
-            if len(processed_tweets) > 500:
-                print("Cleaning up processed tweets list...")
-                processed_list = list(processed_tweets)
-                processed_tweets = set(processed_list[-500:])
-
-            print(f"\nFinished a cycle of queries. Waiting {interval} seconds before the next cycle...")
-            time.sleep(interval)
+                print(f"\nFinished a cycle of queries. Waiting {interval} seconds before the next cycle...")
+                time.sleep(interval)
+                
+            except InvalidSessionIdException as e:
+                print(f"Session expired during main loop. Attempting to re-login...")
+                self.handle_session_recovery()
+                continue
 
     def cleanup(self):
         print("[cleanup] Called.")
@@ -560,48 +624,157 @@ class TwitterBot:
         try:
             tweet_id = self.get_tweet_id(tweet_element)
             print(f"[reply_to_tweet] Processing tweet_id: {tweet_id}")
-            # Like the tweet before replying
-            try:
-                like_button = tweet_element.find_element(By.CSS_SELECTOR, '[data-testid="like"]')
-                like_button.click()
-                print(f"[reply_to_tweet] Liked tweet: {tweet_id}")
-                time.sleep(1)
-            except Exception as e:
-                print(f"[reply_to_tweet] Could not like tweet: {str(e)}")
-            # Extract tweet text for context
+            
+            # Extract tweet text and image (if present) for context
             tweet_text = ""
+            image_description = None
+            
             try:
                 tweet_text_elem = tweet_element.find_element(By.CSS_SELECTOR, '[data-testid="tweetText"]')
                 tweet_text = tweet_text_elem.text
+                print(f"[reply_to_tweet] Extracted tweet text: {tweet_text[:100]}...")
+            except NoSuchElementException:
+                print(f"[reply_to_tweet] No tweet text found, checking for media-only tweet")
+                # Check if it's a media-only tweet
+                try:
+                    media_elem = tweet_element.find_element(By.CSS_SELECTOR, '[data-testid="tweetPhoto"], [data-testid="videoPlayer"]')
+                    tweet_text = "[Media post]"
+                    print(f"[reply_to_tweet] Found media-only tweet")
+                except:
+                    print(f"[reply_to_tweet] Warning: Could not extract any content from tweet")
             except Exception as e:
-                print(f"[reply_to_tweet] Could not extract tweet text: {str(e)}")
-            ai_reply = self.generate_ai_response(tweet_text)
+                print(f"[reply_to_tweet] Error extracting tweet text: {str(e)}")
+            
+            # Extract image description if image is present
+            try:
+                image_elem = tweet_element.find_element(By.CSS_SELECTOR, 'img[alt]:not([alt=""])')
+                image_description = image_elem.get_attribute('alt')
+                print(f"[reply_to_tweet] Found image with description: {image_description[:100]}...")
+            except:
+                pass  # No image or no alt text
+            
+            # Like the tweet before replying (with better error handling)
+            try:
+                # Wait for like button to be clickable
+                like_button = WebDriverWait(tweet_element, 5).until(
+                    EC.element_to_be_clickable((By.CSS_SELECTOR, '[data-testid="like"]'))
+                )
+                # Scroll to element if needed
+                self.driver.execute_script("arguments[0].scrollIntoView(true);", like_button)
+                time.sleep(0.5)
+                like_button.click()
+                print(f"[reply_to_tweet] Liked tweet: {tweet_id}")
+                time.sleep(1)
+            except ElementNotInteractableException:
+                print(f"[reply_to_tweet] Like button not interactable, may be already liked")
+            except TimeoutException:
+                print(f"[reply_to_tweet] Like button not found or not clickable")
+            except Exception as e:
+                print(f"[reply_to_tweet] Could not like tweet: {str(e)}")
+            
+            # Generate AI response with image context if available
+            ai_reply = self.generate_ai_response(tweet_text, image_description)
             print(f"[reply_to_tweet] AI reply: {ai_reply}")
-            # Find and click the reply button
-            reply_button = tweet_element.find_element(By.CSS_SELECTOR, '[data-testid="reply"]')
-            reply_button.click()
-            time.sleep(2)
-            # Find the reply text area (should be the only textarea visible)
-            reply_box = self.wait.until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, 'div[role="dialog"] div[role="textbox"]'))
-            )
-            reply_box.send_keys(ai_reply)
-            time.sleep(1)
+            
+            # Find and click the reply button with better wait
+            try:
+                reply_button = WebDriverWait(tweet_element, 5).until(
+                    EC.element_to_be_clickable((By.CSS_SELECTOR, '[data-testid="reply"]'))
+                )
+                # Scroll to element if needed
+                self.driver.execute_script("arguments[0].scrollIntoView(true);", reply_button)
+                time.sleep(0.5)
+                reply_button.click()
+                time.sleep(2)
+            except ElementNotInteractableException:
+                print(f"[reply_to_tweet] Reply button not interactable")
+                return False
+            except TimeoutException:
+                print(f"[reply_to_tweet] Reply button not found")
+                return False
+            
+            # Find the reply text area with better wait
+            try:
+                reply_box = WebDriverWait(self.driver, 10).until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, 'div[role="dialog"] div[role="textbox"]'))
+                )
+                reply_box.click()  # Ensure it's focused
+                time.sleep(0.5)
+                reply_box.send_keys(ai_reply)
+                time.sleep(1)
+            except TimeoutException:
+                print(f"[reply_to_tweet] Reply box not found")
+                return False
+            
             # Find and click the reply submit button
-            submit_buttons = tweet_element.parent.find_elements(By.CSS_SELECTOR, 'div[role="dialog"] [data-testid="tweetButton"]')
-            if not submit_buttons:
-                # Try global search if not found in parent
-                submit_buttons = self.driver.find_elements(By.CSS_SELECTOR, 'div[role="dialog"] [data-testid="tweetButton"]')
-            if submit_buttons:
-                submit_buttons[0].click()
+            try:
+                submit_button = WebDriverWait(self.driver, 10).until(
+                    EC.element_to_be_clickable((By.CSS_SELECTOR, 'div[role="dialog"] [data-testid="tweetButton"]'))
+                )
+                submit_button.click()
                 print(f"[reply_to_tweet] Successfully replied to tweet: {tweet_id}")
                 time.sleep(2)
                 return True
-            else:
-                print(f"[reply_to_tweet] Could not find reply submit button for tweet: {tweet_id}")
+            except TimeoutException:
+                print(f"[reply_to_tweet] Could not find reply submit button")
                 return False
+                
+        except StaleElementReferenceException:
+            print(f"[reply_to_tweet] Tweet element became stale")
+            return False
+        except InvalidSessionIdException:
+            print(f"[reply_to_tweet] Session expired")
+            raise  # Re-raise to handle at higher level
         except Exception as e:
             print(f"[reply_to_tweet] Error replying to tweet: {str(e)}")
+            return False
+
+    def is_tweet_already_liked(self, tweet_element):
+        """Check if a tweet is already liked by looking for the unlike button."""
+        print("[is_tweet_already_liked] Called.")
+        try:
+            # Check if unlike button exists (which means tweet is already liked)
+            unlike_button = tweet_element.find_element(By.CSS_SELECTOR, '[data-testid="unlike"]')
+            if unlike_button:
+                print("[is_tweet_already_liked] Tweet is already liked")
+                return True
+        except NoSuchElementException:
+            # No unlike button means tweet is not liked
+            print("[is_tweet_already_liked] Tweet is not liked")
+            return False
+        except Exception as e:
+            print(f"[is_tweet_already_liked] Error checking like status: {str(e)}")
+            return False
+
+    def handle_session_recovery(self):
+        """Handle session recovery when session expires."""
+        print("[handle_session_recovery] Called.")
+        try:
+            print("Attempting to recover session...")
+            # Close the current driver
+            if hasattr(self, 'driver'):
+                try:
+                    self.driver.quit()
+                except:
+                    pass
+            
+            # Wait a bit before reconnecting
+            time.sleep(5)
+            
+            # Setup new driver and login
+            print("Setting up new driver...")
+            self.setup_driver()
+            
+            print("Attempting to login again...")
+            if self.login():
+                print("✅ Session recovered successfully!")
+                return True
+            else:
+                print("❌ Failed to recover session")
+                return False
+                
+        except Exception as e:
+            print(f"Error during session recovery: {str(e)}")
             return False
 
 def main():
