@@ -483,30 +483,48 @@ class TwitterBot:
                     print(f"Found {len(top_tweets)} tweets in Top tab for '{query}'")
                     
                     tweets_processed_top = 0
-                    for tweet in top_tweets[:max_tweets_per_tab]:  # Process only first 5 tweets
+                    tweet_index = 0
+                    while tweets_processed_top < max_tweets_per_tab and tweet_index < len(top_tweets):
+                        tweet = top_tweets[tweet_index]
+                        tweet_index += 1
+                        
                         try:
                             tweet_id = self.get_tweet_id(tweet)
                             if not tweet_id or tweet_id in processed_tweets:
+                                time.sleep(2)  # Wait 2 seconds even for skipped tweets
                                 continue
 
                             # Check if tweet is already liked (to prevent duplicate comments)
                             if self.is_tweet_already_liked(tweet):
                                 print(f"Tweet {tweet_id} already liked, skipping...")
                                 processed_tweets.add(tweet_id)
+                                time.sleep(2)  # Wait 2 seconds
                                 continue
 
                             if self.is_blocked_handle(tweet) or self.is_own_tweet(tweet) or self.is_reply_tweet(tweet):
+                                time.sleep(2)  # Wait 2 seconds
                                 continue
                             
                             print(f"Processing tweet: {tweet_id}")
-                            if self.reply_to_tweet(tweet):
+                            reply_result = self.reply_to_tweet(tweet)
+                            
+                            if reply_result is None:
+                                # Tweet had no text, don't count it towards the 5
+                                print(f"Tweet {tweet_id} had no text, not counting towards limit")
+                                time.sleep(2)  # Wait 2 seconds
+                                continue
+                            elif reply_result:
                                 processed_tweets.add(tweet_id)
                                 tweets_processed_top += 1
                                 print(f"Successfully replied to tweet: {tweet_id}")
                                 time.sleep(random.uniform(20, 40))
+                            else:
+                                print(f"Failed to reply to tweet: {tweet_id}")
+                                time.sleep(2)  # Wait 2 seconds
 
                         except Exception as e:
                             print(f"Error processing a tweet: {str(e)}")
+                            time.sleep(2)  # Wait 2 seconds
                             continue
                     
                     print(f"Processed {tweets_processed_top} tweets from Top tab for query '{query}'")
@@ -517,30 +535,48 @@ class TwitterBot:
                     print(f"Found {len(latest_tweets)} tweets in Latest tab for '{query}'")
                     
                     tweets_processed_latest = 0
-                    for tweet in latest_tweets[:max_tweets_per_tab]:  # Process only first 5 tweets
+                    tweet_index = 0
+                    while tweets_processed_latest < max_tweets_per_tab and tweet_index < len(latest_tweets):
+                        tweet = latest_tweets[tweet_index]
+                        tweet_index += 1
+                        
                         try:
                             tweet_id = self.get_tweet_id(tweet)
                             if not tweet_id or tweet_id in processed_tweets:
+                                time.sleep(2)  # Wait 2 seconds even for skipped tweets
                                 continue
 
                             # Check if tweet is already liked (to prevent duplicate comments)
                             if self.is_tweet_already_liked(tweet):
                                 print(f"Tweet {tweet_id} already liked, skipping...")
                                 processed_tweets.add(tweet_id)
+                                time.sleep(2)  # Wait 2 seconds
                                 continue
 
                             if self.is_blocked_handle(tweet) or self.is_own_tweet(tweet) or self.is_reply_tweet(tweet):
+                                time.sleep(2)  # Wait 2 seconds
                                 continue
                             
                             print(f"Processing tweet: {tweet_id}")
-                            if self.reply_to_tweet(tweet):
+                            reply_result = self.reply_to_tweet(tweet)
+                            
+                            if reply_result is None:
+                                # Tweet had no text, don't count it towards the 5
+                                print(f"Tweet {tweet_id} had no text, not counting towards limit")
+                                time.sleep(2)  # Wait 2 seconds
+                                continue
+                            elif reply_result:
                                 processed_tweets.add(tweet_id)
                                 tweets_processed_latest += 1
                                 print(f"Successfully replied to tweet: {tweet_id}")
                                 time.sleep(random.uniform(20, 40))
+                            else:
+                                print(f"Failed to reply to tweet: {tweet_id}")
+                                time.sleep(2)  # Wait 2 seconds
 
                         except Exception as e:
                             print(f"Error processing a tweet: {str(e)}")
+                            time.sleep(2)  # Wait 2 seconds
                             continue
                     
                     print(f"Processed {tweets_processed_latest} tweets from Latest tab for query '{query}'")
@@ -583,6 +619,19 @@ class TwitterBot:
             tweet_id = self.get_tweet_id(tweet_element)
             print(f"[reply_to_tweet] Processing tweet_id: {tweet_id}")
             
+            # Extract tweet text for context FIRST
+            tweet_text = ""
+            try:
+                tweet_text_elem = tweet_element.find_element(By.CSS_SELECTOR, '[data-testid="tweetText"]')
+                tweet_text = tweet_text_elem.text.strip()
+            except Exception as e:
+                print(f"[reply_to_tweet] Could not extract tweet text: {str(e)}")
+            
+            # Skip if no tweet text found
+            if not tweet_text:
+                print(f"[reply_to_tweet] No text content in tweet {tweet_id}, skipping...")
+                return None  # Return None to indicate skip, not failure
+            
             # Like the tweet before replying
             try:
                 like_button = tweet_element.find_element(By.CSS_SELECTOR, '[data-testid="like"]')
@@ -591,14 +640,6 @@ class TwitterBot:
                 time.sleep(1)
             except Exception as e:
                 print(f"[reply_to_tweet] Could not like tweet: {str(e)}")
-            
-            # Extract tweet text for context
-            tweet_text = ""
-            try:
-                tweet_text_elem = tweet_element.find_element(By.CSS_SELECTOR, '[data-testid="tweetText"]')
-                tweet_text = tweet_text_elem.text
-            except Exception as e:
-                print(f"[reply_to_tweet] Could not extract tweet text: {str(e)}")
             
             ai_reply = self.generate_ai_response(tweet_text)
             print(f"[reply_to_tweet] AI reply: {ai_reply}")
