@@ -1,986 +1,480 @@
-[reply_to_tweet] Processing tweet_id: 1954204795675562239
-[reply_to_tweet] Could not like tweet: Message: element not interactable
-  (Session info: chrome=139.0.7258.66)
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xccda34]
-        (No symbol) [0x0xcc2565]
-        (No symbol) [0x0xcf13dc]
-        (No symbol) [0x0xcc1ff4]
-        (No symbol) [0x0xcf1654]
-        (No symbol) [0x0xd126ea]
-        (No symbol) [0x0xcf11d6]
-        (No symbol) [0x0xcc0833]
-        (No symbol) [0x0xcc16a4]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        GetHandleVerifier [0x0xe57728+94152]
-        GetHandleVerifier [0x0xe578b2+94546]
-        GetHandleVerifier [0x0xe42bca+9322]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-[generate_ai_response] Called with tweet_text: 
-[clean_text] Called with text: Okay, I need a tweet to respond to. Give me a tweet and I'll craft a response as Mohit Nagaraj, keeping the tone and guidelines in mind.
-[clean_text] Returning: Okay, I need a tweet to respond to. Give me a tweet and I'll craft a response as Mohit Nagaraj, keeping the tone and guidelines in mind.
-Generated AI response (tone: knowledgeable and helpful): Okay, I need a tweet to respond to. Give me a tweet and I'll craft a response as Mohit Nagaraj, keeping the tone and guidelines in mind.
-[generate_ai_response] AI reply: Okay, I need a tweet to respond to. Give me a tweet and I'll craft a response as Mohit Nagaraj, keeping the tone and guidelines in mind.
-[reply_to_tweet] AI reply: Okay, I need a tweet to respond to. Give me a tweet and I'll craft a response as Mohit Nagaraj, keeping the tone and guidelines in mind.
-[reply_to_tweet] Error replying to tweet: Message: element not interactable
-  (Session info: chrome=139.0.7258.66)
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xccda34]
-        (No symbol) [0x0xcc2565]
-        (No symbol) [0x0xcf13dc]
-        (No symbol) [0x0xcc1ff4]
-        (No symbol) [0x0xcf1654]
-        (No symbol) [0x0xd126ea]
-        (No symbol) [0x0xcf11d6]
-        (No symbol) [0x0xcc0833]
-        (No symbol) [0x0xcc16a4]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        GetHandleVerifier [0x0xe57728+94152]
-        GetHandleVerifier [0x0xe578b2+94546]
-        GetHandleVerifier [0x0xe42bca+9322]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-Processed 0 new tweets for query 'cloud computing'
-
-Processing query: microservices
-[search_tweets] Called with query: microservices
-Searching for tweets with query: microservices
-[12268:7336:0811/114543.464:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A00026005C260000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
-[12268:7336:0811/114543.473:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A06026005C260000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
-[12268:7336:0811/114543.482:ERROR:gpu\command_buffer\service\webgpu_decoder_impl.cc:1670] Failed to query ID3D11Device from ANGLE.
-[12268:7336:0811/114543.534:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A0C030005C260000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
-[search_tweets] Found 4 tweets for 'microservices'
-Found 4 tweets for 'microservices'
-[get_tweet_id] Called.
-[get_tweet_id] Found tweet_id: 1954710822493831199
-[is_blocked_handle] Called.
-[is_blocked_handle] All found handles in tweet: []
-[is_own_tweet] Called.
-[is_reply_tweet] Called.
-Processing tweet: 1954710822493831199
-[reply_to_tweet] Called.
-[get_tweet_id] Called.
-[get_tweet_id] Found tweet_id: 1954710822493831199
-[reply_to_tweet] Processing tweet_id: 1954710822493831199
-[reply_to_tweet] Liked tweet: 1954710822493831199
-[generate_ai_response] Called with tweet_text: Microservices Design Patterns.
-[clean_text] Called with text: Microservices Design Patterns - a rabbit hole worth diving into! Spent a good chunk of last year wrestling with them. The learning curve is steep, but the payoff in scalability and maintainability is 🤌. Worth the headache, honestly.
-[clean_text] Returning: Microservices Design Patterns - a rabbit hole worth diving into! Spent a good chunk of last year wrestling with them. The learning curve is steep, but the payoff in scalability and maintainability is 🤌. Worth the headache, honestly.
-Generated AI response (tone: light-hearted and witty): Microservices Design Patterns - a rabbit hole worth diving into! Spent a good chunk of last year wrestling with them. The learning curve is steep, but the payoff in scalability and maintainability is 🤌. Worth the headache, honestly.
-[generate_ai_response] AI reply: Microservices Design Patterns - a rabbit hole worth diving into! Spent a good chunk of last year wrestling with them. The learning curve is steep, but the payoff in scalability and maintainability is 🤌. Worth the headache, honestly.
-[reply_to_tweet] AI reply: Microservices Design Patterns - a rabbit hole worth diving into! Spent a good chunk of last year wrestling with them. The learning curve is steep, but the payoff in scalability and maintainability is 🤌. Worth the headache, honestly.
-[reply_to_tweet] Error replying to tweet: Message: unknown error: ChromeDriver only supports characters in the BMP
-  (Session info: chrome=139.0.7258.66)
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83e13]
-        (No symbol) [0x0xd08436]
-        (No symbol) [0x0xcc725b]
-        (No symbol) [0x0xcc6881]
-        (No symbol) [0x0xcf13dc]
-        (No symbol) [0x0xcc1ff4]
-        (No symbol) [0x0xcf1654]
-        (No symbol) [0x0xd126ea]
-        (No symbol) [0x0xcf11d6]
-        (No symbol) [0x0xcc0833]
-        (No symbol) [0x0xcc16a4]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        GetHandleVerifier [0x0xe57728+94152]
-        GetHandleVerifier [0x0xe578b2+94546]
-        GetHandleVerifier [0x0xe42bca+9322]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-[get_tweet_id] Called.
-[get_tweet_id] Found tweet_id: 1952236616933884239
-[is_blocked_handle] Called.
-[is_blocked_handle] All found handles in tweet: []
-[is_own_tweet] Called.
-[is_reply_tweet] Called.
-Processing tweet: 1952236616933884239
-[reply_to_tweet] Called.
-[get_tweet_id] Called.
-[get_tweet_id] Found tweet_id: 1952236616933884239
-[reply_to_tweet] Processing tweet_id: 1952236616933884239
-[reply_to_tweet] Could not like tweet: Message: element not interactable
-  (Session info: chrome=139.0.7258.66)
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xccda34]
-        (No symbol) [0x0xcc2565]
-        (No symbol) [0x0xcf13dc]
-        (No symbol) [0x0xcc1ff4]
-        (No symbol) [0x0xcf1654]
-        (No symbol) [0x0xd126ea]
-        (No symbol) [0x0xcf11d6]
-        (No symbol) [0x0xcc0833]
-        (No symbol) [0x0xcc16a4]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        GetHandleVerifier [0x0xe57728+94152]
-        GetHandleVerifier [0x0xe578b2+94546]
-        GetHandleVerifier [0x0xe42bca+9322]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-[generate_ai_response] Called with tweet_text: 
-[clean_text] Called with text: Okay, I need a tweet to respond to. Please provide the tweet content so I can craft a helpful, knowledgeable, and engaging response as Mohit Nagaraj.
-[clean_text] Returning: Okay, I need a tweet to respond to. Please provide the tweet content so I can craft a helpful, knowledgeable, and engaging response as Mohit Nagaraj.
-Generated AI response (tone: knowledgeable and helpful): Okay, I need a tweet to respond to. Please provide the tweet content so I can craft a helpful, knowledgeable, and engaging response as Mohit Nagaraj.      
-[generate_ai_response] AI reply: Okay, I need a tweet to respond to. Please provide the tweet content so I can craft a helpful, knowledgeable, and engaging response as Mohit Nagaraj.
-[reply_to_tweet] AI reply: Okay, I need a tweet to respond to. Please provide the tweet content so I can craft a helpful, knowledgeable, and engaging response as Mohit Nagaraj.
-[reply_to_tweet] Error replying to tweet: Message: element not interactable
-  (Session info: chrome=139.0.7258.66)
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xccda34]
-        (No symbol) [0x0xcc2565]
-        (No symbol) [0x0xcf13dc]
-        (No symbol) [0x0xcc1ff4]
-        (No symbol) [0x0xcf1654]
-        (No symbol) [0x0xd126ea]
-        (No symbol) [0x0xcf11d6]
-        (No symbol) [0x0xcc0833]
-        (No symbol) [0x0xcc16a4]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        GetHandleVerifier [0x0xe57728+94152]
-        GetHandleVerifier [0x0xe578b2+94546]
-        GetHandleVerifier [0x0xe42bca+9322]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-[get_tweet_id] Called.
-[get_tweet_id] Found tweet_id: 1951172066113114359
-[is_blocked_handle] Called.
-[is_blocked_handle] All found handles in tweet: []
-[is_own_tweet] Called.
-[is_reply_tweet] Called.
-Processing tweet: 1951172066113114359
-[reply_to_tweet] Called.
-[get_tweet_id] Called.
-[get_tweet_id] Found tweet_id: 1951172066113114359
-[reply_to_tweet] Processing tweet_id: 1951172066113114359
-[reply_to_tweet] Could not like tweet: Message: element not interactable
-  (Session info: chrome=139.0.7258.66)
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xccda34]
-        (No symbol) [0x0xcc2565]
-        (No symbol) [0x0xcf13dc]
-        (No symbol) [0x0xcc1ff4]
-        (No symbol) [0x0xcf1654]
-        (No symbol) [0x0xd126ea]
-        (No symbol) [0x0xcf11d6]
-        (No symbol) [0x0xcc0833]
-        (No symbol) [0x0xcc16a4]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        GetHandleVerifier [0x0xe57728+94152]
-        GetHandleVerifier [0x0xe578b2+94546]
-        GetHandleVerifier [0x0xe42bca+9322]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-[generate_ai_response] Called with tweet_text: 
-[clean_text] Called with text: Okay, I need a tweet to respond to. Since there's no tweet provided, I'll make a general, slightly boastful tweet about my tech journey instead, aiming for engagement.
-
-Here it is:
-
-Just pushed a major update to Solace. Seeing Docker, AWS S3, and Node.js orchestrate so seamlessly is *chef's kiss*. Building complex systems is where the fun's at. DSCE '26, shaping the future one line of code at a time. 😎
-[clean_text] Returning: Okay, I need a tweet to respond to. Since there's no tweet provided, I'll make a general, slightly boastful tweet about my tech journey instead, aiming for engagement.
-
-Here it is:
-
-Just pushed a major update to Solace. Seeing Docker, AWS S3, and Node.js orchestrate so seamlessly is chef's kiss. Building complex systems is where the fun's at. DSCE '26, shaping the future one line of code at a time. 😎
-Generated AI response (tone: slightly egoistic but still professional): Okay, I need a tweet to respond to. Since there's no tweet provided, I'll make a general, slightly boastful tweet about my tech journey instead, aiming for engagement.
-
-Here it is:
-
-Just pushed a major update to Solace. Seeing Docker, AWS S3, and Node.js orchestrate so seamles...        
-[generate_ai_response] AI reply: Okay, I need a tweet to respond to. Since there's no tweet provided, I'll make a general, slightly boastful tweet about my tech journey instead, aiming for engagement.
-
-Here it is:
-
-Just pushed a major update to Solace. Seeing Docker, AWS S3, and Node.js orchestrate so seamles...        
-[reply_to_tweet] AI reply: Okay, I need a tweet to respond to. Since there's no tweet provided, I'll make a general, slightly boastful tweet about my tech journey instead, aiming for engagement.
-
-Here it is:
-
-Just pushed a major update to Solace. Seeing Docker, AWS S3, and Node.js orchestrate so seamles...        
-[reply_to_tweet] Error replying to tweet: Message: element not interactable
-  (Session info: chrome=139.0.7258.66)
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xccda34]
-        (No symbol) [0x0xcc2565]
-        (No symbol) [0x0xcf13dc]
-        (No symbol) [0x0xcc1ff4]
-        (No symbol) [0x0xcf1654]
-        (No symbol) [0x0xd126ea]
-        (No symbol) [0x0xcf11d6]
-        (No symbol) [0x0xcc0833]
-        (No symbol) [0x0xcc16a4]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        GetHandleVerifier [0x0xe57728+94152]
-        GetHandleVerifier [0x0xe578b2+94546]
-        GetHandleVerifier [0x0xe42bca+9322]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-[get_tweet_id] Called.
-[get_tweet_id] Found tweet_id: 1950508440243048588
-[is_blocked_handle] Called.
-[is_blocked_handle] All found handles in tweet: []
-[is_own_tweet] Called.
-[is_reply_tweet] Called.
-Processing tweet: 1950508440243048588
-[reply_to_tweet] Called.
-[get_tweet_id] Called.
-[get_tweet_id] Found tweet_id: 1950508440243048588
-[reply_to_tweet] Processing tweet_id: 1950508440243048588
-[reply_to_tweet] Could not like tweet: Message: element not interactable
-  (Session info: chrome=139.0.7258.66)
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xccda34]
-        (No symbol) [0x0xcc2565]
-        (No symbol) [0x0xcf13dc]
-        (No symbol) [0x0xcc1ff4]
-        (No symbol) [0x0xcf1654]
-        (No symbol) [0x0xd126ea]
-        (No symbol) [0x0xcf11d6]
-        (No symbol) [0x0xcc0833]
-        (No symbol) [0x0xcc16a4]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        GetHandleVerifier [0x0xe57728+94152]
-        GetHandleVerifier [0x0xe578b2+94546]
-        GetHandleVerifier [0x0xe42bca+9322]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-[generate_ai_response] Called with tweet_text: 
-[clean_text] Called with text: Okay, I need a tweet to respond to! I can't generate a reply without knowing what I'm replying to. Give me the tweet text and I'll craft a perfectly Mohit Nagaraj-esque response.   
-[clean_text] Returning: Okay, I need a tweet to respond to! I can't generate a reply without knowing what I'm replying to. Give me the tweet text and I'll craft a perfectly Mohit Nagaraj-esque response.
-Generated AI response (tone: slightly egoistic but still professional): Okay, I need a tweet to respond to! I can't generate a reply without knowing what I'm replying to. Give me the tweet text and I'll craft a perfectly Mohit Nagaraj-esque response.
-[generate_ai_response] AI reply: Okay, I need a tweet to respond to! I can't generate a reply without knowing what I'm replying to. Give me the tweet text and I'll craft a perfectly Mohit Nagaraj-esque response. 
-[reply_to_tweet] AI reply: Okay, I need a tweet to respond to! I can't generate a reply without knowing what I'm replying to. Give me the tweet text and I'll craft a perfectly Mohit Nagaraj-esque response.       
-[reply_to_tweet] Error replying to tweet: Message: element not interactable
-  (Session info: chrome=139.0.7258.66)
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xccda34]
-        (No symbol) [0x0xcc2565]
-        (No symbol) [0x0xcf13dc]
-        (No symbol) [0x0xcc1ff4]
-        (No symbol) [0x0xcf1654]
-        (No symbol) [0x0xd126ea]
-        (No symbol) [0x0xcf11d6]
-        (No symbol) [0x0xcc0833]
-        (No symbol) [0x0xcc16a4]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        GetHandleVerifier [0x0xe57728+94152]
-        GetHandleVerifier [0x0xe578b2+94546]
-        GetHandleVerifier [0x0xe42bca+9322]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-Processed 0 new tweets for query 'microservices'
-
-Processing query: Golang
-[search_tweets] Called with query: Golang
-Searching for tweets with query: Golang
-[12268:7336:0811/114600.639:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A00026005C260000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
-[12268:7336:0811/114600.651:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A06026005C260000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
-[12268:7336:0811/114600.663:ERROR:gpu\command_buffer\service\webgpu_decoder_impl.cc:1670] Failed to query ID3D11Device from ANGLE.
-[12268:7336:0811/114600.711:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A0C030005C260000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
-[search_tweets] Found 5 tweets for 'Golang'
-Found 5 tweets for 'Golang'
-[get_tweet_id] Called.
-[get_tweet_id] Found tweet_id: 1954630181366165846
-[is_blocked_handle] Called.
-[is_blocked_handle] All found handles in tweet: []
-[is_own_tweet] Called.
-[is_reply_tweet] Called.
-Processing tweet: 1954630181366165846
-[reply_to_tweet] Called.
-[get_tweet_id] Called.
-[get_tweet_id] Found tweet_id: 1954630181366165846
-[reply_to_tweet] Processing tweet_id: 1954630181366165846
-[reply_to_tweet] Could not like tweet: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[data-testid="like"]"}
-  (Session info: chrome=139.0.7258.66); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83e13]
-        (No symbol) [0x0xccc89e]
-        (No symbol) [0x0xcccc3b]
-        (No symbol) [0x0xcc20d1]
-        (No symbol) [0x0xcf1424]
-        (No symbol) [0x0xcc1ff4]
-        (No symbol) [0x0xcf1654]
-        (No symbol) [0x0xd126ea]
-        (No symbol) [0x0xcf11d6]
-        (No symbol) [0x0xcc0833]
-        (No symbol) [0x0xcc16a4]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        GetHandleVerifier [0x0xe57728+94152]
-        GetHandleVerifier [0x0xe578b2+94546]
-        GetHandleVerifier [0x0xe42bca+9322]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-[generate_ai_response] Called with tweet_text: Life is short so i use Python #BigData #Analytics #DataScience #AI #MachineLearning #IoT #IIoT #Python #RStats #TensorFlow #Java #JavaScript #ReactJS #GoLang #CloudComputing #Serverless #DataScientist #Linux #Programming #Coding #100DaysofCode #SQL
-[clean_text] Called with text: Life is short, so I use Go. 😉 Just kidding (mostly). Python's great for data science, but Go's concurrency is where it's at for building scalable systems! Cool stack though. 👍    
-[clean_text] Returning: Life is short, so I use Go. 😉 Just kidding (mostly). Python's great for data science, but Go's concurrency is where it's at for building scalable systems! Cool stack though. 👍
-Generated AI response (tone: light-hearted and witty): Life is short, so I use Go. 😉 Just kidding (mostly). Python's great for data science, but Go's concurrency is where it's at for building scalable systems! Cool stack though. 👍
-[generate_ai_response] AI reply: Life is short, so I use Go. 😉 Just kidding (mostly). Python's great for data science, but Go's concurrency is where it's at for building scalable systems! Cool stack though. 👍  
-[reply_to_tweet] AI reply: Life is short, so I use Go. 😉 Just kidding (mostly). Python's great for data science, but Go's concurrency is where it's at for building scalable systems! Cool stack though. 👍        
-[reply_to_tweet] Error replying to tweet: Message: invalid session id: session deleted as the browser has closed the connection
-from disconnected: not connected to DevTools
-  (Session info: chrome=139.0.7258.66)
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83e13]
-        (No symbol) [0x0xc73760]
-        (No symbol) [0x0xc915d2]
-        (No symbol) [0x0xcf7cac]
-        (No symbol) [0x0xd11fc9]
-        (No symbol) [0x0xcf11d6]
-        (No symbol) [0x0xcc0833]
-        (No symbol) [0x0xcc16a4]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        GetHandleVerifier [0x0xe57728+94152]
-        GetHandleVerifier [0x0xe578b2+94546]
-        GetHandleVerifier [0x0xe42bca+9322]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-[get_tweet_id] Called.
-Error extracting tweet ID: Message: invalid session id
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xcbfaf8]
-        (No symbol) [0x0xcf1296]
-        (No symbol) [0x0xcece75]
-        (No symbol) [0x0xcec3f6]
-        (No symbol) [0x0xc55755]
-        (No symbol) [0x0xc55cae]
-        (No symbol) [0x0xc5613d]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        (No symbol) [0x0xc55420]
-        (No symbol) [0x0xc54c36]
-        GetHandleVerifier [0x0x11f508c+3885356]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-[get_tweet_id] Called.
-Error extracting tweet ID: Message: invalid session id
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xcbfaf8]
-        (No symbol) [0x0xcf1296]
-        (No symbol) [0x0xcece75]
-        (No symbol) [0x0xcec3f6]
-        (No symbol) [0x0xc55755]
-        (No symbol) [0x0xc55cae]
-        (No symbol) [0x0xc5613d]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        (No symbol) [0x0xc55420]
-        (No symbol) [0x0xc54c36]
-        GetHandleVerifier [0x0x11f508c+3885356]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-[get_tweet_id] Called.
-Error extracting tweet ID: Message: invalid session id
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xcbfaf8]
-        (No symbol) [0x0xcf1296]
-        (No symbol) [0x0xcece75]
-        (No symbol) [0x0xcec3f6]
-        (No symbol) [0x0xc55755]
-        (No symbol) [0x0xc55cae]
-        (No symbol) [0x0xc5613d]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        (No symbol) [0x0xc55420]
-        (No symbol) [0x0xc54c36]
-        GetHandleVerifier [0x0x11f508c+3885356]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-[get_tweet_id] Called.
-Error extracting tweet ID: Message: invalid session id
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xcbfaf8]
-        (No symbol) [0x0xcf1296]
-        (No symbol) [0x0xcece75]
-        (No symbol) [0x0xcec3f6]
-        (No symbol) [0x0xc55755]
-        (No symbol) [0x0xc55cae]
-        (No symbol) [0x0xc5613d]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        (No symbol) [0x0xc55420]
-        (No symbol) [0x0xc54c36]
-        GetHandleVerifier [0x0x11f508c+3885356]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-Processed 0 new tweets for query 'Golang'
-
-Processing query: serverless
-[search_tweets] Called with query: serverless
-Searching for tweets with query: serverless
-Error searching tweets for query 'serverless': Message: invalid session id
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xcbfaf8]
-        (No symbol) [0x0xcf1296]
-        (No symbol) [0x0xcece75]
-        (No symbol) [0x0xcec3f6]
-        (No symbol) [0x0xc55755]
-        (No symbol) [0x0xc55cae]
-        (No symbol) [0x0xc5613d]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        (No symbol) [0x0xc55420]
-        (No symbol) [0x0xc54c36]
-        GetHandleVerifier [0x0x11f508c+3885356]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-Found 0 tweets for 'serverless'
-Processed 0 new tweets for query 'serverless'
-
-Processing query: #DevOps
-[search_tweets] Called with query: #DevOps
-Searching for tweets with query: #DevOps
-Error searching tweets for query '#DevOps': Message: invalid session id
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xcbfaf8]
-        (No symbol) [0x0xcf1296]
-        (No symbol) [0x0xcece75]
-        (No symbol) [0x0xcec3f6]
-        (No symbol) [0x0xc55755]
-        (No symbol) [0x0xc55cae]
-        (No symbol) [0x0xc5613d]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        (No symbol) [0x0xc55420]
-        (No symbol) [0x0xc54c36]
-        GetHandleVerifier [0x0x11f508c+3885356]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-Found 0 tweets for '#DevOps'
-Processed 0 new tweets for query '#DevOps'
-
-Processing query: #AWS
-[search_tweets] Called with query: #AWS
-Searching for tweets with query: #AWS
-Error searching tweets for query '#AWS': Message: invalid session id
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xcbfaf8]
-        (No symbol) [0x0xcf1296]
-        (No symbol) [0x0xcece75]
-        (No symbol) [0x0xcec3f6]
-        (No symbol) [0x0xc55755]
-        (No symbol) [0x0xc55cae]
-        (No symbol) [0x0xc5613d]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        (No symbol) [0x0xc55420]
-        (No symbol) [0x0xc54c36]
-        GetHandleVerifier [0x0x11f508c+3885356]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-Found 0 tweets for '#AWS'
-Processed 0 new tweets for query '#AWS'
-
-Processing query: reactjs
-[search_tweets] Called with query: reactjs
-Searching for tweets with query: reactjs
-Error searching tweets for query 'reactjs': Message: invalid session id
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xcbfaf8]
-        (No symbol) [0x0xcf1296]
-        (No symbol) [0x0xcece75]
-        (No symbol) [0x0xcec3f6]
-        (No symbol) [0x0xc55755]
-        (No symbol) [0x0xc55cae]
-        (No symbol) [0x0xc5613d]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        (No symbol) [0x0xc55420]
-        (No symbol) [0x0xc54c36]
-        GetHandleVerifier [0x0x11f508c+3885356]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-Found 0 tweets for 'reactjs'
-Processed 0 new tweets for query 'reactjs'
-
-Processing query: CI/CD
-[search_tweets] Called with query: CI/CD
-Searching for tweets with query: CI/CD
-Error searching tweets for query 'CI/CD': Message: invalid session id
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xcbfaf8]
-        (No symbol) [0x0xcf1296]
-        (No symbol) [0x0xcece75]
-        (No symbol) [0x0xcec3f6]
-        (No symbol) [0x0xc55755]
-        (No symbol) [0x0xc55cae]
-        (No symbol) [0x0xc5613d]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        (No symbol) [0x0xc55420]
-        (No symbol) [0x0xc54c36]
-        GetHandleVerifier [0x0x11f508c+3885356]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-Found 0 tweets for 'CI/CD'
-Processed 0 new tweets for query 'CI/CD'
-
-Processing query: #GCP
-[search_tweets] Called with query: #GCP
-Searching for tweets with query: #GCP
-Error searching tweets for query '#GCP': Message: invalid session id
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xcbfaf8]
-        (No symbol) [0x0xcf1296]
-        (No symbol) [0x0xcece75]
-        (No symbol) [0x0xcec3f6]
-        (No symbol) [0x0xc55755]
-        (No symbol) [0x0xc55cae]
-        (No symbol) [0x0xc5613d]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        (No symbol) [0x0xc55420]
-        (No symbol) [0x0xc54c36]
-        GetHandleVerifier [0x0x11f508c+3885356]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-Found 0 tweets for '#GCP'
-Processed 0 new tweets for query '#GCP'
-
-Processing query: Docker
-[search_tweets] Called with query: Docker
-Searching for tweets with query: Docker
-Error searching tweets for query 'Docker': Message: invalid session id
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xcbfaf8]
-        (No symbol) [0x0xcf1296]
-        (No symbol) [0x0xcece75]
-        (No symbol) [0x0xcec3f6]
-        (No symbol) [0x0xc55755]
-        (No symbol) [0x0xc55cae]
-        (No symbol) [0x0xc5613d]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        (No symbol) [0x0xc55420]
-        (No symbol) [0x0xc54c36]
-        GetHandleVerifier [0x0x11f508c+3885356]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-Found 0 tweets for 'Docker'
-Processed 0 new tweets for query 'Docker'
-
-Processing query: kubernetes
-[search_tweets] Called with query: kubernetes
-Searching for tweets with query: kubernetes
-Error searching tweets for query 'kubernetes': Message: invalid session id
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xcbfaf8]
-        (No symbol) [0x0xcf1296]
-        (No symbol) [0x0xcece75]
-        (No symbol) [0x0xcec3f6]
-        (No symbol) [0x0xc55755]
-        (No symbol) [0x0xc55cae]
-        (No symbol) [0x0xc5613d]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        (No symbol) [0x0xc55420]
-        (No symbol) [0x0xc54c36]
-        GetHandleVerifier [0x0x11f508c+3885356]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-Found 0 tweets for 'kubernetes'
-Processed 0 new tweets for query 'kubernetes'
-
-Processing query: #softwareengineering
-[search_tweets] Called with query: #softwareengineering
-Searching for tweets with query: #softwareengineering
-Error searching tweets for query '#softwareengineering': Message: invalid session id
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xcbfaf8]
-        (No symbol) [0x0xcf1296]
-        (No symbol) [0x0xcece75]
-        (No symbol) [0x0xcec3f6]
-        (No symbol) [0x0xc55755]
-        (No symbol) [0x0xc55cae]
-        (No symbol) [0x0xc5613d]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        (No symbol) [0x0xc55420]
-        (No symbol) [0x0xc54c36]
-        GetHandleVerifier [0x0x11f508c+3885356]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-Found 0 tweets for '#softwareengineering'
-Processed 0 new tweets for query '#softwareengineering'
-
-Processing query: Express.js
-[search_tweets] Called with query: Express.js
-Searching for tweets with query: Express.js
-Error searching tweets for query 'Express.js': Message: invalid session id
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xcbfaf8]
-        (No symbol) [0x0xcf1296]
-        (No symbol) [0x0xcece75]
-        (No symbol) [0x0xcec3f6]
-        (No symbol) [0x0xc55755]
-        (No symbol) [0x0xc55cae]
-        (No symbol) [0x0xc5613d]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        (No symbol) [0x0xc55420]
-        (No symbol) [0x0xc54c36]
-        GetHandleVerifier [0x0x11f508c+3885356]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-Found 0 tweets for 'Express.js'
-Processed 0 new tweets for query 'Express.js'
-
-Processing query: #fullstackdev
-[search_tweets] Called with query: #fullstackdev
-Searching for tweets with query: #fullstackdev
-Error searching tweets for query '#fullstackdev': Message: invalid session id
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xcbfaf8]
-        (No symbol) [0x0xcf1296]
-        (No symbol) [0x0xcece75]
-        (No symbol) [0x0xcec3f6]
-        (No symbol) [0x0xc55755]
-        (No symbol) [0x0xc55cae]
-        (No symbol) [0x0xc5613d]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        (No symbol) [0x0xc55420]
-        (No symbol) [0x0xc54c36]
-        GetHandleVerifier [0x0x11f508c+3885356]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-Found 0 tweets for '#fullstackdev'
-Processed 0 new tweets for query '#fullstackdev'
-
-Processing query: #Azure
-[search_tweets] Called with query: #Azure
-Searching for tweets with query: #Azure
-Error searching tweets for query '#Azure': Message: invalid session id
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xcbfaf8]
-        (No symbol) [0x0xcf1296]
-        (No symbol) [0x0xcece75]
-        (No symbol) [0x0xcec3f6]
-        (No symbol) [0x0xc55755]
-        (No symbol) [0x0xc55cae]
-        (No symbol) [0x0xc5613d]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        (No symbol) [0x0xc55420]
-        (No symbol) [0x0xc54c36]
-        GetHandleVerifier [0x0x11f508c+3885356]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-Found 0 tweets for '#Azure'
-Processed 0 new tweets for query '#Azure'
-
-Processing query: Next.js
-[search_tweets] Called with query: Next.js
-Searching for tweets with query: Next.js
-Error searching tweets for query 'Next.js': Message: invalid session id
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xcbfaf8]
-        (No symbol) [0x0xcf1296]
-        (No symbol) [0x0xcece75]
-        (No symbol) [0x0xcec3f6]
-        (No symbol) [0x0xc55755]
-        (No symbol) [0x0xc55cae]
-        (No symbol) [0x0xc5613d]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        (No symbol) [0x0xc55420]
-        (No symbol) [0x0xc54c36]
-        GetHandleVerifier [0x0x11f508c+3885356]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
-
-Found 0 tweets for 'Next.js'
-Processed 0 new tweets for query 'Next.js'
-
 Processing query: #webdev
 [search_tweets] Called with query: #webdev
 Searching for tweets with query: #webdev
-Error searching tweets for query '#webdev': Message: invalid session id
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xcbfaf8]
-        (No symbol) [0x0xcf1296]
-        (No symbol) [0x0xcece75]
-        (No symbol) [0x0xcec3f6]
-        (No symbol) [0x0xc55755]
-        (No symbol) [0x0xc55cae]
-        (No symbol) [0x0xc5613d]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        (No symbol) [0x0xc55420]
-        (No symbol) [0x0xc54c36]
-        GetHandleVerifier [0x0x11f508c+3885356]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+[19284:18200:0811/122210.369:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A0C02400E4320000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[19284:18200:0811/122210.380:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A0F02400E4320000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[19284:18200:0811/122210.391:ERROR:gpu\command_buffer\service\webgpu_decoder_impl.cc:1670] Failed to query ID3D11Device from ANGLE.
+[19284:18200:0811/122210.445:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A0803000E4320000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[search_tweets] Found 32 tweets for '#webdev'
+Found 32 tweets for '#webdev'
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1954452712914886788
+[is_tweet_already_liked] Called.
+[is_tweet_already_liked] Tweet is not liked
+[is_blocked_handle] Called.
+[is_blocked_handle] Checking handle: forbes
+[is_blocked_handle] Checking handle: forbes
+[is_blocked_handle] Checking handle: forbes
+[is_blocked_handle] Checking handle: hashtag
+[is_blocked_handle] All found handles in tweet: ['forbes', 'forbes', 'forbes', 'hashtag']
+[is_own_tweet] Called.
+[is_reply_tweet] Called.
+Processing tweet: 1954452712914886788
+[reply_to_tweet] Called.
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1954452712914886788
+[reply_to_tweet] Processing tweet_id: 1954452712914886788
+[reply_to_tweet] Extracted tweet text: ...
+[reply_to_tweet] Found image with description: Square profile picture...
 
-Found 0 tweets for '#webdev'
-Processed 0 new tweets for query '#webdev'
+right now we are not even waiting at any place and the actual workflow seems broken. refer to above sonsole logs.
+in the current file we have updated few of the packages as well. i want you to remove the installation of extension handling as well
 
-Processing query: Node.js
-[search_tweets] Called with query: Node.js
-Searching for tweets with query: Node.js
-Error searching tweets for query 'Node.js': Message: invalid session id
-Stacktrace:
-        GetHandleVerifier [0x0xe4fd23+62915]
-        GetHandleVerifier [0x0xe4fd64+62980]
-        (No symbol) [0x0xc83c70]
-        (No symbol) [0x0xcbfaf8]
-        (No symbol) [0x0xcf1296]
-        (No symbol) [0x0xcece75]
-        (No symbol) [0x0xcec3f6]
-        (No symbol) [0x0xc55755]
-        (No symbol) [0x0xc55cae]
-        (No symbol) [0x0xc5613d]
-        GetHandleVerifier [0x0x10b8d13+2590131]
-        GetHandleVerifier [0x0x10b3f5a+2570234]
-        GetHandleVerifier [0x0xe759da+217722]
-        GetHandleVerifier [0x0xe66048+153832]
-        GetHandleVerifier [0x0xe6c4ad+179533]
-        (No symbol) [0x0xc55420]
-        (No symbol) [0x0xc54c36]
-        GetHandleVerifier [0x0x11f508c+3885356]
-        BaseThreadInitThunk [0x0x77215d49+25]
-        RtlInitializeExceptionChain [0x0x77c0d09b+107]
-        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+this was the file where all the tweet extraction was there and was working properly we were even replying properly and proceeding onto next as intended with proper duration make use of the below file content for building it properly to the current file changes in twitter_bot.python
 
-Found 0 tweets for 'Node.js'
-Processed 0 new tweets for query 'Node.js'
+import os
+import json
+import time
+import random
+from dotenv import load_dotenv
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException, NoSuchElementException
+from datetime import datetime, timedelta
+import google.generativeai as genai
 
-Finished a cycle of queries. Waiting 300 seconds before the next cycle...
+# Load environment variables
+load_dotenv()
+
+class TwitterBot:
+    def __init__(self):
+        self.username = os.getenv('TWITTER_USERNAME')
+        self.password = os.getenv('TWITTER_PASSWORD')
+        self.cookies_file = os.getenv('COOKIES_FILE')
+        # Set Chrome profile path to a custom directory
+        self.chrome_profile = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'chrome_profile')
+        
+        # Initialize Gemini AI
+        gemini_api_key = os.getenv('GEMINI_API_KEY')
+        if not gemini_api_key:
+            raise ValueError("GEMINI_API_KEY not found in environment variables")
+        genai.configure(api_key=gemini_api_key)
+        self.model = genai.GenerativeModel('gemini-2.5-flash')
+        
+        self.tech_search_queries = [
+            "Next.js", "Node.js", "Express.js", "Golang", "CI/CD", "Docker",
+            "#fullstackdev", "#webdev", "#softwareengineering",
+            "cloud computing", "#AWS", "#GCP", "#Azure", "#DevOps",
+            "serverless", "microservices", "kubernetes", "reactjs"
+        ]
+
+        # Remove the static reply templates as we'll use AI-generated responses
+        print("AI model initialized successfully!")
+        self.setup_driver()  # Initialize the driver when creating the bot
+
+    def setup_driver(self):
+        print("[setup_driver] Called.")
+        try:
+            # Create profile directory if it doesn't exist
+            os.makedirs(self.chrome_profile, exist_ok=True)
+            
+            # Set up Chrome options
+            chrome_options = webdriver.ChromeOptions()
+            chrome_options.add_argument('--start-maximized')
+            chrome_options.add_argument('--disable-gpu')
+            chrome_options.add_argument('--no-sandbox')
+            chrome_options.add_argument('--disable-dev-shm-usage')
+            chrome_options.add_argument(f'--user-data-dir={self.chrome_profile}')
+            chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
+            chrome_options.add_experimental_option('useAutomationExtension', False)
+            
+            # Initialize the Chrome WebDriver
+            self.driver = webdriver.Chrome(options=chrome_options)
+            self.wait = WebDriverWait(self.driver, 20)
+            
+            # Navigate to Twitter
+            print("Opening Twitter...")
+            self.driver.get("https://twitter.com")
+            print("Twitter opened successfully!")
+                
+            print("[setup_driver] Success.")
+        except Exception as e:
+            print(f"[setup_driver] Error: {str(e)}")
+            if hasattr(self, 'driver'):
+                self.driver.quit()
+            raise e
+
+    def save_cookies(self):
+        print("[save_cookies] Called.")
+        with open(self.cookies_file, 'w') as f:
+            json.dump(self.driver.get_cookies(), f)
+        print("[save_cookies] Cookies saved.")
+
+    def load_cookies(self):
+        print("[load_cookies] Called.")
+        try:
+            with open(self.cookies_file, 'r') as f:
+                cookies = json.load(f)
+                for cookie in cookies:
+                    self.driver.add_cookie(cookie)
+            print("[load_cookies] Cookies loaded.")
+            return True
+        except FileNotFoundError:
+            print("[load_cookies] No cookies file found.")
+            return False
+
+    def login(self):
+        print("[login] Called.")
+        try:
+            print("Starting login process...")
+            self.driver.get('https://x.com/i/flow/login')
+            time.sleep(5)  # Wait for page to fully load
+            
+            print("Checking for existing cookies...")
+            if not self.load_cookies():
+                print("No existing cookies found. Proceeding with manual login...")
+                
+                # Wait and enter username
+                print("Looking for username field...")
+                username_input = self.wait.until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, 'input[autocomplete="username"]'))
+                )
+                print("Found username field, entering username...")
+                username_input.clear()
+                for char in self.username:
+                    username_input.send_keys(char)
+                    time.sleep(0.1)
+                time.sleep(1)
+                username_input.send_keys(Keys.RETURN)
+                time.sleep(2)
+                
+                # Wait and enter password
+                print("Looking for password field...")
+                password_input = self.wait.until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, 'input[name="password"]'))
+                )
+                print("Found password field, entering password...")
+                password_input.clear()
+                for char in self.password:
+                    password_input.send_keys(char)
+                    time.sleep(0.1)
+                time.sleep(1)
+                password_input.send_keys(Keys.RETURN)
+                
+                # Wait for login to complete
+                print("Waiting for login to complete...")
+                time.sleep(10)
+                self.save_cookies()
+            
+            # Navigate to home feed
+            print("Navigating to home feed...")
+            self.driver.get('https://x.com/home')
+            time.sleep(5)
+            
+            # Verify login success
+            if "home" in self.driver.current_url.lower() or "communities/1493446837214187523" or "communities/1471580197908586507" in self.driver.current_url:
+                print("Successfully logged in and navigated to the community!")
+                # Navigate to the specified community after login
+                # print("Navigating to the community page...")
+                # self.driver.get('https://x.com/i/communities/1471580197908586507')
+                time.sleep(5)
+                return True
+            else:
+                print("Login verification failed. Current URL:", self.driver.current_url)
+                return False
+            
+        except Exception as e:
+            print(f"Login failed with error: {str(e)}")
+            print("Current URL:", self.driver.current_url)
+            return False
+
+    def search_tweets(self, query):
+        print(f"[search_tweets] Called with query: {query}")
+        try:
+            print(f"Searching for tweets with query: {query}")
+            search_url = f"https://x.com/search?q={query}&src=typed_query"
+            self.driver.get(search_url)
+            time.sleep(5)
+
+            tweets = self.wait.until(
+                EC.presence_of_all_elements_located((By.CSS_SELECTOR, 'article[data-testid="tweet"]'))
+            )
+            print(f"[search_tweets] Found {len(tweets)} tweets for '{query}'")
+            return tweets
+        except Exception as e:
+            print(f"Error searching tweets for query '{query}': {str(e)}")
+            return []
+
+    def get_tweet_id(self, tweet_element):
+        print("[get_tweet_id] Called.")
+        try:
+            # Find all anchor tags in the tweet element
+            anchors = tweet_element.find_elements(By.TAG_NAME, 'a')
+            for anchor in anchors:
+                href = anchor.get_attribute('href')
+                if href and '/status/' in href:
+                    # The tweet ID is the part after the last '/'
+                    tweet_id = href.split('/status/')[-1].split('?')[0]
+                    print(f"[get_tweet_id] Found tweet_id: {tweet_id}")
+                    return tweet_id
+            return None
+        except Exception as e:
+            print(f"Error extracting tweet ID: {str(e)}")
+            return None
+
+    def is_blocked_handle(self, tweet_element):
+        print("[is_blocked_handle] Called.")
+        blocked_handles = [
+            'elonmusk',
+            'skysingh04'
+        ]
+        try:
+            # Find all anchor tags in the tweet element (recursively)
+            anchors = tweet_element.find_elements(By.XPATH, ".//a")
+            found_handles = []
+            for anchor in anchors:
+                href = anchor.get_attribute('href')
+                if href and href.startswith('/') and '/status/' not in href:
+                    handle = href.strip('/').lower()
+                    found_handles.append(handle)
+                    print(f"[is_blocked_handle] Checking handle: {handle}")
+                    if handle in blocked_handles:
+                        print(f"[is_blocked_handle] Blocked handle found: {handle}")
+                        return True
+            # Fallback: check if tweet text contains @blocked_handle or handle name
+            try:
+                tweet_text_elem = tweet_element.find_element(By.CSS_SELECTOR, '[data-testid="tweetText"]')
+                tweet_text = tweet_text_elem.text.lower()
+                for handle in blocked_handles:
+                    if f"@{handle}" in tweet_text or handle in tweet_text:
+                        print(f"[is_blocked_handle] Blocked handle found in tweet text: {handle}")
+                        return True
+            except Exception as e:
+                print(f"[is_blocked_handle] Could not extract tweet text for fallback: {str(e)}")
+            print(f"[is_blocked_handle] All found handles in tweet: {found_handles}")
+            return False
+        except Exception as e:
+            print(f"Error checking blocked handle: {str(e)}")
+            return False
+
+    def is_own_tweet(self, tweet_element):
+        print("[is_own_tweet] Called.")
+        try:
+            # Find all anchor tags in the tweet element
+            anchors = tweet_element.find_elements(By.TAG_NAME, 'a')
+            for anchor in anchors:
+                href = anchor.get_attribute('href')
+                if href and href.startswith('/') and '/status/' not in href:
+                    # href is like '/username'
+                    handle = href.strip('/').lower()
+                    if handle == self.username.lower():
+                        print(f"[is_own_tweet] Own tweet found: {handle}")
+                        return True
+            return False
+        except Exception as e:
+            print(f"Error checking own tweet: {str(e)}")
+            return False
+
+    def is_reply_tweet(self, tweet_element):
+        print("[is_reply_tweet] Called.")
+        try:
+            # Check for 'Replying to' text in the tweet element
+            reply_texts = tweet_element.find_elements(By.XPATH, ".//*[contains(text(), 'Replying to')]")
+            if reply_texts:
+                print(f"[is_reply_tweet] Reply tweet found: {reply_texts[0].text}")
+                return True
+            # Optionally, check for reply icon or other indicators here
+            return False
+        except Exception as e:
+            print(f"Error checking reply tweet: {str(e)}")
+            return False
+
+    def generate_ai_response(self, tweet_text):
+        print(f"[generate_ai_response] Called with tweet_text: {tweet_text}")
+        try:
+            tones = [
+                "professional and insightful",
+                "light-hearted and witty",
+                "assertive and confident",
+                "knowledgeable and helpful",
+                "slightly egoistic but still professional"
+            ]
+            selected_tone = random.choice(tones)
+
+            # Mohit Nagaraj's background and skills
+            mohit_bio = (
+                "You are Mohit Nagaraj, a Computer Science and Engineering student at Dayananda Sagar College Of Engineering (graduating 2026, CGPA 9.23). "
+                "You have strong technical skills: JavaScript, TypeScript, Go, Dart, C++. "
+                "You work with React, Next.js, Node.js + Express, PostgreSQL, MongoDB, Firestore, Flutter, Git, Redis, and Cloud. "
+                "You are experienced with Tailwind, Three.js, OAuth, tRPC, Redux, Context, Firebase, Passport, Prisma, Bootstrap, RESTful API, GraphQL, gRPC, GoFiber, Gin, and Nginx. "
+                "Notable projects: Solace (GitHub deploy platform with Docker, AWS S3, Node.js, Redis), VidStreamX (Go, FFmpeg, Docker, AWS S3/SQS), WeChat (React, Vite, Express, Socket.io, MongoDB, AWS EC2/CloudFront), Exsense (Vite, Express, Apollo GraphQL, MongoDB, Passport). "
+                "Experience: Frontend Developer at Boho, SellerSetu (Nov 2024 - Feb 2025, Expo React Native, payments, Zustand, React Query), SDE Intern at Springreen (Sep 2024 - Dec 2024, Flask, Golang, CI/CD, microservices on EC2). "
+                "Achievements: 1st place Innerve 9 AIT Pune Hackathon (AI EdTech), 2nd place GoFr Hackathon (AI social outreach), Hacktoberfest 2024 open-source contributor. "
+                "You are passionate about building, learning, and sharing in the tech community. "
+            )
+
+            prompt = f"""
+            {mohit_bio}
+            Your goal is to increase your outreach on Twitter by providing valuable, engaging, and sometimes humorous or assertive comments.
+
+            TONE: {selected_tone}
+
+            IMPORTANT GUIDELINES:
+            - Sound like a real person with a strong technical background.
+            - Use professional but accessible language. Avoid overly technical jargon unless it's appropriate for the context.
+            - Use abbreviations like 'sheesh', 'cool', 'nice', 'lmao', 'lol', 'tf' sparingly and only when it fits the tone.
+            - Keep replies concise and under 280 characters.
+            - No hashtags.
+            - Be relevant to the tweet's content.
+            - Project confidence and expertise.
+
+            Tweet to respond to: "{tweet_text}"
+
+            Generate a natural and engaging reply as Mohit Nagaraj:"""
+
+            response = self.model.generate_content(prompt)
+            ai_reply = response.text.strip().strip('"')
+
+            ai_reply = self.clean_text(ai_reply)
+
+            if len(ai_reply) > 280:
+                ai_reply = ai_reply[:277] + "..."
+
+            print(f"Generated AI response (tone: {selected_tone}): {ai_reply}")
+            print(f"[generate_ai_response] AI reply: {ai_reply}")
+            return ai_reply
+
+        except Exception as e:
+            print(f"Error generating AI response: {str(e)}")
+            return "cool"
+
+    def monitor_and_reply(self, interval=60 * 5):
+        print(f"[monitor_and_reply] Called with interval: {interval}")
+        if not self.login():
+            print("Failed to login. Please check your credentials.")
+            return
+
+        processed_tweets = set()
+        print("Starting to monitor tech tweets...")
+
+        while True:
+            random.shuffle(self.tech_search_queries)
+            for query in self.tech_search_queries:
+                try:
+                    print(f"\nProcessing query: {query}")
+                    tweets = self.search_tweets(query)
+                    print(f"Found {len(tweets)} tweets for '{query}'")
+
+                    tweets_processed_this_round = 0
+                    for tweet in tweets:
+                        try:
+                            tweet_id = self.get_tweet_id(tweet)
+                            if not tweet_id or tweet_id in processed_tweets:
+                                continue
+
+                            if self.is_blocked_handle(tweet) or self.is_own_tweet(tweet) or self.is_reply_tweet(tweet):
+                                continue
+                            
+                            print(f"Processing tweet: {tweet_id}")
+                            if self.reply_to_tweet(tweet):
+                                processed_tweets.add(tweet_id)
+                                tweets_processed_this_round += 1
+                                print(f"Successfully replied to tweet: {tweet_id}")
+                                time.sleep(random.uniform(20, 40))
+
+                        except Exception as e:
+                            print(f"Error processing a tweet: {str(e)}")
+                            continue
+                    
+                    print(f"Processed {tweets_processed_this_round} new tweets for query '{query}'")
+
+                except Exception as e:
+                    print(f"An error occurred while processing query '{query}': {str(e)}")
+                    continue
+            
+            if len(processed_tweets) > 500:
+                print("Cleaning up processed tweets list...")
+                processed_list = list(processed_tweets)
+                processed_tweets = set(processed_list[-500:])
+
+            print(f"\nFinished a cycle of queries. Waiting {interval} seconds before the next cycle...")
+            time.sleep(interval)
+
+    def cleanup(self):
+        print("[cleanup] Called.")
+        if hasattr(self, 'driver'):
+            self.driver.quit()
+        print("[cleanup] Browser closed.")
+
+    def clean_text(self, text):
+        """Clean the AI-generated text (strip whitespace, remove unwanted characters, etc)."""
+        print(f"[clean_text] Called with text: {text}")
+        # Basic cleaning: strip whitespace, remove leading/trailing quotes, and remove all '*' characters
+        cleaned = text.strip().strip('"').replace('*', '')
+        print(f"[clean_text] Returning: {cleaned}")
+        return cleaned
+
+    def reply_to_tweet(self, tweet_element):
+        """Reply to a tweet using Selenium. Log the tweet_id and the AI-generated reply. Return True if successful, False otherwise."""
+        print("[reply_to_tweet] Called.")
+        try:
+            tweet_id = self.get_tweet_id(tweet_element)
+            print(f"[reply_to_tweet] Processing tweet_id: {tweet_id}")
+            # Like the tweet before replying
+            try:
+                like_button = tweet_element.find_element(By.CSS_SELECTOR, '[data-testid="like"]')
+                like_button.click()
+                print(f"[reply_to_tweet] Liked tweet: {tweet_id}")
+                time.sleep(1)
+            except Exception as e:
+                print(f"[reply_to_tweet] Could not like tweet: {str(e)}")
+            # Extract tweet text for context
+            tweet_text = ""
+            try:
+                tweet_text_elem = tweet_element.find_element(By.CSS_SELECTOR, '[data-testid="tweetText"]')
+                tweet_text = tweet_text_elem.text
+            except Exception as e:
+                print(f"[reply_to_tweet] Could not extract tweet text: {str(e)}")
+            ai_reply = self.generate_ai_response(tweet_text)
+            print(f"[reply_to_tweet] AI reply: {ai_reply}")
+            # Find and click the reply button
+            reply_button = tweet_element.find_element(By.CSS_SELECTOR, '[data-testid="reply"]')
+            reply_button.click()
+            time.sleep(2)
+            # Find the reply text area (should be the only textarea visible)
+            reply_box = self.wait.until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, 'div[role="dialog"] div[role="textbox"]'))
+            )
+            reply_box.send_keys(ai_reply)
+            time.sleep(1)
+            # Find and click the reply submit button
+            submit_buttons = tweet_element.parent.find_elements(By.CSS_SELECTOR, 'div[role="dialog"] [data-testid="tweetButton"]')
+            if not submit_buttons:
+                # Try global search if not found in parent
+                submit_buttons = self.driver.find_elements(By.CSS_SELECTOR, 'div[role="dialog"] [data-testid="tweetButton"]')
+            if submit_buttons:
+                submit_buttons[0].click()
+                print(f"[reply_to_tweet] Successfully replied to tweet: {tweet_id}")
+                time.sleep(2)
+                return True
+            else:
+                print(f"[reply_to_tweet] Could not find reply submit button for tweet: {tweet_id}")
+                return False
+        except Exception as e:
+            print(f"[reply_to_tweet] Error replying to tweet: {str(e)}")
+            return False
+
+def main():
+    bot = TwitterBot()
+    try:
+        bot.monitor_and_reply(interval=60 * 5)  # Check for new tweets every 5 minutes
+    except KeyboardInterrupt:
+        print("\nStopping bot...")
+    finally:
+        bot.cleanup()
+
+if __name__ == "__main__":
+    main()

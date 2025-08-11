@@ -174,8 +174,8 @@ class TwitterBot:
             print("✓ WebDriverWait configured (20 seconds)")
             
             # Install Control Panel for Twitter extension FIRST
-            print("\n=== Installing Control Panel for Twitter Extension ===")
-            self.install_control_panel_extension()
+            # print("\n=== Installing Control Panel for Twitter Extension ===")
+            # self.install_control_panel_extension()
             
             # Now navigate to Twitter after extension is installed
             print("\nNavigating to Twitter...")
