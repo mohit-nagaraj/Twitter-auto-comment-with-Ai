@@ -237,43 +237,47 @@ class TwitterBot:
             print("Current URL:", self.driver.current_url)
             return False
 
-    def search_tweets(self, query):
-        print(f"[search_tweets] Called with query: {query}")
+    def search_tweets(self, query, tab="top"):
+        print(f"[search_tweets] Called with query: {query}, tab: {tab}")
         try:
-            print(f"Searching for tweets with query: {query}")
-            
-            # Navigate to explore page first
-            self.driver.get("https://x.com/explore")
-            time.sleep(3)
-            
-            # Find and click on the search box
-            search_box = self.wait.until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, 'input[aria-label="Search query"]'))
-            )
-            search_box.clear()
-            search_box.send_keys(query)
-            search_box.send_keys(Keys.RETURN)
-            
-            # Wait for search results to load
-            time.sleep(5)
-            
-            # Click on "Latest" tab to get most recent tweets
-            try:
-                latest_tab = self.driver.find_element(By.XPATH, "//span[text()='Latest']")
-                latest_tab.click()
-                print(f"[search_tweets] Clicked on Latest tab for query: {query}")
+            if tab == "top":
+                print(f"Searching for tweets with query: {query}")
+                
+                # Navigate to explore page first
+                self.driver.get("https://x.com/explore")
                 time.sleep(3)
-            except:
-                print(f"[search_tweets] Could not find Latest tab, continuing with Top results")
+                
+                # Find and click on the search box
+                search_box = self.wait.until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, 'input[aria-label="Search query"]'))
+                )
+                search_box.clear()
+                search_box.send_keys(query)
+                search_box.send_keys(Keys.RETURN)
+                
+                # Wait for search results to load (Top tab is default)
+                time.sleep(5)
+                print(f"[search_tweets] Searching in Top tab for query: {query}")
+            
+            elif tab == "latest":
+                # Click on "Latest" tab to get most recent tweets
+                try:
+                    latest_tab = self.driver.find_element(By.XPATH, "//span[text()='Latest']")
+                    latest_tab.click()
+                    print(f"[search_tweets] Clicked on Latest tab for query: {query}")
+                    time.sleep(5)
+                except:
+                    print(f"[search_tweets] Could not find Latest tab")
+                    return []
             
             # Now wait for tweets to load
             tweets = self.wait.until(
                 EC.presence_of_all_elements_located((By.CSS_SELECTOR, 'article[data-testid="tweet"]'))
             )
-            print(f"[search_tweets] Found {len(tweets)} tweets for '{query}'")
+            print(f"[search_tweets] Found {len(tweets)} tweets in {tab} tab for '{query}'")
             return tweets
         except Exception as e:
-            print(f"Error searching tweets for query '{query}': {str(e)}")
+            print(f"Error searching tweets for query '{query}' in {tab} tab: {str(e)}")
             return []
 
     def get_tweet_id(self, tweet_element):
@@ -410,12 +414,13 @@ class TwitterBot:
             - Use abbreviations like 'sheesh', 'cool', 'nice', 'lmao', 'lol', 'tf' sparingly and only when it fits the tone.
             - Keep replies concise and under 280 characters.
             - No hashtags.
+            - NO EMOJIS AT ALL. Do not use any emojis in your response.
             - Be relevant to the tweet's content.
             - Project confidence and expertise.
 
             Tweet to respond to: "{tweet_text}"
 
-            Generate a natural and engaging reply as Mohit Nagaraj:"""
+            Generate a natural and engaging reply as Mohit Nagaraj (no hashtags, no emojis):"""
 
             response = self.models.generate_content(
                 model="gemini-2.0-flash-exp",
@@ -424,6 +429,24 @@ class TwitterBot:
             ai_reply = response.text.strip().strip('"')
 
             ai_reply = self.clean_text(ai_reply)
+            
+            # Remove any emojis that might have been generated
+            import re
+            # Remove emojis using regex
+            emoji_pattern = re.compile("["
+                u"\U0001F600-\U0001F64F"  # emoticons
+                u"\U0001F300-\U0001F5FF"  # symbols & pictographs
+                u"\U0001F680-\U0001F6FF"  # transport & map symbols
+                u"\U0001F1E0-\U0001F1FF"  # flags (iOS)
+                u"\U00002702-\U000027B0"
+                u"\U000024C2-\U0001F251"
+                u"\U0001F900-\U0001F9FF"  # Supplemental Symbols and Pictographs
+                u"\U00002600-\U000027BF"  # Miscellaneous Symbols
+                u"\U0001F650-\U0001F67F"  # Ornamental Dingbats
+                u"\U0001F780-\U0001F7FF"  # Geometric Shapes Extended
+                u"\U0001F800-\U0001F8FF"  # Supplemental Arrows-C
+                "]+", flags=re.UNICODE)
+            ai_reply = emoji_pattern.sub('', ai_reply).strip()
 
             if len(ai_reply) > 280:
                 ai_reply = ai_reply[:277] + "..."
@@ -444,18 +467,23 @@ class TwitterBot:
 
         processed_tweets = set()
         print("Starting to monitor tech tweets...")
-        max_tweets_per_query = 5  # Limit tweets per query
+        max_tweets_per_tab = 5  # Limit tweets per tab
 
         while True:
             random.shuffle(self.tech_search_queries)
             for query in self.tech_search_queries:
                 try:
-                    print(f"\nProcessing query: {query}")
-                    tweets = self.search_tweets(query)
-                    print(f"Found {len(tweets)} tweets for '{query}'")
-
-                    tweets_processed_this_round = 0
-                    for tweet in tweets[:max_tweets_per_query]:  # Process only first 5 tweets
+                    print(f"\n{'='*50}")
+                    print(f"Processing query: {query}")
+                    print(f"{'='*50}")
+                    
+                    # Process Top tab first
+                    print(f"\n--- Processing TOP tab for '{query}' ---")
+                    top_tweets = self.search_tweets(query, tab="top")
+                    print(f"Found {len(top_tweets)} tweets in Top tab for '{query}'")
+                    
+                    tweets_processed_top = 0
+                    for tweet in top_tweets[:max_tweets_per_tab]:  # Process only first 5 tweets
                         try:
                             tweet_id = self.get_tweet_id(tweet)
                             if not tweet_id or tweet_id in processed_tweets:
@@ -473,7 +501,7 @@ class TwitterBot:
                             print(f"Processing tweet: {tweet_id}")
                             if self.reply_to_tweet(tweet):
                                 processed_tweets.add(tweet_id)
-                                tweets_processed_this_round += 1
+                                tweets_processed_top += 1
                                 print(f"Successfully replied to tweet: {tweet_id}")
                                 time.sleep(random.uniform(20, 40))
 
@@ -481,7 +509,42 @@ class TwitterBot:
                             print(f"Error processing a tweet: {str(e)}")
                             continue
                     
-                    print(f"Processed {tweets_processed_this_round} new tweets for query '{query}'")
+                    print(f"Processed {tweets_processed_top} tweets from Top tab for query '{query}'")
+                    
+                    # Now process Latest tab
+                    print(f"\n--- Processing LATEST tab for '{query}' ---")
+                    latest_tweets = self.search_tweets(query, tab="latest")
+                    print(f"Found {len(latest_tweets)} tweets in Latest tab for '{query}'")
+                    
+                    tweets_processed_latest = 0
+                    for tweet in latest_tweets[:max_tweets_per_tab]:  # Process only first 5 tweets
+                        try:
+                            tweet_id = self.get_tweet_id(tweet)
+                            if not tweet_id or tweet_id in processed_tweets:
+                                continue
+
+                            # Check if tweet is already liked (to prevent duplicate comments)
+                            if self.is_tweet_already_liked(tweet):
+                                print(f"Tweet {tweet_id} already liked, skipping...")
+                                processed_tweets.add(tweet_id)
+                                continue
+
+                            if self.is_blocked_handle(tweet) or self.is_own_tweet(tweet) or self.is_reply_tweet(tweet):
+                                continue
+                            
+                            print(f"Processing tweet: {tweet_id}")
+                            if self.reply_to_tweet(tweet):
+                                processed_tweets.add(tweet_id)
+                                tweets_processed_latest += 1
+                                print(f"Successfully replied to tweet: {tweet_id}")
+                                time.sleep(random.uniform(20, 40))
+
+                        except Exception as e:
+                            print(f"Error processing a tweet: {str(e)}")
+                            continue
+                    
+                    print(f"Processed {tweets_processed_latest} tweets from Latest tab for query '{query}'")
+                    print(f"Total processed for '{query}': {tweets_processed_top + tweets_processed_latest} tweets")
                     
                     # Add 10 second delay between queries
                     print(f"Waiting 10 seconds before next query...")
