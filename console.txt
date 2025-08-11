@@ -27,11 +27,6 @@ Processing tweet: 1954452712914886788
 [reply_to_tweet] Extracted tweet text: ...
 [reply_to_tweet] Found image with description: Square profile picture...
 
-right now we are not even waiting at any place and the actual workflow seems broken. refer to above sonsole logs.
-in the current file we have updated few of the packages as well. i want you to remove the installation of extension handling as well
-
-this was the file where all the tweet extraction was there and was working properly we were even replying properly and proceeding onto next as intended with proper duration make use of the below file content for building it properly to the current file changes in twitter_bot.python
-
 import os
 import json
 import time
