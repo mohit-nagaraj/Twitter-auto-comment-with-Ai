@@ -2,6 +2,8 @@ import os
 import json
 import time
 import random
+import sys
+import traceback
 from dotenv import load_dotenv
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -14,23 +16,61 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from datetime import datetime, timedelta
 import google.generativeai as genai
 
+print("\n=== Starting Twitter Bot ===")
+print(f"Python version: {sys.version}")
+print(f"Current working directory: {os.getcwd()}")
+
 # Load environment variables
 load_dotenv()
+print("Environment variables loaded")
+
+# Check required environment variables
+env_vars = {
+    'TWITTER_USERNAME': os.getenv('TWITTER_USERNAME'),
+    'TWITTER_PASSWORD': os.getenv('TWITTER_PASSWORD'),
+    'GEMINI_API_KEY': os.getenv('GEMINI_API_KEY'),
+    'COOKIES_FILE': os.getenv('COOKIES_FILE')
+}
+
+print("\n=== Environment Variables Status ===")
+for key, value in env_vars.items():
+    if value:
+        if 'PASSWORD' in key or 'API_KEY' in key:
+            print(f"{key}: {'*' * 8} (hidden)")
+        else:
+            print(f"{key}: {value}")
+    else:
+        print(f"{key}: NOT SET ⚠️")
+
+missing_vars = [k for k, v in env_vars.items() if not v]
+if missing_vars:
+    print(f"\n⚠️ Missing required environment variables: {', '.join(missing_vars)}")
+    print("Please check your .env file")
+    sys.exit(1)
 
 class TwitterBot:
     def __init__(self):
-        self.username = os.getenv('TWITTER_USERNAME')
-        self.password = os.getenv('TWITTER_PASSWORD')
-        self.cookies_file = os.getenv('COOKIES_FILE')
-        # Set Chrome profile path to a custom directory
-        self.chrome_profile = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'chrome_profile')
-        
-        # Initialize Gemini AI
-        gemini_api_key = os.getenv('GEMINI_API_KEY')
-        if not gemini_api_key:
-            raise ValueError("GEMINI_API_KEY not found in environment variables")
-        genai.configure(api_key=gemini_api_key)
-        self.model = genai.GenerativeModel('gemini-2.5-flash')
+        print("\n=== Initializing TwitterBot ===")
+        try:
+            self.username = os.getenv('TWITTER_USERNAME')
+            self.password = os.getenv('TWITTER_PASSWORD')
+            self.cookies_file = os.getenv('COOKIES_FILE')
+            # Set Chrome profile path to a custom directory
+            self.chrome_profile = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'chrome_profile')
+            print(f"Chrome profile directory: {self.chrome_profile}")
+            
+            # Initialize Gemini AI
+            print("\nInitializing Gemini AI...")
+            gemini_api_key = os.getenv('GEMINI_API_KEY')
+            if not gemini_api_key:
+                raise ValueError("GEMINI_API_KEY not found in environment variables")
+            genai.configure(api_key=gemini_api_key)
+            self.model = genai.GenerativeModel('gemini-2.0-flash-exp')
+            print("✓ Gemini AI model initialized successfully!")
+        except Exception as e:
+            print(f"\n❌ Error during initialization: {str(e)}")
+            print(traceback.format_exc())
+            sys.exit(1)
         
         self.tech_search_queries = [
             "Next.js", "Node.js", "Express.js", "Golang", "CI/CD", "Docker",
@@ -38,42 +78,74 @@ class TwitterBot:
             "cloud computing", "#AWS", "#GCP", "#Azure", "#DevOps",
             "serverless", "microservices", "kubernetes", "reactjs"
         ]
-
-        # Remove the static reply templates as we'll use AI-generated responses
-        print("AI model initialized successfully!")
-        self.setup_driver()  # Initialize the driver when creating the bot
+        print(f"\nSearch queries configured: {len(self.tech_search_queries)} queries")
+        
+        # Initialize the driver when creating the bot
+        print("\n=== Setting up Chrome Driver ===")
+        self.setup_driver()
 
     def setup_driver(self):
-        print("[setup_driver] Called.")
+        print("\nSetting up Chrome driver...")
         try:
             # Create profile directory if it doesn't exist
             os.makedirs(self.chrome_profile, exist_ok=True)
+            print(f"✓ Chrome profile directory created/verified: {self.chrome_profile}")
             
             # Set up Chrome options
+            print("\nConfiguring Chrome options...")
             chrome_options = webdriver.ChromeOptions()
             chrome_options.add_argument('--start-maximized')
             chrome_options.add_argument('--disable-gpu')
             chrome_options.add_argument('--no-sandbox')
             chrome_options.add_argument('--disable-dev-shm-usage')
             chrome_options.add_argument(f'--user-data-dir={self.chrome_profile}')
+            chrome_options.add_argument('--disable-blink-features=AutomationControlled')
             chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
             chrome_options.add_experimental_option('useAutomationExtension', False)
+            # Add logging preference
+            chrome_options.add_experimental_option('prefs', {
+                'profile.default_content_setting_values.notifications': 2
+            })
+            print("✓ Chrome options configured")
             
             # Initialize the Chrome WebDriver with automatic ChromeDriver management
-            service = Service(ChromeDriverManager().install())
+            print("\nDownloading/verifying ChromeDriver...")
+            try:
+                driver_path = ChromeDriverManager().install()
+                print(f"✓ ChromeDriver path: {driver_path}")
+            except Exception as e:
+                print(f"❌ Error downloading ChromeDriver: {str(e)}")
+                print("Try manually installing ChromeDriver or updating Chrome browser")
+                raise
+            
+            print("\nStarting Chrome browser...")
+            service = Service(driver_path)
             self.driver = webdriver.Chrome(service=service, options=chrome_options)
+            print("✓ Chrome browser started successfully")
+            
             self.wait = WebDriverWait(self.driver, 20)
+            print("✓ WebDriverWait configured (20 seconds)")
             
             # Navigate to Twitter
-            print("Opening Twitter...")
+            print("\nNavigating to Twitter...")
             self.driver.get("https://twitter.com")
-            print("Twitter opened successfully!")
+            time.sleep(3)  # Give it time to load
+            print(f"✓ Current URL: {self.driver.current_url}")
+            print(f"✓ Page title: {self.driver.title}")
+            print("\n✅ Chrome driver setup completed successfully!")
                 
-            print("[setup_driver] Success.")
         except Exception as e:
-            print(f"[setup_driver] Error: {str(e)}")
+            print(f"\n❌ Error setting up Chrome driver: {str(e)}")
+            print("\nFull error traceback:")
+            print(traceback.format_exc())
+            
             if hasattr(self, 'driver'):
-                self.driver.quit()
+                print("Attempting to close browser...")
+                try:
+                    self.driver.quit()
+                    print("Browser closed")
+                except:
+                    pass
             raise e
 
     def save_cookies(self):
@@ -437,13 +509,34 @@ class TwitterBot:
             return False
 
 def main():
-    bot = TwitterBot()
+    print("\n" + "="*50)
+    print("   TWITTER BOT STARTING")
+    print("="*50)
+    
     try:
+        print("\nCreating TwitterBot instance...")
+        bot = TwitterBot()
+        print("\n✅ Bot initialized successfully!")
+        print("\nStarting monitoring loop...")
         bot.monitor_and_reply(interval=60 * 5)  # Check for new tweets every 5 minutes
     except KeyboardInterrupt:
-        print("\nStopping bot...")
+        print("\n\n⚠️ Keyboard interrupt received. Stopping bot...")
+    except Exception as e:
+        print(f"\n\n❌ Fatal error: {str(e)}")
+        print("\nFull error traceback:")
+        print(traceback.format_exc())
+        sys.exit(1)
     finally:
-        bot.cleanup()
+        if 'bot' in locals():
+            print("\nCleaning up...")
+            bot.cleanup()
+        print("\nBot stopped.")
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as e:
+        print(f"\n\n❌ Unhandled exception: {str(e)}")
+        print(traceback.format_exc())
+        input("\nPress Enter to exit...")
+        sys.exit(1)
