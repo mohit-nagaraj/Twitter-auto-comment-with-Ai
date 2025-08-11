@@ -1,475 +1,748 @@
-Processing query: #webdev
-[search_tweets] Called with query: #webdev
-Searching for tweets with query: #webdev
-[19284:18200:0811/122210.369:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A0C02400E4320000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
-[19284:18200:0811/122210.380:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A0F02400E4320000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
-[19284:18200:0811/122210.391:ERROR:gpu\command_buffer\service\webgpu_decoder_impl.cc:1670] Failed to query ID3D11Device from ANGLE.
-[19284:18200:0811/122210.445:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A0803000E4320000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
-[search_tweets] Found 32 tweets for '#webdev'
-Found 32 tweets for '#webdev'
+[generate_ai_response] Called with tweet_text: What’s that one free coding resource you’d recommend to everyone?
+#sde #DataScience #DataAnalytics #WebDev
+[clean_text] Called with text: For web dev, MDN Web Docs is unbeatable. Comprehensive, up-to-date, and free. Seriously, just learn to love MDN. You'll thank me later. 😉
+[clean_text] Returning: For web dev, MDN Web Docs is unbeatable. Comprehensive, up-to-date, and free. Seriously, just learn to love MDN. You'll thank me later. 😉
+Generated AI response (tone: assertive and confident): For web dev, MDN Web Docs is unbeatable. Comprehensive, up-to-date, and free. Seriously, just learn to love MDN. You'll thank me later. 😉
+[generate_ai_response] AI reply: For web dev, MDN Web Docs is unbeatable. Comprehensive, up-to-date, and free. Seriously, just learn to love MDN. You'll thank me later. 😉
+[reply_to_tweet] AI reply: For web dev, MDN Web Docs is unbeatable. Comprehensive, up-to-date, and free. Seriously, just learn to love MDN. You'll thank me later. 😉
+[reply_to_tweet] Error replying to tweet: Message: unknown error: ChromeDriver only supports characters in the BMP
+  (Session info: chrome=139.0.7258.66)
+Stacktrace:
+        GetHandleVerifier [0x0x7ff752036b55+79621]
+        GetHandleVerifier [0x0x7ff752036bb0+79712]
+        (No symbol) [0x0x7ff751dcc0ea]
+        (No symbol) [0x0x7ff751e66f4d]
+        (No symbol) [0x0x7ff751e1c597]
+        (No symbol) [0x0x7ff751e1b937]
+        (No symbol) [0x0x7ff751e4b13a]
+        (No symbol) [0x0x7ff751e15926]
+        (No symbol) [0x0x7ff751e4b350]
+        (No symbol) [0x0x7ff751e733d0]
+        (No symbol) [0x0x7ff751e4af13]
+        (No symbol) [0x0x7ff751e14151]
+        (No symbol) [0x0x7ff751e14ee3]
+        GetHandleVerifier [0x0x7ff7522f686d+2962461]
+        GetHandleVerifier [0x0x7ff7522f0b8d+2938685]
+        GetHandleVerifier [0x0x7ff75230f74d+3064573]
+        GetHandleVerifier [0x0x7ff752050c9e+186446]
+        GetHandleVerifier [0x0x7ff752058a6f+218655]
+        GetHandleVerifier [0x0x7ff75203f944+115956]
+        GetHandleVerifier [0x0x7ff75203faf9+116393]
+        GetHandleVerifier [0x0x7ff752025f28+10968]
+        BaseThreadInitThunk [0x0x7ff90efbe8d7+23]
+        RtlUserThreadStart [0x0x7ff90fcdc34c+44]
+
 [get_tweet_id] Called.
-[get_tweet_id] Found tweet_id: 1954452712914886788
+[get_tweet_id] Found tweet_id: 1954799970235596950
 [is_tweet_already_liked] Called.
 [is_tweet_already_liked] Tweet is not liked
 [is_blocked_handle] Called.
-[is_blocked_handle] Checking handle: forbes
-[is_blocked_handle] Checking handle: forbes
-[is_blocked_handle] Checking handle: forbes
+[is_blocked_handle] Checking handle: airon_tark
+[is_blocked_handle] Checking handle: airon_tark
+[is_blocked_handle] Checking handle: airon_tark
 [is_blocked_handle] Checking handle: hashtag
-[is_blocked_handle] All found handles in tweet: ['forbes', 'forbes', 'forbes', 'hashtag']
+[is_blocked_handle] Checking handle: hashtag
+[is_blocked_handle] Checking handle: hashtag
+[is_blocked_handle] Checking handle: hashtag
+[is_blocked_handle] Checking handle: hashtag
+[is_blocked_handle] Checking handle: hashtag
+[is_blocked_handle] All found handles in tweet: ['airon_tark', 'airon_tark', 'airon_tark', 'hashtag', 'hashtag', 'hashtag', 'hashtag', 'hashtag', 'hashtag']
 [is_own_tweet] Called.
 [is_reply_tweet] Called.
-Processing tweet: 1954452712914886788
+Processing tweet: 1954799970235596950
 [reply_to_tweet] Called.
 [get_tweet_id] Called.
-[get_tweet_id] Found tweet_id: 1954452712914886788
-[reply_to_tweet] Processing tweet_id: 1954452712914886788
-[reply_to_tweet] Extracted tweet text: ...
-[reply_to_tweet] Found image with description: Square profile picture...
+[get_tweet_id] Found tweet_id: 1954799970235596950
+[reply_to_tweet] Processing tweet_id: 1954799970235596950
+[reply_to_tweet] Could not like tweet: Message: element not interactable
+  (Session info: chrome=139.0.7258.66)
+Stacktrace:
+        GetHandleVerifier [0x0x7ff752036b55+79621]
+        GetHandleVerifier [0x0x7ff752036bb0+79712]
+        (No symbol) [0x0x7ff751dcbf1c]
+        (No symbol) [0x0x7ff751e24454]
+        (No symbol) [0x0x7ff751e16078]
+        (No symbol) [0x0x7ff751e4b13a]
+        (No symbol) [0x0x7ff751e15926]
+        (No symbol) [0x0x7ff751e4b350]
+        (No symbol) [0x0x7ff751e733d0]
+        (No symbol) [0x0x7ff751e4af13]
+        (No symbol) [0x0x7ff751e14151]
+        (No symbol) [0x0x7ff751e14ee3]
+        GetHandleVerifier [0x0x7ff7522f686d+2962461]
+        GetHandleVerifier [0x0x7ff7522f0b8d+2938685]
+        GetHandleVerifier [0x0x7ff75230f74d+3064573]
+        GetHandleVerifier [0x0x7ff752050c9e+186446]
+        GetHandleVerifier [0x0x7ff752058a6f+218655]
+        GetHandleVerifier [0x0x7ff75203f944+115956]
+        GetHandleVerifier [0x0x7ff75203faf9+116393]
+        GetHandleVerifier [0x0x7ff752025f28+10968]
+        BaseThreadInitThunk [0x0x7ff90efbe8d7+23]
+        RtlUserThreadStart [0x0x7ff90fcdc34c+44]
 
-import os
-import json
-import time
-import random
-from dotenv import load_dotenv
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException, NoSuchElementException
-from datetime import datetime, timedelta
-import google.generativeai as genai
+[generate_ai_response] Called with tweet_text: Tark Labs routine #50: Using "vite-plugin-static-copy"  can lead to an error during the build: "Error [ERR_REQUIRE_ESM]: require() of ES Module." You can simply rename your "vite.config.ts" file to "vite.config.mts."   #vitejs #frontend #tyepscript #webdev #tarklabs #airontark
+[clean_text] Called with text: Nice find! Encountered this annoying ESM issue myself. Renaming to `vite.config.mts` is the quick fix, but sometimes a deeper dive into your import statements is worth it. Can save you headaches down the line. #vitejs #frontend #typescript #webdev #tarklabs #airontark
+[clean_text] Returning: Nice find! Encountered this annoying ESM issue myself. Renaming to `vite.config.mts` is the quick fix, but sometimes a deeper dive into your import statements is worth it. Can save you headaches down the line. #vitejs #frontend #typescript #webdev #tarklabs #airontark
+Generated AI response (tone: slightly egoistic but still professional): Nice find! Encountered this annoying ESM issue myself. Renaming to `vite.config.mts` is the quick fix, but sometimes a deeper dive into your import statements is worth it. Can save you headaches down the line. #vitejs #frontend #typescript #webdev #tarklabs #airontark
+[generate_ai_response] AI reply: Nice find! Encountered this annoying ESM issue myself. Renaming to `vite.config.mts` is the quick fix, but sometimes a deeper dive into your import statements is worth it. Can save you headaches down the line. #vitejs #frontend #typescript #webdev #tarklabs #airontark
+[reply_to_tweet] AI reply: Nice find! Encountered this annoying ESM issue myself. Renaming to `vite.config.mts` is the quick fix, but sometimes a deeper dive into your import statements is worth it. Can save you headaches down the line. #vitejs #frontend #typescript #webdev #tarklabs #airontark
+[reply_to_tweet] Error replying to tweet: Message: element not interactable
+  (Session info: chrome=139.0.7258.66)
+Stacktrace:
+        GetHandleVerifier [0x0x7ff752036b55+79621]
+        GetHandleVerifier [0x0x7ff752036bb0+79712]
+        (No symbol) [0x0x7ff751dcbf1c]
+        (No symbol) [0x0x7ff751e24454]
+        (No symbol) [0x0x7ff751e16078]
+        (No symbol) [0x0x7ff751e4b13a]
+        (No symbol) [0x0x7ff751e15926]
+        (No symbol) [0x0x7ff751e4b350]
+        (No symbol) [0x0x7ff751e733d0]
+        (No symbol) [0x0x7ff751e4af13]
+        (No symbol) [0x0x7ff751e14151]
+        (No symbol) [0x0x7ff751e14ee3]
+        GetHandleVerifier [0x0x7ff7522f686d+2962461]
+        GetHandleVerifier [0x0x7ff7522f0b8d+2938685]
+        GetHandleVerifier [0x0x7ff75230f74d+3064573]
+        GetHandleVerifier [0x0x7ff752050c9e+186446]
+        GetHandleVerifier [0x0x7ff752058a6f+218655]
+        GetHandleVerifier [0x0x7ff75203f944+115956]
+        GetHandleVerifier [0x0x7ff75203faf9+116393]
+        GetHandleVerifier [0x0x7ff752025f28+10968]
+        BaseThreadInitThunk [0x0x7ff90efbe8d7+23]
+        RtlUserThreadStart [0x0x7ff90fcdc34c+44]
 
-# Load environment variables
-load_dotenv()
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1954797399345414193
+[is_tweet_already_liked] Called.
+[is_tweet_already_liked] Tweet is not liked
+[is_blocked_handle] Called.
+[is_blocked_handle] Checking handle: abhinoobcodes
+[is_blocked_handle] Checking handle: abhinoobcodes
+[is_blocked_handle] Checking handle: abhinoobcodes
+[is_blocked_handle] Checking handle: hashtag
+[is_blocked_handle] Checking handle: hashtag
+[is_blocked_handle] Checking handle: hashtag
+[is_blocked_handle] Checking handle: hashtag
+[is_blocked_handle] Checking handle: hashtag
+[is_blocked_handle] All found handles in tweet: ['abhinoobcodes', 'abhinoobcodes', 'abhinoobcodes', 'hashtag', 'hashtag', 'hashtag', 'hashtag', 'hashtag']
+[is_own_tweet] Called.
+[is_reply_tweet] Called.
+Processing tweet: 1954797399345414193
+[reply_to_tweet] Called.
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1954797399345414193
+[reply_to_tweet] Processing tweet_id: 1954797399345414193
+[reply_to_tweet] Could not like tweet: Message: element not interactable
+  (Session info: chrome=139.0.7258.66)
+Stacktrace:
+        GetHandleVerifier [0x0x7ff752036b55+79621]
+        GetHandleVerifier [0x0x7ff752036bb0+79712]
+        (No symbol) [0x0x7ff751dcbf1c]
+        (No symbol) [0x0x7ff751e24454]
+        (No symbol) [0x0x7ff751e16078]
+        (No symbol) [0x0x7ff751e4b13a]
+        (No symbol) [0x0x7ff751e15926]
+        (No symbol) [0x0x7ff751e4b350]
+        (No symbol) [0x0x7ff751e733d0]
+        (No symbol) [0x0x7ff751e4af13]
+        (No symbol) [0x0x7ff751e14151]
+        (No symbol) [0x0x7ff751e14ee3]
+        GetHandleVerifier [0x0x7ff7522f686d+2962461]
+        GetHandleVerifier [0x0x7ff7522f0b8d+2938685]
+        GetHandleVerifier [0x0x7ff75230f74d+3064573]
+        GetHandleVerifier [0x0x7ff752050c9e+186446]
+        GetHandleVerifier [0x0x7ff752058a6f+218655]
+        GetHandleVerifier [0x0x7ff75203f944+115956]
+        GetHandleVerifier [0x0x7ff75203faf9+116393]
+        GetHandleVerifier [0x0x7ff752025f28+10968]
+        BaseThreadInitThunk [0x0x7ff90efbe8d7+23]
+        RtlUserThreadStart [0x0x7ff90fcdc34c+44]
 
-class TwitterBot:
-    def __init__(self):
-        self.username = os.getenv('TWITTER_USERNAME')
-        self.password = os.getenv('TWITTER_PASSWORD')
-        self.cookies_file = os.getenv('COOKIES_FILE')
-        # Set Chrome profile path to a custom directory
-        self.chrome_profile = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'chrome_profile')
-        
-        # Initialize Gemini AI
-        gemini_api_key = os.getenv('GEMINI_API_KEY')
-        if not gemini_api_key:
-            raise ValueError("GEMINI_API_KEY not found in environment variables")
-        genai.configure(api_key=gemini_api_key)
-        self.model = genai.GenerativeModel('gemini-2.5-flash')
-        
-        self.tech_search_queries = [
-            "Next.js", "Node.js", "Express.js", "Golang", "CI/CD", "Docker",
-            "#fullstackdev", "#webdev", "#softwareengineering",
-            "cloud computing", "#AWS", "#GCP", "#Azure", "#DevOps",
-            "serverless", "microservices", "kubernetes", "reactjs"
-        ]
+[generate_ai_response] Called with tweet_text: 
+[clean_text] Called with text: Okay, I need a tweet to respond to. Please provide the tweet you want me to respond to, and I'll generate a reply as Mohit Nagaraj according to the persona guidelines.
+[clean_text] Returning: Okay, I need a tweet to respond to. Please provide the tweet you want me to respond to, and I'll generate a reply as Mohit Nagaraj according to the persona guidelines.
+Generated AI response (tone: knowledgeable and helpful): Okay, I need a tweet to respond to. Please provide the tweet you want me to respond to, and I'll generate a reply as Mohit Nagaraj according to the persona guidelines.
+[generate_ai_response] AI reply: Okay, I need a tweet to respond to. Please provide the tweet you want me to respond to, and I'll generate a reply as Mohit Nagaraj according to the persona guidelines.
+[reply_to_tweet] AI reply: Okay, I need a tweet to respond to. Please provide the tweet you want me to respond to, and I'll generate a reply as Mohit Nagaraj according to the persona guidelines.
+[reply_to_tweet] Error replying to tweet: Message: element not interactable
+  (Session info: chrome=139.0.7258.66)
+Stacktrace:
+        GetHandleVerifier [0x0x7ff752036b55+79621]
+        GetHandleVerifier [0x0x7ff752036bb0+79712]
+        (No symbol) [0x0x7ff751dcbf1c]
+        (No symbol) [0x0x7ff751e24454]
+        (No symbol) [0x0x7ff751e16078]
+        (No symbol) [0x0x7ff751e4b13a]
+        (No symbol) [0x0x7ff751e15926]
+        (No symbol) [0x0x7ff751e4b350]
+        (No symbol) [0x0x7ff751e733d0]
+        (No symbol) [0x0x7ff751e4af13]
+        (No symbol) [0x0x7ff751e14151]
+        (No symbol) [0x0x7ff751e14ee3]
+        GetHandleVerifier [0x0x7ff7522f686d+2962461]
+        GetHandleVerifier [0x0x7ff7522f0b8d+2938685]
+        GetHandleVerifier [0x0x7ff75230f74d+3064573]
+        GetHandleVerifier [0x0x7ff752050c9e+186446]
+        GetHandleVerifier [0x0x7ff752058a6f+218655]
+        GetHandleVerifier [0x0x7ff75203f944+115956]
+        GetHandleVerifier [0x0x7ff75203faf9+116393]
+        GetHandleVerifier [0x0x7ff752025f28+10968]
+        BaseThreadInitThunk [0x0x7ff90efbe8d7+23]
+        RtlUserThreadStart [0x0x7ff90fcdc34c+44]
 
-        # Remove the static reply templates as we'll use AI-generated responses
-        print("AI model initialized successfully!")
-        self.setup_driver()  # Initialize the driver when creating the bot
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1954796479756845327
+[is_tweet_already_liked] Called.
+[is_tweet_already_liked] Tweet is not liked
+[is_blocked_handle] Called.
+[is_blocked_handle] Checking handle: samsumansarkar
+[is_blocked_handle] Checking handle: samsumansarkar
+[is_blocked_handle] Checking handle: samsumansarkar
+[is_blocked_handle] Checking handle: vigneshtwt_
+[is_blocked_handle] Checking handle: hashtag
+[is_blocked_handle] Checking handle: hashtag
+[is_blocked_handle] Checking handle: hashtag
+[is_blocked_handle] Checking handle: hashtag
+[is_blocked_handle] Checking handle: hashtag
+[is_blocked_handle] All found handles in tweet: ['samsumansarkar', 'samsumansarkar', 'samsumansarkar', 'vigneshtwt_', 'hashtag', 'hashtag', 'hashtag', 'hashtag', 'hashtag']
+[is_own_tweet] Called.
+[is_reply_tweet] Called.
+Processing tweet: 1954796479756845327
+[reply_to_tweet] Called.
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1954796479756845327
+[reply_to_tweet] Processing tweet_id: 1954796479756845327
+[reply_to_tweet] Could not like tweet: Message: element not interactable
+  (Session info: chrome=139.0.7258.66)
+Stacktrace:
+        GetHandleVerifier [0x0x7ff752036b55+79621]
+        GetHandleVerifier [0x0x7ff752036bb0+79712]
+        (No symbol) [0x0x7ff751dcbf1c]
+        (No symbol) [0x0x7ff751e24454]
+        (No symbol) [0x0x7ff751e16078]
+        (No symbol) [0x0x7ff751e4b13a]
+        (No symbol) [0x0x7ff751e15926]
+        (No symbol) [0x0x7ff751e4b350]
+        (No symbol) [0x0x7ff751e733d0]
+        (No symbol) [0x0x7ff751e4af13]
+        (No symbol) [0x0x7ff751e14151]
+        (No symbol) [0x0x7ff751e14ee3]
+        GetHandleVerifier [0x0x7ff7522f686d+2962461]
+        GetHandleVerifier [0x0x7ff7522f0b8d+2938685]
+        GetHandleVerifier [0x0x7ff75230f74d+3064573]
+        GetHandleVerifier [0x0x7ff752050c9e+186446]
+        GetHandleVerifier [0x0x7ff752058a6f+218655]
+        GetHandleVerifier [0x0x7ff75203f944+115956]
+        GetHandleVerifier [0x0x7ff75203faf9+116393]
+        GetHandleVerifier [0x0x7ff752025f28+10968]
+        BaseThreadInitThunk [0x0x7ff90efbe8d7+23]
+        RtlUserThreadStart [0x0x7ff90fcdc34c+44]
 
-    def setup_driver(self):
-        print("[setup_driver] Called.")
-        try:
-            # Create profile directory if it doesn't exist
-            os.makedirs(self.chrome_profile, exist_ok=True)
-            
-            # Set up Chrome options
-            chrome_options = webdriver.ChromeOptions()
-            chrome_options.add_argument('--start-maximized')
-            chrome_options.add_argument('--disable-gpu')
-            chrome_options.add_argument('--no-sandbox')
-            chrome_options.add_argument('--disable-dev-shm-usage')
-            chrome_options.add_argument(f'--user-data-dir={self.chrome_profile}')
-            chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
-            chrome_options.add_experimental_option('useAutomationExtension', False)
-            
-            # Initialize the Chrome WebDriver
-            self.driver = webdriver.Chrome(options=chrome_options)
-            self.wait = WebDriverWait(self.driver, 20)
-            
-            # Navigate to Twitter
-            print("Opening Twitter...")
-            self.driver.get("https://twitter.com")
-            print("Twitter opened successfully!")
-                
-            print("[setup_driver] Success.")
-        except Exception as e:
-            print(f"[setup_driver] Error: {str(e)}")
-            if hasattr(self, 'driver'):
-                self.driver.quit()
-            raise e
+[generate_ai_response] Called with tweet_text: 
+[clean_text] Called with text: Okay, I'm ready to craft some tweets as Mohit Nagaraj. Since there's no tweet to respond to, I'll generate a sample tweet that Mohit might post to get started.
 
-    def save_cookies(self):
-        print("[save_cookies] Called.")
-        with open(self.cookies_file, 'w') as f:
-            json.dump(self.driver.get_cookies(), f)
-        print("[save_cookies] Cookies saved.")
+**Sample Tweet:**
 
-    def load_cookies(self):
-        print("[load_cookies] Called.")
-        try:
-            with open(self.cookies_file, 'r') as f:
-                cookies = json.load(f)
-                for cookie in cookies:
-                    self.driver.add_cookie(cookie)
-            print("[load_cookies] Cookies loaded.")
-            return True
-        except FileNotFoundError:
-            print("[load_cookies] No cookies file found.")
-            return False
+"Just spent the evening diving deep into optimizing Next.js image loading. Blown away by the performance gains you can get with the right `next/image` configuration. Anyone else been experimenting with this lately?"
 
-    def login(self):
-        print("[login] Called.")
-        try:
-            print("Starting login process...")
-            self.driver.get('https://x.com/i/flow/login')
-            time.sleep(5)  # Wait for page to fully load
-            
-            print("Checking for existing cookies...")
-            if not self.load_cookies():
-                print("No existing cookies found. Proceeding with manual login...")
-                
-                # Wait and enter username
-                print("Looking for username field...")
-                username_input = self.wait.until(
-                    EC.presence_of_element_located((By.CSS_SELECTOR, 'input[autocomplete="username"]'))
-                )
-                print("Found username field, entering username...")
-                username_input.clear()
-                for char in self.username:
-                    username_input.send_keys(char)
-                    time.sleep(0.1)
-                time.sleep(1)
-                username_input.send_keys(Keys.RETURN)
-                time.sleep(2)
-                
-                # Wait and enter password
-                print("Looking for password field...")
-                password_input = self.wait.until(
-                    EC.presence_of_element_located((By.CSS_SELECTOR, 'input[name="password"]'))
-                )
-                print("Found password field, entering password...")
-                password_input.clear()
-                for char in self.password:
-                    password_input.send_keys(char)
-                    time.sleep(0.1)
-                time.sleep(1)
-                password_input.send_keys(Keys.RETURN)
-                
-                # Wait for login to complete
-                print("Waiting for login to complete...")
-                time.sleep(10)
-                self.save_cookies()
-            
-            # Navigate to home feed
-            print("Navigating to home feed...")
-            self.driver.get('https://x.com/home')
-            time.sleep(5)
-            
-            # Verify login success
-            if "home" in self.driver.current_url.lower() or "communities/1493446837214187523" or "communities/1471580197908586507" in self.driver.current_url:
-                print("Successfully logged in and navigated to the community!")
-                # Navigate to the specified community after login
-                # print("Navigating to the community page...")
-                # self.driver.get('https://x.com/i/communities/1471580197908586507')
-                time.sleep(5)
-                return True
-            else:
-                print("Login verification failed. Current URL:", self.driver.current_url)
-                return False
-            
-        except Exception as e:
-            print(f"Login failed with error: {str(e)}")
-            print("Current URL:", self.driver.current_url)
-            return False
+This tweet sets the stage for further engagement and allows me to showcase Mohit's expertise. I'm ready for the next prompt!
+[clean_text] Returning: Okay, I'm ready to craft some tweets as Mohit Nagaraj. Since there's no tweet to respond to, I'll generate a sample tweet that Mohit might post to get started.
 
-    def search_tweets(self, query):
-        print(f"[search_tweets] Called with query: {query}")
-        try:
-            print(f"Searching for tweets with query: {query}")
-            search_url = f"https://x.com/search?q={query}&src=typed_query"
-            self.driver.get(search_url)
-            time.sleep(5)
+Sample Tweet:
 
-            tweets = self.wait.until(
-                EC.presence_of_all_elements_located((By.CSS_SELECTOR, 'article[data-testid="tweet"]'))
-            )
-            print(f"[search_tweets] Found {len(tweets)} tweets for '{query}'")
-            return tweets
-        except Exception as e:
-            print(f"Error searching tweets for query '{query}': {str(e)}")
-            return []
+"Just spent the evening diving deep into optimizing Next.js image loading. Blown away by the performance gains you can get with the right `next/image` configuration. Anyone else been experimenting with this lately?"
 
-    def get_tweet_id(self, tweet_element):
-        print("[get_tweet_id] Called.")
-        try:
-            # Find all anchor tags in the tweet element
-            anchors = tweet_element.find_elements(By.TAG_NAME, 'a')
-            for anchor in anchors:
-                href = anchor.get_attribute('href')
-                if href and '/status/' in href:
-                    # The tweet ID is the part after the last '/'
-                    tweet_id = href.split('/status/')[-1].split('?')[0]
-                    print(f"[get_tweet_id] Found tweet_id: {tweet_id}")
-                    return tweet_id
-            return None
-        except Exception as e:
-            print(f"Error extracting tweet ID: {str(e)}")
-            return None
+This tweet sets the stage for further engagement and allows me to showcase Mohit's expertise. I'm ready for the next prompt!
+Generated AI response (tone: knowledgeable and helpful): Okay, I'm ready to craft some tweets as Mohit Nagaraj. Since there's no tweet to respond to, I'll generate a sample tweet that Mohit might post to get started.
 
-    def is_blocked_handle(self, tweet_element):
-        print("[is_blocked_handle] Called.")
-        blocked_handles = [
-            'elonmusk',
-            'skysingh04'
-        ]
-        try:
-            # Find all anchor tags in the tweet element (recursively)
-            anchors = tweet_element.find_elements(By.XPATH, ".//a")
-            found_handles = []
-            for anchor in anchors:
-                href = anchor.get_attribute('href')
-                if href and href.startswith('/') and '/status/' not in href:
-                    handle = href.strip('/').lower()
-                    found_handles.append(handle)
-                    print(f"[is_blocked_handle] Checking handle: {handle}")
-                    if handle in blocked_handles:
-                        print(f"[is_blocked_handle] Blocked handle found: {handle}")
-                        return True
-            # Fallback: check if tweet text contains @blocked_handle or handle name
-            try:
-                tweet_text_elem = tweet_element.find_element(By.CSS_SELECTOR, '[data-testid="tweetText"]')
-                tweet_text = tweet_text_elem.text.lower()
-                for handle in blocked_handles:
-                    if f"@{handle}" in tweet_text or handle in tweet_text:
-                        print(f"[is_blocked_handle] Blocked handle found in tweet text: {handle}")
-                        return True
-            except Exception as e:
-                print(f"[is_blocked_handle] Could not extract tweet text for fallback: {str(e)}")
-            print(f"[is_blocked_handle] All found handles in tweet: {found_handles}")
-            return False
-        except Exception as e:
-            print(f"Error checking blocked handle: {str(e)}")
-            return False
+Sample Tweet:
 
-    def is_own_tweet(self, tweet_element):
-        print("[is_own_tweet] Called.")
-        try:
-            # Find all anchor tags in the tweet element
-            anchors = tweet_element.find_elements(By.TAG_NAME, 'a')
-            for anchor in anchors:
-                href = anchor.get_attribute('href')
-                if href and href.startswith('/') and '/status/' not in href:
-                    # href is like '/username'
-                    handle = href.strip('/').lower()
-                    if handle == self.username.lower():
-                        print(f"[is_own_tweet] Own tweet found: {handle}")
-                        return True
-            return False
-        except Exception as e:
-            print(f"Error checking own tweet: {str(e)}")
-            return False
+"Just spent the evening diving deep into optimizing Next.js image loading. Blown away by the performa...  
+[generate_ai_response] AI reply: Okay, I'm ready to craft some tweets as Mohit Nagaraj. Since there's no tweet to respond to, I'll generate a sample tweet that Mohit might post to get started.
 
-    def is_reply_tweet(self, tweet_element):
-        print("[is_reply_tweet] Called.")
-        try:
-            # Check for 'Replying to' text in the tweet element
-            reply_texts = tweet_element.find_elements(By.XPATH, ".//*[contains(text(), 'Replying to')]")
-            if reply_texts:
-                print(f"[is_reply_tweet] Reply tweet found: {reply_texts[0].text}")
-                return True
-            # Optionally, check for reply icon or other indicators here
-            return False
-        except Exception as e:
-            print(f"Error checking reply tweet: {str(e)}")
-            return False
+Sample Tweet:
 
-    def generate_ai_response(self, tweet_text):
-        print(f"[generate_ai_response] Called with tweet_text: {tweet_text}")
-        try:
-            tones = [
-                "professional and insightful",
-                "light-hearted and witty",
-                "assertive and confident",
-                "knowledgeable and helpful",
-                "slightly egoistic but still professional"
-            ]
-            selected_tone = random.choice(tones)
+"Just spent the evening diving deep into optimizing Next.js image loading. Blown away by the performa...  
+[reply_to_tweet] AI reply: Okay, I'm ready to craft some tweets as Mohit Nagaraj. Since there's no tweet to respond to, I'll generate a sample tweet that Mohit might post to get started.
 
-            # Mohit Nagaraj's background and skills
-            mohit_bio = (
-                "You are Mohit Nagaraj, a Computer Science and Engineering student at Dayananda Sagar College Of Engineering (graduating 2026, CGPA 9.23). "
-                "You have strong technical skills: JavaScript, TypeScript, Go, Dart, C++. "
-                "You work with React, Next.js, Node.js + Express, PostgreSQL, MongoDB, Firestore, Flutter, Git, Redis, and Cloud. "
-                "You are experienced with Tailwind, Three.js, OAuth, tRPC, Redux, Context, Firebase, Passport, Prisma, Bootstrap, RESTful API, GraphQL, gRPC, GoFiber, Gin, and Nginx. "
-                "Notable projects: Solace (GitHub deploy platform with Docker, AWS S3, Node.js, Redis), VidStreamX (Go, FFmpeg, Docker, AWS S3/SQS), WeChat (React, Vite, Express, Socket.io, MongoDB, AWS EC2/CloudFront), Exsense (Vite, Express, Apollo GraphQL, MongoDB, Passport). "
-                "Experience: Frontend Developer at Boho, SellerSetu (Nov 2024 - Feb 2025, Expo React Native, payments, Zustand, React Query), SDE Intern at Springreen (Sep 2024 - Dec 2024, Flask, Golang, CI/CD, microservices on EC2). "
-                "Achievements: 1st place Innerve 9 AIT Pune Hackathon (AI EdTech), 2nd place GoFr Hackathon (AI social outreach), Hacktoberfest 2024 open-source contributor. "
-                "You are passionate about building, learning, and sharing in the tech community. "
-            )
+Sample Tweet:
 
-            prompt = f"""
-            {mohit_bio}
-            Your goal is to increase your outreach on Twitter by providing valuable, engaging, and sometimes humorous or assertive comments.
+"Just spent the evening diving deep into optimizing Next.js image loading. Blown away by the performa...  
+[reply_to_tweet] Error replying to tweet: Message: element not interactable
+  (Session info: chrome=139.0.7258.66)
+Stacktrace:
+        GetHandleVerifier [0x0x7ff752036b55+79621]
+        GetHandleVerifier [0x0x7ff752036bb0+79712]
+        (No symbol) [0x0x7ff751dcbf1c]
+        (No symbol) [0x0x7ff751e24454]
+        (No symbol) [0x0x7ff751e16078]
+        (No symbol) [0x0x7ff751e4b13a]
+        (No symbol) [0x0x7ff751e15926]
+        (No symbol) [0x0x7ff751e4b350]
+        (No symbol) [0x0x7ff751e733d0]
+        (No symbol) [0x0x7ff751e4af13]
+        (No symbol) [0x0x7ff751e14151]
+        (No symbol) [0x0x7ff751e14ee3]
+        GetHandleVerifier [0x0x7ff7522f686d+2962461]
+        GetHandleVerifier [0x0x7ff7522f0b8d+2938685]
+        GetHandleVerifier [0x0x7ff75230f74d+3064573]
+        GetHandleVerifier [0x0x7ff752050c9e+186446]
+        GetHandleVerifier [0x0x7ff752058a6f+218655]
+        GetHandleVerifier [0x0x7ff75203f944+115956]
+        GetHandleVerifier [0x0x7ff75203faf9+116393]
+        GetHandleVerifier [0x0x7ff752025f28+10968]
+        BaseThreadInitThunk [0x0x7ff90efbe8d7+23]
+        RtlUserThreadStart [0x0x7ff90fcdc34c+44]
 
-            TONE: {selected_tone}
+Processed 1 new tweets for query '#webdev'
+Waiting 10 seconds before next query...
 
-            IMPORTANT GUIDELINES:
-            - Sound like a real person with a strong technical background.
-            - Use professional but accessible language. Avoid overly technical jargon unless it's appropriate for the context.
-            - Use abbreviations like 'sheesh', 'cool', 'nice', 'lmao', 'lol', 'tf' sparingly and only when it fits the tone.
-            - Keep replies concise and under 280 characters.
-            - No hashtags.
-            - Be relevant to the tweet's content.
-            - Project confidence and expertise.
+Processing query: microservices
+[search_tweets] Called with query: microservices
+Searching for tweets with query: microservices
+[11180:6744:0811/124658.095:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A050250014670000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[11180:6744:0811/124658.108:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A0F0240014670000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[11180:6744:0811/124658.119:ERROR:gpu\command_buffer\service\webgpu_decoder_impl.cc:1670] Failed to query ID3D11Device from ANGLE.
+[11180:6744:0811/124658.168:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A0B0300014670000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[search_tweets] Clicked on Latest tab for query: microservices
+[5932:6680:0811/124708.085:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[search_tweets] Found 10 tweets for 'microservices'
+Found 10 tweets for 'microservices'
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1954801947065581995
+[is_tweet_already_liked] Called.
+[is_tweet_already_liked] Tweet is not liked
+[is_blocked_handle] Called.
+[is_blocked_handle] Checking handle: shatanshubodkhe
+[is_blocked_handle] Checking handle: shatanshubodkhe
+[is_blocked_handle] Checking handle: shatanshubodkhe
+[is_blocked_handle] Checking handle: asmah2107
+[is_blocked_handle] All found handles in tweet: ['shatanshubodkhe', 'shatanshubodkhe', 'shatanshubodkhe', 'asmah2107']
+[is_own_tweet] Called.
+[is_reply_tweet] Called.
+[is_reply_tweet] Reply tweet found: Replying to 
+@asmah2107
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1954799362048921948
+[is_tweet_already_liked] Called.
+[is_tweet_already_liked] Tweet is not liked
+[is_blocked_handle] Called.
+[is_blocked_handle] Checking handle: techbahr
+[is_blocked_handle] Checking handle: techbahr
+[is_blocked_handle] Checking handle: techbahr
+[is_blocked_handle] Checking handle: hashtag
+[is_blocked_handle] Checking handle: hashtag
+[is_blocked_handle] All found handles in tweet: ['techbahr', 'techbahr', 'techbahr', 'hashtag', 'hashtag']
+[is_own_tweet] Called.
+[is_reply_tweet] Called.
+Processing tweet: 1954799362048921948
+[reply_to_tweet] Called.
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1954799362048921948
+[reply_to_tweet] Processing tweet_id: 1954799362048921948
+[reply_to_tweet] Liked tweet: 1954799362048921948
+[generate_ai_response] Called with tweet_text:  Tailor-made workflow automation, scalable microservices, AI-driven edge, and long-term ROI—all in one.
 
-            Tweet to respond to: "{tweet_text}"
+ Custom software is not just a tool—it’s a strategic asset for 2025 growth.
 
-            Generate a natural and engaging reply as Mohit Nagaraj:"""
+https://techbahr.com/why-custom-software-is-the-smartest-invest…­ment-for-scaling-businesses-in-2025/     
 
-            response = self.model.generate_content(prompt)
-            ai_reply = response.text.strip().strip('"')
+#CustomSoftware #TechBahr
+[clean_text] Called with text: Custom software IS the way to go. Forget generic solutions; build exactly what you need. Microservices + AI edge is the stack of the future. Stop patching, start architecting. 🔥   
+[clean_text] Returning: Custom software IS the way to go. Forget generic solutions; build exactly what you need. Microservices + AI edge is the stack of the future. Stop patching, start architecting. 🔥
+Generated AI response (tone: assertive and confident): Custom software IS the way to go. Forget generic solutions; build exactly what you need. Microservices + AI edge is the stack of the future. Stop patching, start architecting. 🔥
+[generate_ai_response] AI reply: Custom software IS the way to go. Forget generic solutions; build exactly what you need. Microservices + AI edge is the stack of the future. Stop patching, start architecting. 🔥 
+[reply_to_tweet] AI reply: Custom software IS the way to go. Forget generic solutions; build exactly what you need. Microservices + AI edge is the stack of the future. Stop patching, start architecting. 🔥       
+[reply_to_tweet] Error replying to tweet: Message: unknown error: ChromeDriver only supports characters in the BMP
+  (Session info: chrome=139.0.7258.66)
+Stacktrace:
+        GetHandleVerifier [0x0x7ff752036b55+79621]
+        GetHandleVerifier [0x0x7ff752036bb0+79712]
+        (No symbol) [0x0x7ff751dcc0ea]
+        (No symbol) [0x0x7ff751e66f4d]
+        (No symbol) [0x0x7ff751e1c597]
+        (No symbol) [0x0x7ff751e1b937]
+        (No symbol) [0x0x7ff751e4b13a]
+        (No symbol) [0x0x7ff751e15926]
+        (No symbol) [0x0x7ff751e4b350]
+        (No symbol) [0x0x7ff751e733d0]
+        (No symbol) [0x0x7ff751e4af13]
+        (No symbol) [0x0x7ff751e14151]
+        (No symbol) [0x0x7ff751e14ee3]
+        GetHandleVerifier [0x0x7ff7522f686d+2962461]
+        GetHandleVerifier [0x0x7ff7522f0b8d+2938685]
+        GetHandleVerifier [0x0x7ff75230f74d+3064573]
+        GetHandleVerifier [0x0x7ff752050c9e+186446]
+        GetHandleVerifier [0x0x7ff752058a6f+218655]
+        GetHandleVerifier [0x0x7ff75203f944+115956]
+        GetHandleVerifier [0x0x7ff75203faf9+116393]
+        GetHandleVerifier [0x0x7ff752025f28+10968]
+        BaseThreadInitThunk [0x0x7ff90efbe8d7+23]
+        RtlUserThreadStart [0x0x7ff90fcdc34c+44]
 
-            ai_reply = self.clean_text(ai_reply)
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1954793318505734537
+[is_tweet_already_liked] Called.
+[is_tweet_already_liked] Tweet is not liked
+[is_blocked_handle] Called.
+[is_blocked_handle] Checking handle: the_complex_one
+[is_blocked_handle] Checking handle: the_complex_one
+[is_blocked_handle] Checking handle: the_complex_one
+[is_blocked_handle] All found handles in tweet: ['the_complex_one', 'the_complex_one', 'the_complex_one']
+[is_own_tweet] Called.
+[is_reply_tweet] Called.
+Processing tweet: 1954793318505734537
+[reply_to_tweet] Called.
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1954793318505734537
+[reply_to_tweet] Processing tweet_id: 1954793318505734537
+[reply_to_tweet] Could not like tweet: Message: element not interactable
+  (Session info: chrome=139.0.7258.66)
+Stacktrace:
+        GetHandleVerifier [0x0x7ff752036b55+79621]
+        GetHandleVerifier [0x0x7ff752036bb0+79712]
+        (No symbol) [0x0x7ff751dcbf1c]
+        (No symbol) [0x0x7ff751e24454]
+        (No symbol) [0x0x7ff751e16078]
+        (No symbol) [0x0x7ff751e4b13a]
+        (No symbol) [0x0x7ff751e15926]
+        (No symbol) [0x0x7ff751e4b350]
+        (No symbol) [0x0x7ff751e733d0]
+        (No symbol) [0x0x7ff751e4af13]
+        (No symbol) [0x0x7ff751e14151]
+        (No symbol) [0x0x7ff751e14ee3]
+        GetHandleVerifier [0x0x7ff7522f686d+2962461]
+        GetHandleVerifier [0x0x7ff7522f0b8d+2938685]
+        GetHandleVerifier [0x0x7ff75230f74d+3064573]
+        GetHandleVerifier [0x0x7ff752050c9e+186446]
+        GetHandleVerifier [0x0x7ff752058a6f+218655]
+        GetHandleVerifier [0x0x7ff75203f944+115956]
+        GetHandleVerifier [0x0x7ff75203faf9+116393]
+        GetHandleVerifier [0x0x7ff752025f28+10968]
+        BaseThreadInitThunk [0x0x7ff90efbe8d7+23]
+        RtlUserThreadStart [0x0x7ff90fcdc34c+44]
 
-            if len(ai_reply) > 280:
-                ai_reply = ai_reply[:277] + "..."
+[generate_ai_response] Called with tweet_text: 
+[clean_text] Called with text: Okay, I need a tweet to respond to! I can't generate a reply without the content of the original tweet. Give me the tweet, and I'll craft a confident and engaging response as Mohit Nagaraj.
+[clean_text] Returning: Okay, I need a tweet to respond to! I can't generate a reply without the content of the original tweet. Give me the tweet, and I'll craft a confident and engaging response as Mohit Nagaraj.
+Generated AI response (tone: assertive and confident): Okay, I need a tweet to respond to! I can't generate a reply without the content of the original tweet. Give me the tweet, and I'll craft a confident and engaging response as Mohit Nagaraj.
+[generate_ai_response] AI reply: Okay, I need a tweet to respond to! I can't generate a reply without the content of the original tweet. Give me the tweet, and I'll craft a confident and engaging response as Mohit Nagaraj.
+[reply_to_tweet] AI reply: Okay, I need a tweet to respond to! I can't generate a reply without the content of the original tweet. Give me the tweet, and I'll craft a confident and engaging response as Mohit Nagaraj.
+[reply_to_tweet] Error replying to tweet: Message: element not interactable
+  (Session info: chrome=139.0.7258.66)
+Stacktrace:
+        GetHandleVerifier [0x0x7ff752036b55+79621]
+        GetHandleVerifier [0x0x7ff752036bb0+79712]
+        (No symbol) [0x0x7ff751dcbf1c]
+        (No symbol) [0x0x7ff751e24454]
+        (No symbol) [0x0x7ff751e16078]
+        (No symbol) [0x0x7ff751e4b13a]
+        (No symbol) [0x0x7ff751e15926]
+        (No symbol) [0x0x7ff751e4b350]
+        (No symbol) [0x0x7ff751e733d0]
+        (No symbol) [0x0x7ff751e4af13]
+        (No symbol) [0x0x7ff751e14151]
+        (No symbol) [0x0x7ff751e14ee3]
+        GetHandleVerifier [0x0x7ff7522f686d+2962461]
+        GetHandleVerifier [0x0x7ff7522f0b8d+2938685]
+        GetHandleVerifier [0x0x7ff75230f74d+3064573]
+        GetHandleVerifier [0x0x7ff752050c9e+186446]
+        GetHandleVerifier [0x0x7ff752058a6f+218655]
+        GetHandleVerifier [0x0x7ff75203f944+115956]
+        GetHandleVerifier [0x0x7ff75203faf9+116393]
+        GetHandleVerifier [0x0x7ff752025f28+10968]
+        BaseThreadInitThunk [0x0x7ff90efbe8d7+23]
+        RtlUserThreadStart [0x0x7ff90fcdc34c+44]
 
-            print(f"Generated AI response (tone: {selected_tone}): {ai_reply}")
-            print(f"[generate_ai_response] AI reply: {ai_reply}")
-            return ai_reply
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1954792520719732926
+[is_tweet_already_liked] Called.
+[is_tweet_already_liked] Tweet is not liked
+[is_blocked_handle] Called.
+[is_blocked_handle] Checking handle: shauvikkumar
+[is_blocked_handle] Checking handle: shauvikkumar
+[is_blocked_handle] Checking handle: shauvikkumar
+[is_blocked_handle] Checking handle: shauvikkumar
+[is_blocked_handle] All found handles in tweet: ['shauvikkumar', 'shauvikkumar', 'shauvikkumar', 'shauvikkumar']
+[is_own_tweet] Called.
+[is_reply_tweet] Called.
+[is_reply_tweet] Reply tweet found: 
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1954792397616869475
+[is_tweet_already_liked] Called.
+[is_tweet_already_liked] Tweet is not liked
+[is_blocked_handle] Called.
+[is_blocked_handle] Checking handle: goyalshaliniuk
+[is_blocked_handle] Checking handle: goyalshaliniuk
+[is_blocked_handle] Checking handle: goyalshaliniuk
+[is_blocked_handle] All found handles in tweet: ['goyalshaliniuk', 'goyalshaliniuk', 'goyalshaliniuk']
+[is_own_tweet] Called.
+[is_reply_tweet] Called.
+Processing tweet: 1954792397616869475
+[reply_to_tweet] Called.
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1954792397616869475
+[reply_to_tweet] Processing tweet_id: 1954792397616869475
+[reply_to_tweet] Could not like tweet: Message: element not interactable
+  (Session info: chrome=139.0.7258.66)
+Stacktrace:
+        GetHandleVerifier [0x0x7ff752036b55+79621]
+        GetHandleVerifier [0x0x7ff752036bb0+79712]
+        (No symbol) [0x0x7ff751dcbf1c]
+        (No symbol) [0x0x7ff751e24454]
+        (No symbol) [0x0x7ff751e16078]
+        (No symbol) [0x0x7ff751e4b13a]
+        (No symbol) [0x0x7ff751e15926]
+        (No symbol) [0x0x7ff751e4b350]
+        (No symbol) [0x0x7ff751e733d0]
+        (No symbol) [0x0x7ff751e4af13]
+        (No symbol) [0x0x7ff751e14151]
+        (No symbol) [0x0x7ff751e14ee3]
+        GetHandleVerifier [0x0x7ff7522f686d+2962461]
+        GetHandleVerifier [0x0x7ff7522f0b8d+2938685]
+        GetHandleVerifier [0x0x7ff75230f74d+3064573]
+        GetHandleVerifier [0x0x7ff752050c9e+186446]
+        GetHandleVerifier [0x0x7ff752058a6f+218655]
+        GetHandleVerifier [0x0x7ff75203f944+115956]
+        GetHandleVerifier [0x0x7ff75203faf9+116393]
+        GetHandleVerifier [0x0x7ff752025f28+10968]
+        BaseThreadInitThunk [0x0x7ff90efbe8d7+23]
+        RtlUserThreadStart [0x0x7ff90fcdc34c+44]
 
-        except Exception as e:
-            print(f"Error generating AI response: {str(e)}")
-            return "cool"
+[generate_ai_response] Called with tweet_text: 
+[clean_text] Called with text: Since there's no tweet to respond to, here are a few general options I, as Mohit Nagaraj, might tweet:
 
-    def monitor_and_reply(self, interval=60 * 5):
-        print(f"[monitor_and_reply] Called with interval: {interval}")
-        if not self.login():
-            print("Failed to login. Please check your credentials.")
-            return
+**Option 1 (General observation on tech):**
 
-        processed_tweets = set()
-        print("Starting to monitor tech tweets...")
+> Building resilient systems is key. Thinking about failure scenarios from the start saves a ton of headaches down the line. #devops #softwareengineering
 
-        while True:
-            random.shuffle(self.tech_search_queries)
-            for query in self.tech_search_queries:
-                try:
-                    print(f"\nProcessing query: {query}")
-                    tweets = self.search_tweets(query)
-                    print(f"Found {len(tweets)} tweets for '{query}'")
+**Option 2 (Sharing a recent learning experience):**
 
-                    tweets_processed_this_round = 0
-                    for tweet in tweets:
-                        try:
-                            tweet_id = self.get_tweet_id(tweet)
-                            if not tweet_id or tweet_id in processed_tweets:
-                                continue
+> Just wrestled with a tricky CORS issue using gRPC & GoFiber. Finally cracked it! Sometimes the simplest solutions are the hardest to find. #golang #grpc #cors
 
-                            if self.is_blocked_handle(tweet) or self.is_own_tweet(tweet) or self.is_reply_tweet(tweet):
-                                continue
-                            
-                            print(f"Processing tweet: {tweet_id}")
-                            if self.reply_to_tweet(tweet):
-                                processed_tweets.add(tweet_id)
-                                tweets_processed_this_round += 1
-                                print(f"Successfully replied to tweet: {tweet_id}")
-                                time.sleep(random.uniform(20, 40))
+**Option 3 (Humorous/Relatable Developer Thought):**
 
-                        except Exception as e:
-                            print(f"Error processing a tweet: {str(e)}")
-                            continue
-                    
-                    print(f"Processed {tweets_processed_this_round} new tweets for query '{query}'")
+> Me: Adds a single line of code.
+> My tests: 💥💥💥💥💥💥💥
+> #programming #developerlife #testing
 
-                except Exception as e:
-                    print(f"An error occurred while processing query '{query}': {str(e)}")
-                    continue
-            
-            if len(processed_tweets) > 500:
-                print("Cleaning up processed tweets list...")
-                processed_list = list(processed_tweets)
-                processed_tweets = set(processed_list[-500:])
+**Option 4 (Commenting on the importance of open source):**
 
-            print(f"\nFinished a cycle of queries. Waiting {interval} seconds before the next cycle...")
-            time.sleep(interval)
+> Love seeing so many people contributing to open source this Hacktoberfest! It's the best way to learn, collaborate, and build a stronger tech community. #opensource #hacktoberfest
+[clean_text] Returning: Since there's no tweet to respond to, here are a few general options I, as Mohit Nagaraj, might tweet:
 
-    def cleanup(self):
-        print("[cleanup] Called.")
-        if hasattr(self, 'driver'):
-            self.driver.quit()
-        print("[cleanup] Browser closed.")
+Option 1 (General observation on tech):
 
-    def clean_text(self, text):
-        """Clean the AI-generated text (strip whitespace, remove unwanted characters, etc)."""
-        print(f"[clean_text] Called with text: {text}")
-        # Basic cleaning: strip whitespace, remove leading/trailing quotes, and remove all '*' characters
-        cleaned = text.strip().strip('"').replace('*', '')
-        print(f"[clean_text] Returning: {cleaned}")
-        return cleaned
+> Building resilient systems is key. Thinking about failure scenarios from the start saves a ton of headaches down the line. #devops #softwareengineering
 
-    def reply_to_tweet(self, tweet_element):
-        """Reply to a tweet using Selenium. Log the tweet_id and the AI-generated reply. Return True if successful, False otherwise."""
-        print("[reply_to_tweet] Called.")
-        try:
-            tweet_id = self.get_tweet_id(tweet_element)
-            print(f"[reply_to_tweet] Processing tweet_id: {tweet_id}")
-            # Like the tweet before replying
-            try:
-                like_button = tweet_element.find_element(By.CSS_SELECTOR, '[data-testid="like"]')
-                like_button.click()
-                print(f"[reply_to_tweet] Liked tweet: {tweet_id}")
-                time.sleep(1)
-            except Exception as e:
-                print(f"[reply_to_tweet] Could not like tweet: {str(e)}")
-            # Extract tweet text for context
-            tweet_text = ""
-            try:
-                tweet_text_elem = tweet_element.find_element(By.CSS_SELECTOR, '[data-testid="tweetText"]')
-                tweet_text = tweet_text_elem.text
-            except Exception as e:
-                print(f"[reply_to_tweet] Could not extract tweet text: {str(e)}")
-            ai_reply = self.generate_ai_response(tweet_text)
-            print(f"[reply_to_tweet] AI reply: {ai_reply}")
-            # Find and click the reply button
-            reply_button = tweet_element.find_element(By.CSS_SELECTOR, '[data-testid="reply"]')
-            reply_button.click()
-            time.sleep(2)
-            # Find the reply text area (should be the only textarea visible)
-            reply_box = self.wait.until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, 'div[role="dialog"] div[role="textbox"]'))
-            )
-            reply_box.send_keys(ai_reply)
-            time.sleep(1)
-            # Find and click the reply submit button
-            submit_buttons = tweet_element.parent.find_elements(By.CSS_SELECTOR, 'div[role="dialog"] [data-testid="tweetButton"]')
-            if not submit_buttons:
-                # Try global search if not found in parent
-                submit_buttons = self.driver.find_elements(By.CSS_SELECTOR, 'div[role="dialog"] [data-testid="tweetButton"]')
-            if submit_buttons:
-                submit_buttons[0].click()
-                print(f"[reply_to_tweet] Successfully replied to tweet: {tweet_id}")
-                time.sleep(2)
-                return True
-            else:
-                print(f"[reply_to_tweet] Could not find reply submit button for tweet: {tweet_id}")
-                return False
-        except Exception as e:
-            print(f"[reply_to_tweet] Error replying to tweet: {str(e)}")
-            return False
+Option 2 (Sharing a recent learning experience):
 
-def main():
-    bot = TwitterBot()
-    try:
-        bot.monitor_and_reply(interval=60 * 5)  # Check for new tweets every 5 minutes
-    except KeyboardInterrupt:
-        print("\nStopping bot...")
-    finally:
-        bot.cleanup()
+> Just wrestled with a tricky CORS issue using gRPC & GoFiber. Finally cracked it! Sometimes the simplest solutions are the hardest to find. #golang #grpc #cors
 
-if __name__ == "__main__":
+Option 3 (Humorous/Relatable Developer Thought):
+
+> Me: Adds a single line of code.
+> My tests: 💥💥💥💥💥💥💥
+> #programming #developerlife #testing
+
+Option 4 (Commenting on the importance of open source):
+
+> Love seeing so many people contributing to open source this Hacktoberfest! It's the best way to learn, collaborate, and build a stronger tech community. #opensource #hacktoberfest
+Generated AI response (tone: professional and insightful): Since there's no tweet to respond to, here are a few general options I, as Mohit Nagaraj, might tweet:
+
+Option 1 (General observation on tech):
+
+> Building resilient systems is key. Thinking about failure scenarios from the start saves a ton of headaches down the line. #devops...
+[generate_ai_response] AI reply: Since there's no tweet to respond to, here are a few general options I, as Mohit Nagaraj, might tweet:
+
+Option 1 (General observation on tech):
+
+> Building resilient systems is key. Thinking about failure scenarios from the start saves a ton of headaches down the line. #devops...
+[reply_to_tweet] AI reply: Since there's no tweet to respond to, here are a few general options I, as Mohit Nagaraj, might tweet:
+
+Option 1 (General observation on tech):
+
+> Building resilient systems is key. Thinking about failure scenarios from the start saves a ton of headaches down the line. #devops...
+[reply_to_tweet] Error replying to tweet: Message: element not interactable
+  (Session info: chrome=139.0.7258.66)
+Stacktrace:
+        GetHandleVerifier [0x0x7ff752036b55+79621]
+        GetHandleVerifier [0x0x7ff752036bb0+79712]
+        (No symbol) [0x0x7ff751dcbf1c]
+        (No symbol) [0x0x7ff751e24454]
+        (No symbol) [0x0x7ff751e16078]
+        (No symbol) [0x0x7ff751e4b13a]
+        (No symbol) [0x0x7ff751e15926]
+        (No symbol) [0x0x7ff751e4b350]
+        (No symbol) [0x0x7ff751e733d0]
+        (No symbol) [0x0x7ff751e4af13]
+        (No symbol) [0x0x7ff751e14151]
+        (No symbol) [0x0x7ff751e14ee3]
+        GetHandleVerifier [0x0x7ff7522f686d+2962461]
+        GetHandleVerifier [0x0x7ff7522f0b8d+2938685]
+        GetHandleVerifier [0x0x7ff75230f74d+3064573]
+        GetHandleVerifier [0x0x7ff752050c9e+186446]
+        GetHandleVerifier [0x0x7ff752058a6f+218655]
+        GetHandleVerifier [0x0x7ff75203f944+115956]
+        GetHandleVerifier [0x0x7ff75203faf9+116393]
+        GetHandleVerifier [0x0x7ff752025f28+10968]
+        BaseThreadInitThunk [0x0x7ff90efbe8d7+23]
+        RtlUserThreadStart [0x0x7ff90fcdc34c+44]
+
+Processed 0 new tweets for query 'microservices'
+Waiting 10 seconds before next query...
+
+Processing query: Express.js
+[search_tweets] Called with query: Express.js
+Searching for tweets with query: Express.js
+[11180:6744:0811/124730.968:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A0F0240014670000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[11180:6744:0811/124730.978:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A050250014670000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[11180:6744:0811/124730.989:ERROR:gpu\command_buffer\service\webgpu_decoder_impl.cc:1670] Failed to query ID3D11Device from ANGLE.
+[11180:6744:0811/124731.040:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A080300014670000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[search_tweets] Clicked on Latest tab for query: Express.js
+[search_tweets] Found 8 tweets for 'Express.js'
+Found 8 tweets for 'Express.js'
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1954803974294409408
+[is_tweet_already_liked] Called.
+[is_tweet_already_liked] Tweet is not liked
+[is_blocked_handle] Called.
+[is_blocked_handle] Checking handle: puneetverma_7
+[is_blocked_handle] Checking handle: puneetverma_7
+[is_blocked_handle] Checking handle: puneetverma_7
+[is_blocked_handle] Checking handle: sheryians_
+[is_blocked_handle] Checking handle: ankurdotio
+[is_blocked_handle] Checking handle: hashtag
+[is_blocked_handle] Checking handle: hashtag
+[is_blocked_handle] Checking handle: hashtag
+[is_blocked_handle] All found handles in tweet: ['puneetverma_7', 'puneetverma_7', 'puneetverma_7', 'sheryians_', 'ankurdotio', 'hashtag', 'hashtag', 'hashtag']
+[is_own_tweet] Called.
+[is_reply_tweet] Called.
+Processing tweet: 1954803974294409408
+[reply_to_tweet] Called.
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1954803974294409408
+[reply_to_tweet] Processing tweet_id: 1954803974294409408
+[reply_to_tweet] Liked tweet: 1954803974294409408
+[generate_ai_response] Called with tweet_text:  Backend Day 22 Update
+
+Just built an AI Chatbot  with:
+ Real-time chat via Gemini AI API
+ React.js UI + Node.js &amp; Express backend
+Learnt frontend-backend integration & solved many issues along the way
+Thanks
+@sheryians_
+ &
+@ankurdotio
+ sir!
+#BackendDev #AIChatbot #GeminiAI
+
+
+⚠️ Keyboard interrupt received. Stopping bot...
+
+Cleaning up...
+[cleanup] Called.
+Traceback (most recent call last):
+  File "D:\software\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\github projects\Twitter-auto-comment-with-Ai\twitter_bot.py", line 619, in <module>
     main()
+    ~~~~^^
+  File "D:\github projects\Twitter-auto-comment-with-Ai\twitter_bot.py", line 613, in main
+    bot.cleanup()
+    ~~~~~~~~~~~^^
+  File "D:\github projects\Twitter-auto-comment-with-Ai\twitter_bot.py", line 505, in cleanup
+    self.driver.quit()
+    ~~~~~~~~~~~~~~~~^^
+  File "D:\software\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 187, in quit        
+    super().quit()
+    ~~~~~~~~~~~~^^
+  File "D:\software\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 469, in quit
+    self.execute(Command.QUIT)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "D:\software\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 345, in execute       
+    response = self.command_executor.execute(driver_command, params)
+  File "D:\software\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 300, in execute
+    return self._request(command_info[0], url, body=data)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\software\Lib\site-packages\selenium\webdriver\remote\remote_connection.py", line 321, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+  File "D:\software\Lib\site-packages\urllib3\_request_methods.py", line 135, in request
+    return self.request_encode_url(
+           ~~~~~~~~~~~~~~~~~~~~~~~^
+        method,
+        ^^^^^^^
+    ...<3 lines>...
+        **urlopen_kw,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\software\Lib\site-packages\urllib3\_request_methods.py", line 182, in request_encode_url       
+    return self.urlopen(method, url, **extra_kw)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\software\Lib\site-packages\urllib3\poolmanager.py", line 459, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "D:\software\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "D:\software\Lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+    ~~~~~~~~~~~~^
+        method,
+        ^^^^^^^
+    ...<6 lines>...
+        enforce_content_length=enforce_content_length,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\software\Lib\site-packages\urllib3\connection.py", line 494, in request
+    self.endheaders()
+    ~~~~~~~~~~~~~~~^^
+  File "D:\software\Lib\http\client.py", line 1333, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\software\Lib\http\client.py", line 1093, in _send_output
+    self.send(msg)
+    ~~~~~~~~~^^^^^
+  File "D:\software\Lib\http\client.py", line 1037, in send
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "D:\software\Lib\site-packages\urllib3\connection.py", line 325, in connect
+    self.sock = self._new_conn()
+                ~~~~~~~~~~~~~~^^
+  File "D:\software\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "D:\software\Lib\site-packages\urllib3\util\connection.py", line 81, in create_connection
+    sock.close()
+    ~~~~~~~~~~^^
+  File "D:\software\Lib\socket.py", line 501, in close
+    def close(self):
+
+KeyboardInterrupt
+PS D:\github projects\Twitter-auto-comment-with-Ai> git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1.63 KiB | 277.00 KiB/s, done.
+From https://github.com/mohit-nagaraj/Twitter-auto-comment-with-Ai
+   c3bd1a5..f7f503e  main       -> origin/main
+Updating c3bd1a5..f7f503e
+Fast-forward
+ twitter_bot.py | 137 +++++++++++++++++++++++++++++++++++++++++----------------
+ 1 file changed, 100 insertions(+), 37 deletions(-)
+PS D:\github projects\Twitter-auto-comment-with-Ai> 
