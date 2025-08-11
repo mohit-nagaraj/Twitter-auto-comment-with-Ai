@@ -4,17 +4,52 @@ import time
 import random
 import sys
 import traceback
-from dotenv import load_dotenv
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException, NoSuchElementException
-from datetime import datetime, timedelta
-import google.generativeai as genai
+
+print("=== Importing required modules ===")
+
+try:
+    print("Importing dotenv...")
+    from dotenv import load_dotenv
+    print("✓ dotenv imported successfully")
+except Exception as e:
+    print(f"❌ Failed to import dotenv: {e}")
+    input("Press Enter to exit...")
+    sys.exit(1)
+
+try:
+    print("Importing selenium modules...")
+    from selenium import webdriver
+    from selenium.webdriver.chrome.service import Service
+    from webdriver_manager.chrome import ChromeDriverManager
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.common.keys import Keys
+    from selenium.webdriver.support.ui import WebDriverWait
+    from selenium.webdriver.support import expected_conditions as EC
+    from selenium.common.exceptions import TimeoutException, NoSuchElementException
+    print("✓ selenium modules imported successfully")
+except Exception as e:
+    print(f"❌ Failed to import selenium modules: {e}")
+    input("Press Enter to exit...")
+    sys.exit(1)
+
+try:
+    print("Importing datetime...")
+    from datetime import datetime, timedelta
+    print("✓ datetime imported successfully")
+except Exception as e:
+    print(f"❌ Failed to import datetime: {e}")
+    input("Press Enter to exit...")
+    sys.exit(1)
+
+try:
+    print("Importing google.genai...")
+    import google.genai as genai
+    print("✓ google.genai imported successfully")
+except Exception as e:
+    print(f"❌ Failed to import google.genai: {e}")
+    print("Please install it with: pip install google-genai")
+    input("Press Enter to exit...")
+    sys.exit(1)
 
 print("\n=== Starting Twitter Bot ===")
 print(f"Python version: {sys.version}")
@@ -64,9 +99,9 @@ class TwitterBot:
             gemini_api_key = os.getenv('GEMINI_API_KEY')
             if not gemini_api_key:
                 raise ValueError("GEMINI_API_KEY not found in environment variables")
-            genai.configure(api_key=gemini_api_key)
-            self.model = genai.GenerativeModel('gemini-2.0-flash-exp')
-            print("✓ Gemini AI model initialized successfully!")
+            self.client = genai.Client(api_key=gemini_api_key)
+            self.models = self.client.models
+            print("✓ Gemini AI client initialized successfully!")
         except Exception as e:
             print(f"\n❌ Error during initialization: {str(e)}")
             print(traceback.format_exc())
@@ -112,6 +147,18 @@ class TwitterBot:
             print("\nDownloading/verifying ChromeDriver...")
             try:
                 driver_path = ChromeDriverManager().install()
+                # Fix the path to point to the actual chromedriver executable
+                if driver_path.endswith('THIRD_PARTY_NOTICES.chromedriver'):
+                    # Remove the incorrect suffix and find the actual executable
+                    base_path = driver_path.replace('/THIRD_PARTY_NOTICES.chromedriver', '')
+                    actual_driver_path = os.path.join(base_path, 'chromedriver.exe')
+                    if os.path.exists(actual_driver_path):
+                        driver_path = actual_driver_path
+                    else:
+                        # Try alternative path
+                        actual_driver_path = os.path.join(base_path, 'chromedriver')
+                        if os.path.exists(actual_driver_path):
+                            driver_path = actual_driver_path
                 print(f"✓ ChromeDriver path: {driver_path}")
             except Exception as e:
                 print(f"❌ Error downloading ChromeDriver: {str(e)}")
@@ -132,6 +179,11 @@ class TwitterBot:
             time.sleep(3)  # Give it time to load
             print(f"✓ Current URL: {self.driver.current_url}")
             print(f"✓ Page title: {self.driver.title}")
+            
+            # Install Control Panel for Twitter extension
+            print("\n=== Installing Control Panel for Twitter Extension ===")
+            self.install_control_panel_extension()
+            
             print("\n✅ Chrome driver setup completed successfully!")
                 
         except Exception as e:
@@ -147,6 +199,47 @@ class TwitterBot:
                 except:
                     pass
             raise e
+
+    def install_control_panel_extension(self):
+        """Install the Control Panel for Twitter extension from Chrome Web Store"""
+        print("Installing Control Panel for Twitter extension...")
+        try:
+            # Navigate to the Chrome Web Store extension page
+            extension_url = "https://chromewebstore.google.com/detail/control-panel-for-twitter/kpmjjdhbcfebfjgdnpjagcndoelnidfj"
+            print(f"Navigating to extension page: {extension_url}")
+            self.driver.get(extension_url)
+            time.sleep(5)  # Wait for page to load
+            
+            print("Looking for 'Add to Chrome' button...")
+            # Wait for the "Add to Chrome" button to appear
+            add_button = self.wait.until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, 'div[role="button"][aria-label*="Add to Chrome"], button[aria-label*="Add to Chrome"]'))
+            )
+            print("Found 'Add to Chrome' button, clicking...")
+            add_button.click()
+            time.sleep(3)
+            
+            # Handle the confirmation dialog
+            print("Looking for confirmation dialog...")
+            try:
+                confirm_button = self.wait.until(
+                    EC.element_to_be_clickable((By.CSS_SELECTOR, 'div[role="button"][aria-label*="Add extension"], button[aria-label*="Add extension"]'))
+                )
+                print("Found confirmation button, clicking...")
+                confirm_button.click()
+                time.sleep(5)
+                print("✅ Control Panel for Twitter extension installed successfully!")
+            except TimeoutException:
+                print("⚠️ No confirmation dialog found, extension might already be installed or installation completed automatically")
+            
+            # Navigate back to Twitter
+            print("Navigating back to Twitter...")
+            self.driver.get("https://twitter.com")
+            time.sleep(3)
+            
+        except Exception as e:
+            print(f"❌ Error installing extension: {str(e)}")
+            print("Extension installation failed, but continuing with bot setup...")
 
     def save_cookies(self):
         print("[save_cookies] Called.")
@@ -376,7 +469,10 @@ class TwitterBot:
 
             Generate a natural and engaging reply as Mohit Nagaraj:"""
 
-            response = self.model.generate_content(prompt)
+            response = self.models.generate_content(
+                model="gemini-2.0-flash-exp",
+                contents=prompt
+            )
             ai_reply = response.text.strip().strip('"')
 
             ai_reply = self.clean_text(ai_reply)
@@ -534,9 +630,16 @@ def main():
 
 if __name__ == "__main__":
     try:
+        print("Starting main function...")
         main()
     except Exception as e:
         print(f"\n\n❌ Unhandled exception: {str(e)}")
         print(traceback.format_exc())
         input("\nPress Enter to exit...")
         sys.exit(1)
+    except SystemExit as e:
+        print(f"\n\n⚠️ Script exited with code: {e.code}")
+        if e.code != 0:
+            print("This indicates an error occurred during execution.")
+        input("\nPress Enter to exit...")
+        sys.exit(e.code)

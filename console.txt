@@ -1,0 +1,986 @@
+[reply_to_tweet] Processing tweet_id: 1954204795675562239
+[reply_to_tweet] Could not like tweet: Message: element not interactable
+  (Session info: chrome=139.0.7258.66)
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xccda34]
+        (No symbol) [0x0xcc2565]
+        (No symbol) [0x0xcf13dc]
+        (No symbol) [0x0xcc1ff4]
+        (No symbol) [0x0xcf1654]
+        (No symbol) [0x0xd126ea]
+        (No symbol) [0x0xcf11d6]
+        (No symbol) [0x0xcc0833]
+        (No symbol) [0x0xcc16a4]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        GetHandleVerifier [0x0xe57728+94152]
+        GetHandleVerifier [0x0xe578b2+94546]
+        GetHandleVerifier [0x0xe42bca+9322]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+[generate_ai_response] Called with tweet_text: 
+[clean_text] Called with text: Okay, I need a tweet to respond to. Give me a tweet and I'll craft a response as Mohit Nagaraj, keeping the tone and guidelines in mind.
+[clean_text] Returning: Okay, I need a tweet to respond to. Give me a tweet and I'll craft a response as Mohit Nagaraj, keeping the tone and guidelines in mind.
+Generated AI response (tone: knowledgeable and helpful): Okay, I need a tweet to respond to. Give me a tweet and I'll craft a response as Mohit Nagaraj, keeping the tone and guidelines in mind.
+[generate_ai_response] AI reply: Okay, I need a tweet to respond to. Give me a tweet and I'll craft a response as Mohit Nagaraj, keeping the tone and guidelines in mind.
+[reply_to_tweet] AI reply: Okay, I need a tweet to respond to. Give me a tweet and I'll craft a response as Mohit Nagaraj, keeping the tone and guidelines in mind.
+[reply_to_tweet] Error replying to tweet: Message: element not interactable
+  (Session info: chrome=139.0.7258.66)
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xccda34]
+        (No symbol) [0x0xcc2565]
+        (No symbol) [0x0xcf13dc]
+        (No symbol) [0x0xcc1ff4]
+        (No symbol) [0x0xcf1654]
+        (No symbol) [0x0xd126ea]
+        (No symbol) [0x0xcf11d6]
+        (No symbol) [0x0xcc0833]
+        (No symbol) [0x0xcc16a4]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        GetHandleVerifier [0x0xe57728+94152]
+        GetHandleVerifier [0x0xe578b2+94546]
+        GetHandleVerifier [0x0xe42bca+9322]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+Processed 0 new tweets for query 'cloud computing'
+
+Processing query: microservices
+[search_tweets] Called with query: microservices
+Searching for tweets with query: microservices
+[12268:7336:0811/114543.464:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A00026005C260000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[12268:7336:0811/114543.473:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A06026005C260000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[12268:7336:0811/114543.482:ERROR:gpu\command_buffer\service\webgpu_decoder_impl.cc:1670] Failed to query ID3D11Device from ANGLE.
+[12268:7336:0811/114543.534:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A0C030005C260000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[search_tweets] Found 4 tweets for 'microservices'
+Found 4 tweets for 'microservices'
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1954710822493831199
+[is_blocked_handle] Called.
+[is_blocked_handle] All found handles in tweet: []
+[is_own_tweet] Called.
+[is_reply_tweet] Called.
+Processing tweet: 1954710822493831199
+[reply_to_tweet] Called.
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1954710822493831199
+[reply_to_tweet] Processing tweet_id: 1954710822493831199
+[reply_to_tweet] Liked tweet: 1954710822493831199
+[generate_ai_response] Called with tweet_text: Microservices Design Patterns.
+[clean_text] Called with text: Microservices Design Patterns - a rabbit hole worth diving into! Spent a good chunk of last year wrestling with them. The learning curve is steep, but the payoff in scalability and maintainability is 🤌. Worth the headache, honestly.
+[clean_text] Returning: Microservices Design Patterns - a rabbit hole worth diving into! Spent a good chunk of last year wrestling with them. The learning curve is steep, but the payoff in scalability and maintainability is 🤌. Worth the headache, honestly.
+Generated AI response (tone: light-hearted and witty): Microservices Design Patterns - a rabbit hole worth diving into! Spent a good chunk of last year wrestling with them. The learning curve is steep, but the payoff in scalability and maintainability is 🤌. Worth the headache, honestly.
+[generate_ai_response] AI reply: Microservices Design Patterns - a rabbit hole worth diving into! Spent a good chunk of last year wrestling with them. The learning curve is steep, but the payoff in scalability and maintainability is 🤌. Worth the headache, honestly.
+[reply_to_tweet] AI reply: Microservices Design Patterns - a rabbit hole worth diving into! Spent a good chunk of last year wrestling with them. The learning curve is steep, but the payoff in scalability and maintainability is 🤌. Worth the headache, honestly.
+[reply_to_tweet] Error replying to tweet: Message: unknown error: ChromeDriver only supports characters in the BMP
+  (Session info: chrome=139.0.7258.66)
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83e13]
+        (No symbol) [0x0xd08436]
+        (No symbol) [0x0xcc725b]
+        (No symbol) [0x0xcc6881]
+        (No symbol) [0x0xcf13dc]
+        (No symbol) [0x0xcc1ff4]
+        (No symbol) [0x0xcf1654]
+        (No symbol) [0x0xd126ea]
+        (No symbol) [0x0xcf11d6]
+        (No symbol) [0x0xcc0833]
+        (No symbol) [0x0xcc16a4]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        GetHandleVerifier [0x0xe57728+94152]
+        GetHandleVerifier [0x0xe578b2+94546]
+        GetHandleVerifier [0x0xe42bca+9322]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1952236616933884239
+[is_blocked_handle] Called.
+[is_blocked_handle] All found handles in tweet: []
+[is_own_tweet] Called.
+[is_reply_tweet] Called.
+Processing tweet: 1952236616933884239
+[reply_to_tweet] Called.
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1952236616933884239
+[reply_to_tweet] Processing tweet_id: 1952236616933884239
+[reply_to_tweet] Could not like tweet: Message: element not interactable
+  (Session info: chrome=139.0.7258.66)
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xccda34]
+        (No symbol) [0x0xcc2565]
+        (No symbol) [0x0xcf13dc]
+        (No symbol) [0x0xcc1ff4]
+        (No symbol) [0x0xcf1654]
+        (No symbol) [0x0xd126ea]
+        (No symbol) [0x0xcf11d6]
+        (No symbol) [0x0xcc0833]
+        (No symbol) [0x0xcc16a4]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        GetHandleVerifier [0x0xe57728+94152]
+        GetHandleVerifier [0x0xe578b2+94546]
+        GetHandleVerifier [0x0xe42bca+9322]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+[generate_ai_response] Called with tweet_text: 
+[clean_text] Called with text: Okay, I need a tweet to respond to. Please provide the tweet content so I can craft a helpful, knowledgeable, and engaging response as Mohit Nagaraj.
+[clean_text] Returning: Okay, I need a tweet to respond to. Please provide the tweet content so I can craft a helpful, knowledgeable, and engaging response as Mohit Nagaraj.
+Generated AI response (tone: knowledgeable and helpful): Okay, I need a tweet to respond to. Please provide the tweet content so I can craft a helpful, knowledgeable, and engaging response as Mohit Nagaraj.      
+[generate_ai_response] AI reply: Okay, I need a tweet to respond to. Please provide the tweet content so I can craft a helpful, knowledgeable, and engaging response as Mohit Nagaraj.
+[reply_to_tweet] AI reply: Okay, I need a tweet to respond to. Please provide the tweet content so I can craft a helpful, knowledgeable, and engaging response as Mohit Nagaraj.
+[reply_to_tweet] Error replying to tweet: Message: element not interactable
+  (Session info: chrome=139.0.7258.66)
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xccda34]
+        (No symbol) [0x0xcc2565]
+        (No symbol) [0x0xcf13dc]
+        (No symbol) [0x0xcc1ff4]
+        (No symbol) [0x0xcf1654]
+        (No symbol) [0x0xd126ea]
+        (No symbol) [0x0xcf11d6]
+        (No symbol) [0x0xcc0833]
+        (No symbol) [0x0xcc16a4]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        GetHandleVerifier [0x0xe57728+94152]
+        GetHandleVerifier [0x0xe578b2+94546]
+        GetHandleVerifier [0x0xe42bca+9322]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1951172066113114359
+[is_blocked_handle] Called.
+[is_blocked_handle] All found handles in tweet: []
+[is_own_tweet] Called.
+[is_reply_tweet] Called.
+Processing tweet: 1951172066113114359
+[reply_to_tweet] Called.
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1951172066113114359
+[reply_to_tweet] Processing tweet_id: 1951172066113114359
+[reply_to_tweet] Could not like tweet: Message: element not interactable
+  (Session info: chrome=139.0.7258.66)
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xccda34]
+        (No symbol) [0x0xcc2565]
+        (No symbol) [0x0xcf13dc]
+        (No symbol) [0x0xcc1ff4]
+        (No symbol) [0x0xcf1654]
+        (No symbol) [0x0xd126ea]
+        (No symbol) [0x0xcf11d6]
+        (No symbol) [0x0xcc0833]
+        (No symbol) [0x0xcc16a4]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        GetHandleVerifier [0x0xe57728+94152]
+        GetHandleVerifier [0x0xe578b2+94546]
+        GetHandleVerifier [0x0xe42bca+9322]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+[generate_ai_response] Called with tweet_text: 
+[clean_text] Called with text: Okay, I need a tweet to respond to. Since there's no tweet provided, I'll make a general, slightly boastful tweet about my tech journey instead, aiming for engagement.
+
+Here it is:
+
+Just pushed a major update to Solace. Seeing Docker, AWS S3, and Node.js orchestrate so seamlessly is *chef's kiss*. Building complex systems is where the fun's at. DSCE '26, shaping the future one line of code at a time. 😎
+[clean_text] Returning: Okay, I need a tweet to respond to. Since there's no tweet provided, I'll make a general, slightly boastful tweet about my tech journey instead, aiming for engagement.
+
+Here it is:
+
+Just pushed a major update to Solace. Seeing Docker, AWS S3, and Node.js orchestrate so seamlessly is chef's kiss. Building complex systems is where the fun's at. DSCE '26, shaping the future one line of code at a time. 😎
+Generated AI response (tone: slightly egoistic but still professional): Okay, I need a tweet to respond to. Since there's no tweet provided, I'll make a general, slightly boastful tweet about my tech journey instead, aiming for engagement.
+
+Here it is:
+
+Just pushed a major update to Solace. Seeing Docker, AWS S3, and Node.js orchestrate so seamles...        
+[generate_ai_response] AI reply: Okay, I need a tweet to respond to. Since there's no tweet provided, I'll make a general, slightly boastful tweet about my tech journey instead, aiming for engagement.
+
+Here it is:
+
+Just pushed a major update to Solace. Seeing Docker, AWS S3, and Node.js orchestrate so seamles...        
+[reply_to_tweet] AI reply: Okay, I need a tweet to respond to. Since there's no tweet provided, I'll make a general, slightly boastful tweet about my tech journey instead, aiming for engagement.
+
+Here it is:
+
+Just pushed a major update to Solace. Seeing Docker, AWS S3, and Node.js orchestrate so seamles...        
+[reply_to_tweet] Error replying to tweet: Message: element not interactable
+  (Session info: chrome=139.0.7258.66)
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xccda34]
+        (No symbol) [0x0xcc2565]
+        (No symbol) [0x0xcf13dc]
+        (No symbol) [0x0xcc1ff4]
+        (No symbol) [0x0xcf1654]
+        (No symbol) [0x0xd126ea]
+        (No symbol) [0x0xcf11d6]
+        (No symbol) [0x0xcc0833]
+        (No symbol) [0x0xcc16a4]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        GetHandleVerifier [0x0xe57728+94152]
+        GetHandleVerifier [0x0xe578b2+94546]
+        GetHandleVerifier [0x0xe42bca+9322]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1950508440243048588
+[is_blocked_handle] Called.
+[is_blocked_handle] All found handles in tweet: []
+[is_own_tweet] Called.
+[is_reply_tweet] Called.
+Processing tweet: 1950508440243048588
+[reply_to_tweet] Called.
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1950508440243048588
+[reply_to_tweet] Processing tweet_id: 1950508440243048588
+[reply_to_tweet] Could not like tweet: Message: element not interactable
+  (Session info: chrome=139.0.7258.66)
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xccda34]
+        (No symbol) [0x0xcc2565]
+        (No symbol) [0x0xcf13dc]
+        (No symbol) [0x0xcc1ff4]
+        (No symbol) [0x0xcf1654]
+        (No symbol) [0x0xd126ea]
+        (No symbol) [0x0xcf11d6]
+        (No symbol) [0x0xcc0833]
+        (No symbol) [0x0xcc16a4]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        GetHandleVerifier [0x0xe57728+94152]
+        GetHandleVerifier [0x0xe578b2+94546]
+        GetHandleVerifier [0x0xe42bca+9322]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+[generate_ai_response] Called with tweet_text: 
+[clean_text] Called with text: Okay, I need a tweet to respond to! I can't generate a reply without knowing what I'm replying to. Give me the tweet text and I'll craft a perfectly Mohit Nagaraj-esque response.   
+[clean_text] Returning: Okay, I need a tweet to respond to! I can't generate a reply without knowing what I'm replying to. Give me the tweet text and I'll craft a perfectly Mohit Nagaraj-esque response.
+Generated AI response (tone: slightly egoistic but still professional): Okay, I need a tweet to respond to! I can't generate a reply without knowing what I'm replying to. Give me the tweet text and I'll craft a perfectly Mohit Nagaraj-esque response.
+[generate_ai_response] AI reply: Okay, I need a tweet to respond to! I can't generate a reply without knowing what I'm replying to. Give me the tweet text and I'll craft a perfectly Mohit Nagaraj-esque response. 
+[reply_to_tweet] AI reply: Okay, I need a tweet to respond to! I can't generate a reply without knowing what I'm replying to. Give me the tweet text and I'll craft a perfectly Mohit Nagaraj-esque response.       
+[reply_to_tweet] Error replying to tweet: Message: element not interactable
+  (Session info: chrome=139.0.7258.66)
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xccda34]
+        (No symbol) [0x0xcc2565]
+        (No symbol) [0x0xcf13dc]
+        (No symbol) [0x0xcc1ff4]
+        (No symbol) [0x0xcf1654]
+        (No symbol) [0x0xd126ea]
+        (No symbol) [0x0xcf11d6]
+        (No symbol) [0x0xcc0833]
+        (No symbol) [0x0xcc16a4]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        GetHandleVerifier [0x0xe57728+94152]
+        GetHandleVerifier [0x0xe578b2+94546]
+        GetHandleVerifier [0x0xe42bca+9322]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+Processed 0 new tweets for query 'microservices'
+
+Processing query: Golang
+[search_tweets] Called with query: Golang
+Searching for tweets with query: Golang
+[12268:7336:0811/114600.639:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A00026005C260000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[12268:7336:0811/114600.651:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A06026005C260000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[12268:7336:0811/114600.663:ERROR:gpu\command_buffer\service\webgpu_decoder_impl.cc:1670] Failed to query ID3D11Device from ANGLE.
+[12268:7336:0811/114600.711:ERROR:gpu\command_buffer\service\gles2_cmd_decoder_passthrough.cc:1096] [GroupMarkerNotSet(crbug.com/242999)!:A0C030005C260000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+[search_tweets] Found 5 tweets for 'Golang'
+Found 5 tweets for 'Golang'
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1954630181366165846
+[is_blocked_handle] Called.
+[is_blocked_handle] All found handles in tweet: []
+[is_own_tweet] Called.
+[is_reply_tweet] Called.
+Processing tweet: 1954630181366165846
+[reply_to_tweet] Called.
+[get_tweet_id] Called.
+[get_tweet_id] Found tweet_id: 1954630181366165846
+[reply_to_tweet] Processing tweet_id: 1954630181366165846
+[reply_to_tweet] Could not like tweet: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[data-testid="like"]"}
+  (Session info: chrome=139.0.7258.66); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83e13]
+        (No symbol) [0x0xccc89e]
+        (No symbol) [0x0xcccc3b]
+        (No symbol) [0x0xcc20d1]
+        (No symbol) [0x0xcf1424]
+        (No symbol) [0x0xcc1ff4]
+        (No symbol) [0x0xcf1654]
+        (No symbol) [0x0xd126ea]
+        (No symbol) [0x0xcf11d6]
+        (No symbol) [0x0xcc0833]
+        (No symbol) [0x0xcc16a4]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        GetHandleVerifier [0x0xe57728+94152]
+        GetHandleVerifier [0x0xe578b2+94546]
+        GetHandleVerifier [0x0xe42bca+9322]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+[generate_ai_response] Called with tweet_text: Life is short so i use Python #BigData #Analytics #DataScience #AI #MachineLearning #IoT #IIoT #Python #RStats #TensorFlow #Java #JavaScript #ReactJS #GoLang #CloudComputing #Serverless #DataScientist #Linux #Programming #Coding #100DaysofCode #SQL
+[clean_text] Called with text: Life is short, so I use Go. 😉 Just kidding (mostly). Python's great for data science, but Go's concurrency is where it's at for building scalable systems! Cool stack though. 👍    
+[clean_text] Returning: Life is short, so I use Go. 😉 Just kidding (mostly). Python's great for data science, but Go's concurrency is where it's at for building scalable systems! Cool stack though. 👍
+Generated AI response (tone: light-hearted and witty): Life is short, so I use Go. 😉 Just kidding (mostly). Python's great for data science, but Go's concurrency is where it's at for building scalable systems! Cool stack though. 👍
+[generate_ai_response] AI reply: Life is short, so I use Go. 😉 Just kidding (mostly). Python's great for data science, but Go's concurrency is where it's at for building scalable systems! Cool stack though. 👍  
+[reply_to_tweet] AI reply: Life is short, so I use Go. 😉 Just kidding (mostly). Python's great for data science, but Go's concurrency is where it's at for building scalable systems! Cool stack though. 👍        
+[reply_to_tweet] Error replying to tweet: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=139.0.7258.66)
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83e13]
+        (No symbol) [0x0xc73760]
+        (No symbol) [0x0xc915d2]
+        (No symbol) [0x0xcf7cac]
+        (No symbol) [0x0xd11fc9]
+        (No symbol) [0x0xcf11d6]
+        (No symbol) [0x0xcc0833]
+        (No symbol) [0x0xcc16a4]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        GetHandleVerifier [0x0xe57728+94152]
+        GetHandleVerifier [0x0xe578b2+94546]
+        GetHandleVerifier [0x0xe42bca+9322]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+[get_tweet_id] Called.
+Error extracting tweet ID: Message: invalid session id
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xcbfaf8]
+        (No symbol) [0x0xcf1296]
+        (No symbol) [0x0xcece75]
+        (No symbol) [0x0xcec3f6]
+        (No symbol) [0x0xc55755]
+        (No symbol) [0x0xc55cae]
+        (No symbol) [0x0xc5613d]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        (No symbol) [0x0xc55420]
+        (No symbol) [0x0xc54c36]
+        GetHandleVerifier [0x0x11f508c+3885356]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+[get_tweet_id] Called.
+Error extracting tweet ID: Message: invalid session id
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xcbfaf8]
+        (No symbol) [0x0xcf1296]
+        (No symbol) [0x0xcece75]
+        (No symbol) [0x0xcec3f6]
+        (No symbol) [0x0xc55755]
+        (No symbol) [0x0xc55cae]
+        (No symbol) [0x0xc5613d]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        (No symbol) [0x0xc55420]
+        (No symbol) [0x0xc54c36]
+        GetHandleVerifier [0x0x11f508c+3885356]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+[get_tweet_id] Called.
+Error extracting tweet ID: Message: invalid session id
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xcbfaf8]
+        (No symbol) [0x0xcf1296]
+        (No symbol) [0x0xcece75]
+        (No symbol) [0x0xcec3f6]
+        (No symbol) [0x0xc55755]
+        (No symbol) [0x0xc55cae]
+        (No symbol) [0x0xc5613d]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        (No symbol) [0x0xc55420]
+        (No symbol) [0x0xc54c36]
+        GetHandleVerifier [0x0x11f508c+3885356]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+[get_tweet_id] Called.
+Error extracting tweet ID: Message: invalid session id
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xcbfaf8]
+        (No symbol) [0x0xcf1296]
+        (No symbol) [0x0xcece75]
+        (No symbol) [0x0xcec3f6]
+        (No symbol) [0x0xc55755]
+        (No symbol) [0x0xc55cae]
+        (No symbol) [0x0xc5613d]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        (No symbol) [0x0xc55420]
+        (No symbol) [0x0xc54c36]
+        GetHandleVerifier [0x0x11f508c+3885356]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+Processed 0 new tweets for query 'Golang'
+
+Processing query: serverless
+[search_tweets] Called with query: serverless
+Searching for tweets with query: serverless
+Error searching tweets for query 'serverless': Message: invalid session id
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xcbfaf8]
+        (No symbol) [0x0xcf1296]
+        (No symbol) [0x0xcece75]
+        (No symbol) [0x0xcec3f6]
+        (No symbol) [0x0xc55755]
+        (No symbol) [0x0xc55cae]
+        (No symbol) [0x0xc5613d]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        (No symbol) [0x0xc55420]
+        (No symbol) [0x0xc54c36]
+        GetHandleVerifier [0x0x11f508c+3885356]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+Found 0 tweets for 'serverless'
+Processed 0 new tweets for query 'serverless'
+
+Processing query: #DevOps
+[search_tweets] Called with query: #DevOps
+Searching for tweets with query: #DevOps
+Error searching tweets for query '#DevOps': Message: invalid session id
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xcbfaf8]
+        (No symbol) [0x0xcf1296]
+        (No symbol) [0x0xcece75]
+        (No symbol) [0x0xcec3f6]
+        (No symbol) [0x0xc55755]
+        (No symbol) [0x0xc55cae]
+        (No symbol) [0x0xc5613d]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        (No symbol) [0x0xc55420]
+        (No symbol) [0x0xc54c36]
+        GetHandleVerifier [0x0x11f508c+3885356]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+Found 0 tweets for '#DevOps'
+Processed 0 new tweets for query '#DevOps'
+
+Processing query: #AWS
+[search_tweets] Called with query: #AWS
+Searching for tweets with query: #AWS
+Error searching tweets for query '#AWS': Message: invalid session id
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xcbfaf8]
+        (No symbol) [0x0xcf1296]
+        (No symbol) [0x0xcece75]
+        (No symbol) [0x0xcec3f6]
+        (No symbol) [0x0xc55755]
+        (No symbol) [0x0xc55cae]
+        (No symbol) [0x0xc5613d]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        (No symbol) [0x0xc55420]
+        (No symbol) [0x0xc54c36]
+        GetHandleVerifier [0x0x11f508c+3885356]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+Found 0 tweets for '#AWS'
+Processed 0 new tweets for query '#AWS'
+
+Processing query: reactjs
+[search_tweets] Called with query: reactjs
+Searching for tweets with query: reactjs
+Error searching tweets for query 'reactjs': Message: invalid session id
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xcbfaf8]
+        (No symbol) [0x0xcf1296]
+        (No symbol) [0x0xcece75]
+        (No symbol) [0x0xcec3f6]
+        (No symbol) [0x0xc55755]
+        (No symbol) [0x0xc55cae]
+        (No symbol) [0x0xc5613d]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        (No symbol) [0x0xc55420]
+        (No symbol) [0x0xc54c36]
+        GetHandleVerifier [0x0x11f508c+3885356]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+Found 0 tweets for 'reactjs'
+Processed 0 new tweets for query 'reactjs'
+
+Processing query: CI/CD
+[search_tweets] Called with query: CI/CD
+Searching for tweets with query: CI/CD
+Error searching tweets for query 'CI/CD': Message: invalid session id
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xcbfaf8]
+        (No symbol) [0x0xcf1296]
+        (No symbol) [0x0xcece75]
+        (No symbol) [0x0xcec3f6]
+        (No symbol) [0x0xc55755]
+        (No symbol) [0x0xc55cae]
+        (No symbol) [0x0xc5613d]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        (No symbol) [0x0xc55420]
+        (No symbol) [0x0xc54c36]
+        GetHandleVerifier [0x0x11f508c+3885356]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+Found 0 tweets for 'CI/CD'
+Processed 0 new tweets for query 'CI/CD'
+
+Processing query: #GCP
+[search_tweets] Called with query: #GCP
+Searching for tweets with query: #GCP
+Error searching tweets for query '#GCP': Message: invalid session id
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xcbfaf8]
+        (No symbol) [0x0xcf1296]
+        (No symbol) [0x0xcece75]
+        (No symbol) [0x0xcec3f6]
+        (No symbol) [0x0xc55755]
+        (No symbol) [0x0xc55cae]
+        (No symbol) [0x0xc5613d]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        (No symbol) [0x0xc55420]
+        (No symbol) [0x0xc54c36]
+        GetHandleVerifier [0x0x11f508c+3885356]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+Found 0 tweets for '#GCP'
+Processed 0 new tweets for query '#GCP'
+
+Processing query: Docker
+[search_tweets] Called with query: Docker
+Searching for tweets with query: Docker
+Error searching tweets for query 'Docker': Message: invalid session id
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xcbfaf8]
+        (No symbol) [0x0xcf1296]
+        (No symbol) [0x0xcece75]
+        (No symbol) [0x0xcec3f6]
+        (No symbol) [0x0xc55755]
+        (No symbol) [0x0xc55cae]
+        (No symbol) [0x0xc5613d]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        (No symbol) [0x0xc55420]
+        (No symbol) [0x0xc54c36]
+        GetHandleVerifier [0x0x11f508c+3885356]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+Found 0 tweets for 'Docker'
+Processed 0 new tweets for query 'Docker'
+
+Processing query: kubernetes
+[search_tweets] Called with query: kubernetes
+Searching for tweets with query: kubernetes
+Error searching tweets for query 'kubernetes': Message: invalid session id
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xcbfaf8]
+        (No symbol) [0x0xcf1296]
+        (No symbol) [0x0xcece75]
+        (No symbol) [0x0xcec3f6]
+        (No symbol) [0x0xc55755]
+        (No symbol) [0x0xc55cae]
+        (No symbol) [0x0xc5613d]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        (No symbol) [0x0xc55420]
+        (No symbol) [0x0xc54c36]
+        GetHandleVerifier [0x0x11f508c+3885356]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+Found 0 tweets for 'kubernetes'
+Processed 0 new tweets for query 'kubernetes'
+
+Processing query: #softwareengineering
+[search_tweets] Called with query: #softwareengineering
+Searching for tweets with query: #softwareengineering
+Error searching tweets for query '#softwareengineering': Message: invalid session id
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xcbfaf8]
+        (No symbol) [0x0xcf1296]
+        (No symbol) [0x0xcece75]
+        (No symbol) [0x0xcec3f6]
+        (No symbol) [0x0xc55755]
+        (No symbol) [0x0xc55cae]
+        (No symbol) [0x0xc5613d]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        (No symbol) [0x0xc55420]
+        (No symbol) [0x0xc54c36]
+        GetHandleVerifier [0x0x11f508c+3885356]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+Found 0 tweets for '#softwareengineering'
+Processed 0 new tweets for query '#softwareengineering'
+
+Processing query: Express.js
+[search_tweets] Called with query: Express.js
+Searching for tweets with query: Express.js
+Error searching tweets for query 'Express.js': Message: invalid session id
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xcbfaf8]
+        (No symbol) [0x0xcf1296]
+        (No symbol) [0x0xcece75]
+        (No symbol) [0x0xcec3f6]
+        (No symbol) [0x0xc55755]
+        (No symbol) [0x0xc55cae]
+        (No symbol) [0x0xc5613d]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        (No symbol) [0x0xc55420]
+        (No symbol) [0x0xc54c36]
+        GetHandleVerifier [0x0x11f508c+3885356]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+Found 0 tweets for 'Express.js'
+Processed 0 new tweets for query 'Express.js'
+
+Processing query: #fullstackdev
+[search_tweets] Called with query: #fullstackdev
+Searching for tweets with query: #fullstackdev
+Error searching tweets for query '#fullstackdev': Message: invalid session id
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xcbfaf8]
+        (No symbol) [0x0xcf1296]
+        (No symbol) [0x0xcece75]
+        (No symbol) [0x0xcec3f6]
+        (No symbol) [0x0xc55755]
+        (No symbol) [0x0xc55cae]
+        (No symbol) [0x0xc5613d]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        (No symbol) [0x0xc55420]
+        (No symbol) [0x0xc54c36]
+        GetHandleVerifier [0x0x11f508c+3885356]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+Found 0 tweets for '#fullstackdev'
+Processed 0 new tweets for query '#fullstackdev'
+
+Processing query: #Azure
+[search_tweets] Called with query: #Azure
+Searching for tweets with query: #Azure
+Error searching tweets for query '#Azure': Message: invalid session id
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xcbfaf8]
+        (No symbol) [0x0xcf1296]
+        (No symbol) [0x0xcece75]
+        (No symbol) [0x0xcec3f6]
+        (No symbol) [0x0xc55755]
+        (No symbol) [0x0xc55cae]
+        (No symbol) [0x0xc5613d]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        (No symbol) [0x0xc55420]
+        (No symbol) [0x0xc54c36]
+        GetHandleVerifier [0x0x11f508c+3885356]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+Found 0 tweets for '#Azure'
+Processed 0 new tweets for query '#Azure'
+
+Processing query: Next.js
+[search_tweets] Called with query: Next.js
+Searching for tweets with query: Next.js
+Error searching tweets for query 'Next.js': Message: invalid session id
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xcbfaf8]
+        (No symbol) [0x0xcf1296]
+        (No symbol) [0x0xcece75]
+        (No symbol) [0x0xcec3f6]
+        (No symbol) [0x0xc55755]
+        (No symbol) [0x0xc55cae]
+        (No symbol) [0x0xc5613d]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        (No symbol) [0x0xc55420]
+        (No symbol) [0x0xc54c36]
+        GetHandleVerifier [0x0x11f508c+3885356]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+Found 0 tweets for 'Next.js'
+Processed 0 new tweets for query 'Next.js'
+
+Processing query: #webdev
+[search_tweets] Called with query: #webdev
+Searching for tweets with query: #webdev
+Error searching tweets for query '#webdev': Message: invalid session id
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xcbfaf8]
+        (No symbol) [0x0xcf1296]
+        (No symbol) [0x0xcece75]
+        (No symbol) [0x0xcec3f6]
+        (No symbol) [0x0xc55755]
+        (No symbol) [0x0xc55cae]
+        (No symbol) [0x0xc5613d]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        (No symbol) [0x0xc55420]
+        (No symbol) [0x0xc54c36]
+        GetHandleVerifier [0x0x11f508c+3885356]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+Found 0 tweets for '#webdev'
+Processed 0 new tweets for query '#webdev'
+
+Processing query: Node.js
+[search_tweets] Called with query: Node.js
+Searching for tweets with query: Node.js
+Error searching tweets for query 'Node.js': Message: invalid session id
+Stacktrace:
+        GetHandleVerifier [0x0xe4fd23+62915]
+        GetHandleVerifier [0x0xe4fd64+62980]
+        (No symbol) [0x0xc83c70]
+        (No symbol) [0x0xcbfaf8]
+        (No symbol) [0x0xcf1296]
+        (No symbol) [0x0xcece75]
+        (No symbol) [0x0xcec3f6]
+        (No symbol) [0x0xc55755]
+        (No symbol) [0x0xc55cae]
+        (No symbol) [0x0xc5613d]
+        GetHandleVerifier [0x0x10b8d13+2590131]
+        GetHandleVerifier [0x0x10b3f5a+2570234]
+        GetHandleVerifier [0x0xe759da+217722]
+        GetHandleVerifier [0x0xe66048+153832]
+        GetHandleVerifier [0x0xe6c4ad+179533]
+        (No symbol) [0x0xc55420]
+        (No symbol) [0x0xc54c36]
+        GetHandleVerifier [0x0x11f508c+3885356]
+        BaseThreadInitThunk [0x0x77215d49+25]
+        RtlInitializeExceptionChain [0x0x77c0d09b+107]
+        RtlGetAppContainerNamedObjectPath [0x0x77c0d021+561]
+
+Found 0 tweets for 'Node.js'
+Processed 0 new tweets for query 'Node.js'
+
+Finished a cycle of queries. Waiting 300 seconds before the next cycle...
