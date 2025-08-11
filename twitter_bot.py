@@ -241,10 +241,32 @@ class TwitterBot:
         print(f"[search_tweets] Called with query: {query}")
         try:
             print(f"Searching for tweets with query: {query}")
-            search_url = f"https://x.com/search?q={query}&src=typed_query"
-            self.driver.get(search_url)
+            
+            # Navigate to explore page first
+            self.driver.get("https://x.com/explore")
+            time.sleep(3)
+            
+            # Find and click on the search box
+            search_box = self.wait.until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, 'input[aria-label="Search query"]'))
+            )
+            search_box.clear()
+            search_box.send_keys(query)
+            search_box.send_keys(Keys.RETURN)
+            
+            # Wait for search results to load
             time.sleep(5)
-
+            
+            # Click on "Latest" tab to get most recent tweets
+            try:
+                latest_tab = self.driver.find_element(By.XPATH, "//span[text()='Latest']")
+                latest_tab.click()
+                print(f"[search_tweets] Clicked on Latest tab for query: {query}")
+                time.sleep(3)
+            except:
+                print(f"[search_tweets] Could not find Latest tab, continuing with Top results")
+            
+            # Now wait for tweets to load
             tweets = self.wait.until(
                 EC.presence_of_all_elements_located((By.CSS_SELECTOR, 'article[data-testid="tweet"]'))
             )
